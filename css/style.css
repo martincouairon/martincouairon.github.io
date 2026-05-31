@@ -43,7 +43,7 @@ a:hover {
 /* ── Language system ── */
 html.lang-fr .en,
 html.lang-en .fr {
-  display: none;
+  display: none !important;
 }
 
 /* ── Nav ── */
