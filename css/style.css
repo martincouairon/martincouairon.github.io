@@ -371,6 +371,46 @@ p:last-child {
   border-color: var(--text);
 }
 
+/* ── Home page ── */
+.home-hero {
+  padding-bottom: 2.5rem;
+}
+
+.home-links {
+  display: flex;
+  flex-direction: column;
+}
+
+.home-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--border);
+  text-decoration: none;
+  color: var(--text);
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: color 0.15s;
+}
+
+.home-link:first-child {
+  border-top: 1px solid var(--border);
+}
+
+.home-link:hover {
+  color: var(--muted);
+}
+
+.home-link-arrow {
+  color: var(--subtle);
+  transition: color 0.15s;
+}
+
+.home-link:hover .home-link-arrow {
+  color: var(--muted);
+}
+
 /* ── Footer ── */
 footer {
   border-top: 1px solid var(--border);
