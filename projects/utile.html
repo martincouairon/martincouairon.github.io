@@ -1,9 +1,15 @@
 <!DOCTYPE html>
-<html lang="fr" data-lang="fr">
+<html class="lang-fr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Utile — Martin Couairon</title>
+  <script>
+    (function () {
+      var saved = localStorage.getItem('lang') || (navigator.language.startsWith('fr') ? 'fr' : 'en');
+      document.documentElement.className = 'lang-' + saved;
+    })();
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -15,9 +21,9 @@
     <span class="nav-brand">Martin Couairon</span>
     <div class="nav-right">
       <ul class="nav-links">
-        <li><a href="../index.html"><span lang="fr">À propos</span><span lang="en">About</span></a></li>
+        <li><a href="../index.html"><span class="fr">À propos</span><span class="en">About</span></a></li>
         <li><a href="../cv.html">CV</a></li>
-        <li><a href="index.html" class="active"><span lang="fr">Projets</span><span lang="en">Projects</span></a></li>
+        <li><a href="index.html" class="active"><span class="fr">Projets</span><span class="en">Projects</span></a></li>
       </ul>
       <button id="lang-toggle" onclick="toggleLang()">EN</button>
     </div>
@@ -25,50 +31,52 @@
 
   <main>
     <a href="index.html" class="back-link">
-      ← <span lang="fr">Tous les projets</span><span lang="en">All projects</span>
+      ← <span class="fr">Tous les projets</span><span class="en">All projects</span>
     </a>
 
     <div class="project-hero">
-      <p class="hero-role" style="margin-bottom: 0.5rem;">2026 · Web app · <span lang="fr">En cours</span><span lang="en">Ongoing</span></p>
+      <p class="hero-role" style="margin-bottom: 0.5rem;">
+        2026 · Web app · <span class="fr">En cours</span><span class="en">Ongoing</span>
+      </p>
       <h1 class="hero-title">Utile</h1>
-      <p class="hero-bio" lang="fr">Plateforme de partage de compétences gratuite.</p>
-      <p class="hero-bio" lang="en">Free skills-sharing platform.</p>
+      <p class="hero-bio fr">Plateforme de partage de compétences gratuite.</p>
+      <p class="hero-bio en">Free skills-sharing platform.</p>
       <div class="project-links">
         <a href="https://github.com/martincouairon/utile" target="_blank" rel="noopener">GitHub</a>
       </div>
     </div>
 
     <section class="section">
-      <p class="section-label"><span lang="fr">Le problème</span><span lang="en">The problem</span></p>
-      <p lang="fr">Il est souvent difficile de trouver une aide gratuite et de qualité sur un sujet précis — que ce soit pour apprendre quelque chose, progresser dans une compétence ou obtenir un conseil d'expert.</p>
-      <p lang="en">Finding free, quality help on a specific topic is often difficult — whether to learn something, improve a skill, or get expert advice.</p>
+      <p class="section-label"><span class="fr">Le problème</span><span class="en">The problem</span></p>
+      <p class="fr">Il est souvent difficile de trouver une aide gratuite et de qualité sur un sujet précis — que ce soit pour apprendre quelque chose, progresser dans une compétence ou obtenir un conseil d'expert.</p>
+      <p class="en">Finding free, quality help on a specific topic is often difficult — whether to learn something, improve a skill, or get expert advice.</p>
     </section>
 
     <section class="section">
-      <p class="section-label"><span lang="fr">La solution</span><span lang="en">The solution</span></p>
-      <p lang="fr">Utile permet à chacun de proposer ou de trouver une aide gratuite sur n'importe quel sujet. Un répertoire simple, filtrable, où des personnes compétentes partagent leur temps.</p>
-      <p lang="en">Utile lets anyone offer or find free help on any topic. A simple, filterable directory where knowledgeable people share their time.</p>
+      <p class="section-label"><span class="fr">La solution</span><span class="en">The solution</span></p>
+      <p class="fr">Utile permet à chacun de proposer ou de trouver une aide gratuite sur n'importe quel sujet. Un répertoire simple, filtrable, où des personnes compétentes partagent leur temps.</p>
+      <p class="en">Utile lets anyone offer or find free help on any topic. A simple, filterable directory where knowledgeable people share their time.</p>
     </section>
 
     <section class="section">
-      <p class="section-label"><span lang="fr">Fonctionnalités</span><span lang="en">Features</span></p>
+      <p class="section-label"><span class="fr">Fonctionnalités</span><span class="en">Features</span></p>
       <div class="project-list">
         <div class="project-item" style="pointer-events: none; cursor: default;">
           <span class="project-meta"></span>
           <div>
-            <p class="project-title" lang="fr">Annonces</p>
-            <p class="project-title" lang="en">Listings</p>
-            <p class="project-desc" lang="fr">Poster ou consulter des annonces de partage de compétences, avec filtres par catégorie, lieu et disponibilité.</p>
-            <p class="project-desc" lang="en">Post or browse skills-sharing listings, filtered by category, location and availability.</p>
+            <p class="project-title fr">Annonces</p>
+            <p class="project-title en">Listings</p>
+            <p class="project-desc fr">Poster ou consulter des annonces de partage de compétences, avec filtres par catégorie, lieu et disponibilité.</p>
+            <p class="project-desc en">Post or browse skills-sharing listings, filtered by category, location and availability.</p>
           </div>
         </div>
         <div class="project-item" style="pointer-events: none; cursor: default;">
           <span class="project-meta"></span>
           <div>
-            <p class="project-title" lang="fr">Recherche académique</p>
-            <p class="project-title" lang="en">Academic search</p>
-            <p class="project-desc" lang="fr">Sous-page Académie : recherche de ressources académiques via Exa, avec scoring IA et filtres avancés.</p>
-            <p class="project-desc" lang="en">Académie sub-page: academic resource search powered by Exa, with AI scoring and advanced filters.</p>
+            <p class="project-title fr">Recherche académique</p>
+            <p class="project-title en">Academic search</p>
+            <p class="project-desc fr">Sous-page Académie : recherche de ressources via Exa, avec scoring IA et filtres avancés.</p>
+            <p class="project-desc en">Académie sub-page: resource search powered by Exa, with AI scoring and advanced filters.</p>
           </div>
         </div>
       </div>

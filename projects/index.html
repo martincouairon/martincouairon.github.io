@@ -1,9 +1,15 @@
 <!DOCTYPE html>
-<html lang="fr" data-lang="fr">
+<html class="lang-fr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Projets — Martin Couairon</title>
+  <script>
+    (function () {
+      var saved = localStorage.getItem('lang') || (navigator.language.startsWith('fr') ? 'fr' : 'en');
+      document.documentElement.className = 'lang-' + saved;
+    })();
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -15,9 +21,9 @@
     <span class="nav-brand">Martin Couairon</span>
     <div class="nav-right">
       <ul class="nav-links">
-        <li><a href="../index.html"><span lang="fr">À propos</span><span lang="en">About</span></a></li>
+        <li><a href="../index.html"><span class="fr">À propos</span><span class="en">About</span></a></li>
         <li><a href="../cv.html">CV</a></li>
-        <li><a href="index.html" class="active"><span lang="fr">Projets</span><span lang="en">Projects</span></a></li>
+        <li><a href="index.html" class="active"><span class="fr">Projets</span><span class="en">Projects</span></a></li>
       </ul>
       <button id="lang-toggle" onclick="toggleLang()">EN</button>
     </div>
@@ -25,20 +31,20 @@
 
   <main>
     <div class="hero">
-      <h1 class="hero-title"><span lang="fr">Projets</span><span lang="en">Projects</span></h1>
-      <p class="hero-role" lang="fr">Ce que j'ai construit — produits, expérimentations et travaux en cours.</p>
-      <p class="hero-role" lang="en">What I've built — products, experiments, and ongoing work.</p>
+      <h1 class="hero-title"><span class="fr">Projets</span><span class="en">Projects</span></h1>
+      <p class="hero-role fr">Ce que j'ai construit — produits, expérimentations et travaux en cours.</p>
+      <p class="hero-role en">What I've built — products, experiments, and ongoing work.</p>
     </div>
 
     <section class="section">
-      <p class="section-label"><span lang="fr">En cours</span><span lang="en">Current</span></p>
+      <p class="section-label"><span class="fr">En cours</span><span class="en">Current</span></p>
       <div class="project-list">
         <a href="utile.html" class="project-item">
           <span class="project-meta">2026 · Web app</span>
           <div>
             <p class="project-title">Utile</p>
-            <p class="project-desc" lang="fr">Plateforme de partage de compétences gratuite. Trouver ou proposer une aide sur n'importe quel sujet — tutorat, conseil, pratique.</p>
-            <p class="project-desc" lang="en">Free skills-sharing platform. Find or offer help on any topic — tutoring, advice, practice.</p>
+            <p class="project-desc fr">Plateforme de partage de compétences gratuite. Trouver ou proposer une aide sur n'importe quel sujet — tutorat, conseil, pratique.</p>
+            <p class="project-desc en">Free skills-sharing platform. Find or offer help on any topic — tutoring, advice, practice.</p>
             <div class="tag-list">
               <span class="tag">Next.js</span>
               <span class="tag">Supabase</span>
@@ -49,7 +55,6 @@
         </a>
       </div>
     </section>
-
   </main>
 
   <footer>

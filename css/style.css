@@ -41,8 +41,8 @@ a:hover {
 }
 
 /* ── Language system ── */
-[data-lang="fr"] [lang="en"],
-[data-lang="en"] [lang="fr"] {
+html.lang-fr .en,
+html.lang-en .fr {
   display: none;
 }
 

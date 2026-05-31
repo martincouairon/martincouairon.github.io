@@ -1,9 +1,15 @@
 <!DOCTYPE html>
-<html lang="fr" data-lang="fr">
+<html class="lang-fr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CV — Martin Couairon</title>
+  <script>
+    (function () {
+      var saved = localStorage.getItem('lang') || (navigator.language.startsWith('fr') ? 'fr' : 'en');
+      document.documentElement.className = 'lang-' + saved;
+    })();
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -15,9 +21,9 @@
     <span class="nav-brand">Martin Couairon</span>
     <div class="nav-right">
       <ul class="nav-links">
-        <li><a href="index.html"><span lang="fr">À propos</span><span lang="en">About</span></a></li>
+        <li><a href="index.html"><span class="fr">À propos</span><span class="en">About</span></a></li>
         <li><a href="cv.html" class="active">CV</a></li>
-        <li><a href="projects/index.html"><span lang="fr">Projets</span><span lang="en">Projects</span></a></li>
+        <li><a href="projects/index.html"><span class="fr">Projets</span><span class="en">Projects</span></a></li>
       </ul>
       <button id="lang-toggle" onclick="toggleLang()">EN</button>
     </div>
@@ -27,88 +33,109 @@
     <div class="hero">
       <h1 class="hero-title">Curriculum Vitae</h1>
       <p class="hero-role">
-        <span lang="fr">Senior Financial Auditor · Expert-comptable stagiaire · CFA Level II candidate</span>
-        <span lang="en">Senior Financial Auditor · CPA candidate · CFA Level II candidate</span>
+        <span class="fr">Senior Financial Auditor · Expert-comptable stagiaire · CFA Level II candidate</span>
+        <span class="en">Senior Financial Auditor · CPA candidate · CFA Level II candidate</span>
       </p>
     </div>
 
     <section class="section">
-      <p class="section-label"><span lang="fr">Expériences</span><span lang="en">Experience</span></p>
+      <p class="section-label"><span class="fr">Expériences</span><span class="en">Experience</span></p>
 
       <div class="cv-entry">
-        <span class="cv-date"><span lang="fr">Sept. 2025 — présent</span><span lang="en">Sept. 2025 — present</span></span>
+        <span class="cv-date">
+          <span class="fr">Sept. 2025 — présent</span>
+          <span class="en">Sept. 2025 — present</span>
+        </span>
         <div>
-          <h3><span lang="fr">Senior Financial Auditor</span><span lang="en">Senior Financial Auditor</span></h3>
+          <h3>Senior Financial Auditor</h3>
           <p>Forvis Mazars Group · Paris</p>
           <ul class="cv-bullets">
-            <li lang="fr">Audit de 10 états financiers par an, principalement dans les secteurs aérospatial et défense</li>
-            <li lang="en">Audited 10 financial statements a year, key assignments in the aerospace & defense industry</li>
-            <li lang="fr">Direction de 6 missions d'audit</li>
-            <li lang="en">Led 6 audit engagements</li>
-            <li lang="fr">Management de 12 collaborateurs juniors en équipes de 4</li>
-            <li lang="en">Managed 12 junior collaborators in teams of up to 4</li>
-            <li lang="fr">Interlocuteur principal auprès des clients et des associés</li>
-            <li lang="en">Responsible for communication with clients and partners</li>
+            <li class="fr">Audit de 10 états financiers par an, principalement dans les secteurs aérospatial et défense</li>
+            <li class="en">Audited 10 financial statements a year, key assignments in the aerospace & defense industry</li>
+            <li class="fr">Direction de 6 missions d'audit</li>
+            <li class="en">Led 6 audit engagements</li>
+            <li class="fr">Management de 12 collaborateurs juniors en équipes de 4</li>
+            <li class="en">Managed 12 junior collaborators in teams of up to 4</li>
+            <li class="fr">Interlocuteur principal auprès des clients et des associés</li>
+            <li class="en">Responsible for communication with clients and partners</li>
           </ul>
         </div>
       </div>
 
       <div class="cv-entry">
-        <span class="cv-date"><span lang="fr">Déc. 2023 — Sept. 2025</span><span lang="en">Dec. 2023 — Sept. 2025</span></span>
+        <span class="cv-date">
+          <span class="fr">Déc. 2023 — Sept. 2025</span>
+          <span class="en">Dec. 2023 — Sept. 2025</span>
+        </span>
         <div>
           <h3>Financial Auditor</h3>
           <p>Forvis Mazars Group · Paris</p>
           <ul class="cv-bullets">
-            <li lang="fr">Audit de 10 comptes annuels et consolidés par an pour 20 clients — grands groupes internationaux (&gt;100 Md€ de CA) à entreprises locales et institutions publiques</li>
-            <li lang="en">Audited 10 statutory and consolidated financial statements a year across 20 clients — from large listed groups (&gt;€100bn revenue) to local businesses and public institutions</li>
-            <li lang="fr">Maîtrise des référentiels PCG, US GAAP et IFRS et des normes d'audit NEP, PCAOB et ISA</li>
-            <li lang="en">Working knowledge of PCG, US GAAP and IFRS, and corresponding auditing standards (NEP, PCAOB, ISA)</li>
-            <li lang="fr">Revue et tests du contrôle interne (ICFR) dans le cadre du Sarbanes-Oxley Act</li>
-            <li lang="en">Reviewed and tested internal control over financial reporting (ICFR) under the Sarbanes-Oxley Act</li>
-            <li lang="fr">Contribution au déploiement d'un outil innovant de confirmations d'audit</li>
-            <li lang="en">Contributed to the rollout of an innovative audit confirmation software</li>
+            <li class="fr">Audit de 10 comptes annuels et consolidés par an pour 20 clients — grands groupes internationaux (&gt;100 Md€ de CA) à entreprises locales et institutions publiques</li>
+            <li class="en">Audited 10 statutory and consolidated financial statements a year across 20 clients — from large listed groups (&gt;€100bn revenue) to local businesses and public institutions</li>
+            <li class="fr">Maîtrise des référentiels PCG, US GAAP et IFRS et des normes d'audit NEP, PCAOB et ISA</li>
+            <li class="en">Working knowledge of PCG, US GAAP and IFRS, and corresponding auditing standards (NEP, PCAOB, ISA)</li>
+            <li class="fr">Revue et tests du contrôle interne (ICFR) dans le cadre du Sarbanes-Oxley Act</li>
+            <li class="en">Reviewed and tested internal control over financial reporting (ICFR) under the Sarbanes-Oxley Act</li>
+            <li class="fr">Contribution au déploiement d'un outil innovant de confirmations d'audit</li>
+            <li class="en">Contributed to the rollout of an innovative audit confirmation software</li>
           </ul>
         </div>
       </div>
 
       <div class="cv-entry">
-        <span class="cv-date"><span lang="fr">Sept. 2021 — Août 2023</span><span lang="en">Sept. 2021 — Aug. 2023</span></span>
+        <span class="cv-date">
+          <span class="fr">Sept. 2021 — Août 2023</span>
+          <span class="en">Sept. 2021 — Aug. 2023</span>
+        </span>
         <div>
-          <h3><span lang="fr">Comptable</span><span lang="en">Accountant</span></h3>
+          <h3><span class="fr">Comptable</span><span class="en">Accountant</span></h3>
           <p>Sefico Nexia · Paris</p>
           <ul class="cv-bullets">
-            <li lang="fr">Tenue de la comptabilité et déclarations fiscales mensuelles et annuelles pour un groupe de 7 hôtels parisiens (bilan de 1–2 M€, CA moyen de 1 M€)</li>
-            <li lang="en">Bookkeeping and monthly/annual tax filings for a group of 7 Paris-based hotels (total assets €1–2M, avg. revenue €1M)</li>
-            <li lang="fr">PCG · Secteurs services et immobilier · Sociétés non cotées</li>
-            <li lang="en">French GAAP · Services and real estate · Non-listed companies</li>
+            <li class="fr">Tenue de la comptabilité et déclarations fiscales mensuelles et annuelles pour un groupe de 7 hôtels parisiens (bilan de 1–2 M€, CA moyen de 1 M€)</li>
+            <li class="en">Bookkeeping and monthly/annual tax filings for a group of 7 Paris-based hotels (total assets €1–2M, avg. revenue €1M)</li>
+            <li class="fr">PCG · Secteurs services et immobilier · Sociétés non cotées</li>
+            <li class="en">French GAAP · Services and real estate · Non-listed companies</li>
           </ul>
         </div>
       </div>
     </section>
 
     <section class="section">
-      <p class="section-label"><span lang="fr">Formation</span><span lang="en">Education</span></p>
+      <p class="section-label"><span class="fr">Formation</span><span class="en">Education</span></p>
 
       <div class="cv-entry">
-        <span class="cv-date"><span lang="fr">Oct. 2024 — Oct. 2027</span><span lang="en">Oct. 2024 — Oct. 2027</span></span>
+        <span class="cv-date">Oct. 2024 — Oct. 2027</span>
         <div>
-          <h3><span lang="fr">Expert-comptable stagiaire</span><span lang="en">Certified Public Accountant (trainee)</span></h3>
-          <p><span lang="fr">Conseil de l'Ordre des Experts-Comptables</span><span lang="en">French Institute of Chartered Accountants</span></p>
+          <h3>
+            <span class="fr">Expert-comptable stagiaire</span>
+            <span class="en">Certified Public Accountant (trainee)</span>
+          </h3>
+          <p>
+            <span class="fr">Conseil de l'Ordre des Experts-Comptables</span>
+            <span class="en">French Institute of Chartered Accountants</span>
+          </p>
         </div>
       </div>
 
       <div class="cv-entry">
         <span class="cv-date">2021 — 2023</span>
         <div>
-          <h3><span lang="fr">Master Comptabilité Contrôle Audit (CCA)</span><span lang="en">Master's in Accounting, Auditing & Control (CCA)</span></h3>
-          <p>Paris-Dauphine <span lang="fr">· ex-MSTCF</span></p>
+          <h3>
+            <span class="fr">Master Comptabilité Contrôle Audit (CCA)</span>
+            <span class="en">Master's in Accounting, Auditing & Control (CCA)</span>
+          </h3>
+          <p>Paris-Dauphine</p>
         </div>
       </div>
 
       <div class="cv-entry">
         <span class="cv-date">2020 — 2021</span>
         <div>
-          <h3><span lang="fr">Licence Comptabilité Contrôle Audit (CCA)</span><span lang="en">Bachelor's in Accounting, Auditing & Control (CCA)</span></h3>
+          <h3>
+            <span class="fr">Licence Comptabilité Contrôle Audit (CCA)</span>
+            <span class="en">Bachelor's in Accounting, Auditing & Control (CCA)</span>
+          </h3>
           <p>Université Paris Dauphine - PSL</p>
         </div>
       </div>
@@ -116,78 +143,83 @@
       <div class="cv-entry">
         <span class="cv-date">2018 — 2020</span>
         <div>
-          <h3><span lang="fr">Licence LSO</span><span lang="en">Bachelor's — LSO</span></h3>
+          <h3><span class="fr">Licence LSO</span><span class="en">Bachelor's — LSO</span></h3>
           <p>Université Paris Dauphine</p>
         </div>
       </div>
     </section>
 
     <section class="section">
-      <p class="section-label"><span lang="fr">Engagements</span><span lang="en">Memberships</span></p>
+      <p class="section-label"><span class="fr">Engagements</span><span class="en">Memberships</span></p>
 
       <div class="cv-entry">
-        <span class="cv-date"><span lang="fr">Oct. 2025 — présent</span><span lang="en">Oct. 2025 — present</span></span>
+        <span class="cv-date">
+          <span class="fr">Oct. 2025 — présent</span>
+          <span class="en">Oct. 2025 — present</span>
+        </span>
         <div>
           <h3>Institut français des relations internationales (IFRI)</h3>
-          <p lang="fr">Membre · Think tank indépendant dédié aux relations internationales et à l'analyse des politiques mondiales.</p>
-          <p lang="en">Member · Independent think tank focused on global affairs and international policy analysis.</p>
+          <p class="fr">Membre · Think tank indépendant dédié aux relations internationales et à l'analyse des politiques mondiales.</p>
+          <p class="en">Member · Independent think tank focused on global affairs and international policy analysis.</p>
         </div>
       </div>
 
       <div class="cv-entry">
-        <span class="cv-date"><span lang="fr">Sept. 2025 — présent</span><span lang="en">Sept. 2025 — present</span></span>
+        <span class="cv-date">
+          <span class="fr">Sept. 2025 — présent</span>
+          <span class="en">Sept. 2025 — present</span>
+        </span>
         <div>
           <h3>Outre Terre</h3>
-          <p lang="fr">Membre · Conférences de géopolitique explorant les enjeux et cadres de pensée des acteurs mondiaux.</p>
-          <p lang="en">Member · Geopolitics conferences exploring the challenges and reasoning of global stakeholders.</p>
+          <p class="fr">Membre · Conférences de géopolitique explorant les enjeux et cadres de pensée des acteurs mondiaux.</p>
+          <p class="en">Member · Geopolitics conferences exploring the challenges and reasoning of global stakeholders.</p>
         </div>
       </div>
     </section>
 
     <section class="section">
-      <p class="section-label"><span lang="fr">Projets</span><span lang="en">Projects</span></p>
+      <p class="section-label"><span class="fr">Projets</span><span class="en">Projects</span></p>
 
       <div class="cv-entry">
         <span class="cv-date">2026</span>
         <div>
           <h3><a href="projects/utile.html">Utile</a></h3>
-          <p lang="fr">Plateforme de partage de compétences gratuite — Next.js, Supabase, Tailwind CSS.</p>
-          <p lang="en">Free skills-sharing platform — Next.js, Supabase, Tailwind CSS.</p>
+          <p class="fr">Plateforme de partage de compétences gratuite — Next.js, Supabase, Tailwind CSS.</p>
+          <p class="en">Free skills-sharing platform — Next.js, Supabase, Tailwind CSS.</p>
         </div>
       </div>
-
     </section>
 
     <section class="section">
-      <p class="section-label"><span lang="fr">Compétences & certifications</span><span lang="en">Skills & certifications</span></p>
+      <p class="section-label"><span class="fr">Compétences & certifications</span><span class="en">Skills & certifications</span></p>
 
       <div class="cv-entry">
-        <span class="cv-date"><span lang="fr">Certifications</span><span lang="en">Certifications</span></span>
+        <span class="cv-date"><span class="fr">Certifications</span><span class="en">Certifications</span></span>
         <div>
           <p>CFA Program Level I · DSCG</p>
         </div>
       </div>
 
       <div class="cv-entry">
-        <span class="cv-date"><span lang="fr">Expertise</span><span lang="en">Expertise</span></span>
+        <span class="cv-date"><span class="fr">Expertise</span><span class="en">Expertise</span></span>
         <div>
-          <p lang="fr">Audit financier · Analyse financière · Management · ISA · PCG · IFRS · US GAAP · Sarbanes-Oxley</p>
-          <p lang="en">Financial audit · Financial analysis · Management · ISA · PCG · IFRS · US GAAP · Sarbanes-Oxley</p>
+          <p class="fr">Audit financier · Analyse financière · Management · ISA · PCG · IFRS · US GAAP · Sarbanes-Oxley</p>
+          <p class="en">Financial audit · Financial analysis · Management · ISA · PCG · IFRS · US GAAP · Sarbanes-Oxley</p>
         </div>
       </div>
 
       <div class="cv-entry">
-        <span class="cv-date"><span lang="fr">Développement</span><span lang="en">Development</span></span>
+        <span class="cv-date"><span class="fr">Développement</span><span class="en">Development</span></span>
         <div>
           <p>JavaScript, TypeScript, React, Next.js, Supabase, Tailwind CSS</p>
         </div>
       </div>
 
       <div class="cv-entry">
-        <span class="cv-date"><span lang="fr">Langues</span><span lang="en">Languages</span></span>
+        <span class="cv-date"><span class="fr">Langues</span><span class="en">Languages</span></span>
         <div>
-          <p lang="fr">Français (bilingue) · Anglais (bilingue) · Allemand (notions professionnelles)</p>
-          <p lang="en">French (native/bilingual) · English (native/bilingual) · German (limited working)</p>
+          <p class="fr">Français (bilingue) · Anglais (bilingue) · Allemand (notions professionnelles)</p>
+          <p class="en">French (native/bilingual) · English (native/bilingual) · German (limited working)</p>
         </div>
       </div>
     </section>
