@@ -419,33 +419,11 @@ p:last-child {
   flex-shrink: 0;
 }
 
-.home-link-block {
-  display: block;
-  cursor: default;
-}
-
-.home-link-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  margin-bottom: 0.15rem;
-}
-
-.home-link-all {
-  font-size: 0.8rem;
-  color: var(--subtle);
-  text-decoration: none;
-  transition: color 0.15s;
-}
-
-.home-link-all:hover {
-  color: var(--muted);
-}
-
 .home-project-list {
-  margin-top: 1rem;
+  padding-left: 2rem;
   display: flex;
   flex-direction: column;
+  border-bottom: 1px solid var(--border);
 }
 
 .home-project-item {
