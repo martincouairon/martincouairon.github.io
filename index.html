@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" data-lang="fr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,73 +8,70 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
+  <script src="js/lang.js" defer></script>
 </head>
 <body>
   <nav>
     <span class="nav-brand">Martin Couairon</span>
-    <ul class="nav-links">
-      <li><a href="index.html" class="active">À propos</a></li>
-      <li><a href="cv.html">CV</a></li>
-      <li><a href="projects/index.html">Projets</a></li>
-    </ul>
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="index.html" class="active"><span lang="fr">À propos</span><span lang="en">About</span></a></li>
+        <li><a href="cv.html">CV</a></li>
+        <li><a href="projects/index.html"><span lang="fr">Projets</span><span lang="en">Projects</span></a></li>
+      </ul>
+      <button id="lang-toggle" onclick="toggleLang()">EN</button>
+    </div>
   </nav>
 
   <main>
-    <section class="hero">
-      <h1>Bonjour, je suis<br />Martin Couairon.</h1>
-      <p class="hero-sub">
-        Senior Financial Auditor chez Forvis Mazars, expert-comptable stagiaire et CFA Level II candidate. Je construis aussi des produits numériques à l'intersection de la finance et de la technologie.
+    <div class="hero">
+      <h1 class="hero-title">Martin Couairon</h1>
+      <p class="hero-role">
+        <span lang="fr">Auditeur financier senior · Expert-comptable stagiaire · CFA Level II</span>
+        <span lang="en">Senior Financial Auditor · CPA candidate · CFA Level II</span>
+      </p>
+      <p class="hero-bio" lang="fr">
+        Diplômé du Master CCA de Paris-Dauphine, j'audite des groupes internationaux chez Forvis Mazars à Paris — principalement dans les secteurs aérospatial et défense. En parallèle, je prépare le CFA Level II et l'expertise comptable, et je construis des produits numériques.
+      </p>
+      <p class="hero-bio" lang="en">
+        Paris-Dauphine CCA graduate. Senior Financial Auditor at Forvis Mazars in Paris, working mainly on aerospace & defense clients. Pursuing CFA Level II and the CPA qualification. I also build digital products on the side.
       </p>
       <div class="hero-links">
-        <a href="projects/index.html" class="btn btn-primary">Voir mes projets</a>
-        <a href="cv.html" class="btn btn-secondary">Consulter mon CV</a>
-        <a href="mailto:couaironmartin@gmail.com" class="btn btn-secondary">Me contacter</a>
+        <a href="mailto:couaironmartin@gmail.com">couaironmartin@gmail.com</a>
+        <a href="https://linkedin.com/in/martin-couairon" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/martincouairon" target="_blank" rel="noopener">GitHub</a>
+        <a href="cv.html">CV</a>
       </div>
-    </section>
+    </div>
 
     <section class="section">
-      <p class="section-label">À propos</p>
-      <p>
-        Diplômé du Master CCA de Paris-Dauphine, je travaille comme Senior Financial Auditor chez Forvis Mazars à Paris où j'audite des groupes internationaux, notamment dans l'aérospatial et la défense. En parallèle, je prépare le CFA Level II et l'expertise comptable.
-      </p>
-      <p>
-        J'ai aussi une appétence pour le développement produit : je construis des outils numériques utiles, à l'image de cette plateforme de partage de compétences. J'aime résoudre de vrais problèmes avec du code.
-      </p>
-    </section>
-
-    <section class="section">
-      <p class="section-label">Ce sur quoi je travaille</p>
-      <div class="card-grid">
-        <a href="projects/utile.html" class="card">
-          <p class="card-meta">Projet en cours</p>
-          <p class="card-title">Utile</p>
-          <p class="card-desc">Plateforme de partage de compétences gratuite. Trouver ou proposer une aide sur n'importe quel sujet.</p>
-          <div class="tag-list">
-            <span class="tag">Next.js</span>
-            <span class="tag">Supabase</span>
-            <span class="tag">Tailwind</span>
+      <p class="section-label"><span lang="fr">Projets récents</span><span lang="en">Recent projects</span></p>
+      <div class="project-list">
+        <a href="projects/utile.html" class="project-item">
+          <span class="project-meta">2026</span>
+          <div>
+            <p class="project-title">Utile</p>
+            <p class="project-desc" lang="fr">Plateforme de partage de compétences gratuite — trouver ou proposer une aide sur n'importe quel sujet.</p>
+            <p class="project-desc" lang="en">Free skills-sharing platform — find or offer help on any topic.</p>
+            <div class="tag-list">
+              <span class="tag">Next.js</span>
+              <span class="tag">Supabase</span>
+              <span class="tag">Tailwind</span>
+            </div>
           </div>
         </a>
-        <a href="projects/freelancehub.html" class="card">
-          <p class="card-meta">Projet</p>
-          <p class="card-title">FreelanceHub</p>
-          <p class="card-desc">Répertoire de missions freelance. Centraliser et filtrer les offres pour les indépendants.</p>
-          <div class="tag-list">
-            <span class="tag">Next.js</span>
-            <span class="tag">Supabase</span>
+        <a href="projects/freelancehub.html" class="project-item">
+          <span class="project-meta">2025</span>
+          <div>
+            <p class="project-title">FreelanceHub</p>
+            <p class="project-desc" lang="fr">Répertoire centralisé de missions freelance avec filtres avancés.</p>
+            <p class="project-desc" lang="en">Centralised freelance job board with advanced filters.</p>
+            <div class="tag-list">
+              <span class="tag">Next.js</span>
+              <span class="tag">Supabase</span>
+            </div>
           </div>
         </a>
-      </div>
-    </section>
-
-    <section class="section">
-      <p class="section-label">Contact</p>
-      <p>
-        Disponible pour des collaborations, des questions ou simplement pour échanger.
-      </p>
-      <div class="hero-links">
-        <a href="mailto:couaironmartin@gmail.com" class="btn btn-secondary">couaironmartin@gmail.com</a>
-        <a href="https://github.com/martincouairon" class="btn btn-secondary" target="_blank" rel="noopener">GitHub</a>
       </div>
     </section>
   </main>

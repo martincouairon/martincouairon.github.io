@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" data-lang="fr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,50 +8,61 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../css/style.css" />
+  <script src="../js/lang.js" defer></script>
 </head>
 <body>
   <nav>
     <span class="nav-brand">Martin Couairon</span>
-    <ul class="nav-links">
-      <li><a href="../index.html">À propos</a></li>
-      <li><a href="../cv.html">CV</a></li>
-      <li><a href="index.html" class="active">Projets</a></li>
-    </ul>
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="../index.html"><span lang="fr">À propos</span><span lang="en">About</span></a></li>
+        <li><a href="../cv.html">CV</a></li>
+        <li><a href="index.html" class="active"><span lang="fr">Projets</span><span lang="en">Projects</span></a></li>
+      </ul>
+      <button id="lang-toggle" onclick="toggleLang()">EN</button>
+    </div>
   </nav>
 
   <main>
-    <div class="hero" style="padding-bottom: 2rem;">
-      <h1>Projets</h1>
-      <p class="hero-sub">Ce que j'ai construit — produits, expérimentations, et travaux en cours.</p>
+    <div class="hero">
+      <h1 class="hero-title"><span lang="fr">Projets</span><span lang="en">Projects</span></h1>
+      <p class="hero-role" lang="fr">Ce que j'ai construit — produits, expérimentations et travaux en cours.</p>
+      <p class="hero-role" lang="en">What I've built — products, experiments, and ongoing work.</p>
     </div>
 
     <section class="section">
-      <p class="section-label">En cours</p>
-      <div class="card-grid">
-        <a href="utile.html" class="card">
-          <p class="card-meta">2026 · Web app</p>
-          <p class="card-title">Utile</p>
-          <p class="card-desc">Plateforme de partage de compétences gratuite. Trouver ou proposer une aide sur n'importe quel sujet — tutorat, conseil, pratique.</p>
-          <div class="tag-list">
-            <span class="tag">Next.js</span>
-            <span class="tag">Supabase</span>
-            <span class="tag">Tailwind CSS</span>
-            <span class="tag">TypeScript</span>
+      <p class="section-label"><span lang="fr">En cours</span><span lang="en">Current</span></p>
+      <div class="project-list">
+        <a href="utile.html" class="project-item">
+          <span class="project-meta">2026 · Web app</span>
+          <div>
+            <p class="project-title">Utile</p>
+            <p class="project-desc" lang="fr">Plateforme de partage de compétences gratuite. Trouver ou proposer une aide sur n'importe quel sujet — tutorat, conseil, pratique.</p>
+            <p class="project-desc" lang="en">Free skills-sharing platform. Find or offer help on any topic — tutoring, advice, practice.</p>
+            <div class="tag-list">
+              <span class="tag">Next.js</span>
+              <span class="tag">Supabase</span>
+              <span class="tag">Tailwind CSS</span>
+              <span class="tag">TypeScript</span>
+            </div>
           </div>
         </a>
       </div>
     </section>
 
     <section class="section">
-      <p class="section-label">Autres projets</p>
-      <div class="card-grid">
-        <a href="freelancehub.html" class="card">
-          <p class="card-meta">2025 · Web app</p>
-          <p class="card-title">FreelanceHub</p>
-          <p class="card-desc">Répertoire de missions freelance. Centraliser et filtrer les offres pour les indépendants en recherche de missions.</p>
-          <div class="tag-list">
-            <span class="tag">Next.js</span>
-            <span class="tag">Supabase</span>
+      <p class="section-label"><span lang="fr">Autres projets</span><span lang="en">Other projects</span></p>
+      <div class="project-list">
+        <a href="freelancehub.html" class="project-item">
+          <span class="project-meta">2025 · Web app</span>
+          <div>
+            <p class="project-title">FreelanceHub</p>
+            <p class="project-desc" lang="fr">Répertoire centralisé de missions freelance avec filtres avancés.</p>
+            <p class="project-desc" lang="en">Centralised freelance job board with advanced filters.</p>
+            <div class="tag-list">
+              <span class="tag">Next.js</span>
+              <span class="tag">Supabase</span>
+            </div>
           </div>
         </a>
       </div>

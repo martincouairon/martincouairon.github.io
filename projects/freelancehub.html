@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" data-lang="fr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,73 +8,79 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../css/style.css" />
+  <script src="../js/lang.js" defer></script>
 </head>
 <body>
   <nav>
     <span class="nav-brand">Martin Couairon</span>
-    <ul class="nav-links">
-      <li><a href="../index.html">À propos</a></li>
-      <li><a href="../cv.html">CV</a></li>
-      <li><a href="index.html" class="active">Projets</a></li>
-    </ul>
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="../index.html"><span lang="fr">À propos</span><span lang="en">About</span></a></li>
+        <li><a href="../cv.html">CV</a></li>
+        <li><a href="index.html" class="active"><span lang="fr">Projets</span><span lang="en">Projects</span></a></li>
+      </ul>
+      <button id="lang-toggle" onclick="toggleLang()">EN</button>
+    </div>
   </nav>
 
   <main>
-    <a href="index.html" class="back-link">← Tous les projets</a>
+    <a href="index.html" class="back-link">
+      ← <span lang="fr">Tous les projets</span><span lang="en">All projects</span>
+    </a>
 
     <div class="project-hero">
-      <p style="font-size: 0.82rem; color: var(--muted); margin-bottom: 0.75rem;">2025 · Web app</p>
-      <h1>FreelanceHub</h1>
-      <p class="hero-sub">Répertoire de missions freelance centralisé.</p>
+      <p class="hero-role" style="margin-bottom: 0.5rem;">2025 · Web app</p>
+      <h1 class="hero-title">FreelanceHub</h1>
+      <p class="hero-bio" lang="fr">Répertoire centralisé de missions freelance.</p>
+      <p class="hero-bio" lang="en">Centralised freelance job board.</p>
       <div class="project-links">
-        <a href="https://github.com/martincouairon/freelancehub" class="btn btn-secondary" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://github.com/martincouairon/freelancehub" target="_blank" rel="noopener">GitHub</a>
       </div>
     </div>
 
     <section class="section">
-      <p class="section-label">Le problème</p>
-      <p>
-        <!-- À compléter : quel problème FreelanceHub résout-il ? -->
-        Les missions freelance sont dispersées sur de nombreuses plateformes différentes, ce qui rend la veille chronophage pour les indépendants.
-      </p>
+      <p class="section-label"><span lang="fr">Le problème</span><span lang="en">The problem</span></p>
+      <p lang="fr">Les missions freelance sont dispersées sur de nombreuses plateformes, ce qui rend la veille chronophage pour les indépendants.</p>
+      <p lang="en">Freelance opportunities are scattered across many platforms, making it time-consuming for independents to track them.</p>
     </section>
 
     <section class="section">
-      <p class="section-label">La solution</p>
-      <p>
-        <!-- À compléter -->
-        FreelanceHub centralise les offres de missions en un seul endroit, avec des filtres pour trouver rapidement les missions correspondant à son profil.
-      </p>
+      <p class="section-label"><span lang="fr">La solution</span><span lang="en">The solution</span></p>
+      <p lang="fr">FreelanceHub centralise les offres en un seul endroit, avec des filtres pour trouver rapidement les missions correspondant à son profil.</p>
+      <p lang="en">FreelanceHub aggregates listings in one place, with filters to quickly find missions matching your profile.</p>
     </section>
 
     <section class="section">
-      <p class="section-label">Fonctionnalités</p>
-      <div class="card-grid">
-        <div class="card" style="pointer-events: none;">
-          <p class="card-title">Répertoire de missions</p>
-          <p class="card-desc">Liste filtrée de missions freelance avec recherche par compétence, budget et localisation.</p>
+      <p class="section-label"><span lang="fr">Fonctionnalités</span><span lang="en">Features</span></p>
+      <div class="project-list">
+        <div class="project-item" style="pointer-events: none; cursor: default;">
+          <span class="project-meta"></span>
+          <div>
+            <p class="project-title" lang="fr">Répertoire de missions</p>
+            <p class="project-title" lang="en">Job board</p>
+            <p class="project-desc" lang="fr">Liste filtrée de missions avec recherche par compétence, budget et localisation.</p>
+            <p class="project-desc" lang="en">Filtered list of missions, searchable by skill, budget and location.</p>
+          </div>
         </div>
-        <div class="card" style="pointer-events: none;">
-          <p class="card-title">Dépôt d'annonces</p>
-          <p class="card-desc">Interface pour déposer une mission et la rendre visible aux freelances.</p>
+        <div class="project-item" style="pointer-events: none; cursor: default;">
+          <span class="project-meta"></span>
+          <div>
+            <p class="project-title" lang="fr">Dépôt d'annonces</p>
+            <p class="project-title" lang="en">Post a mission</p>
+            <p class="project-desc" lang="fr">Interface pour déposer une mission et la rendre visible aux freelances.</p>
+            <p class="project-desc" lang="en">Interface for posting a mission and making it visible to freelancers.</p>
+          </div>
         </div>
       </div>
     </section>
 
     <section class="section">
-      <p class="section-label">Stack technique</p>
-      <div class="tag-list" style="margin-top: 0;">
+      <p class="section-label">Stack</p>
+      <div class="tag-list">
         <span class="tag">Next.js</span>
         <span class="tag">Supabase</span>
         <span class="tag">Tailwind CSS</span>
       </div>
-    </section>
-
-    <section class="section">
-      <p class="section-label">Ce que j'ai appris</p>
-      <p>
-        <!-- À compléter -->
-      </p>
     </section>
   </main>
 
