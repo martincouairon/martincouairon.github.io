@@ -15,7 +15,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
-  <script src="js/lang.js?v=4" defer></script>
 </head>
 <body>
   <nav>
@@ -213,5 +212,18 @@
   <footer>
     <p>Martin Couairon &mdash; 2026</p>
   </footer>
+  <script>
+    function applyLang(lang) {
+      document.documentElement.classList.remove('lang-fr', 'lang-en');
+      document.documentElement.classList.add('lang-' + lang);
+      var btn = document.getElementById('lang-toggle');
+      if (btn) btn.textContent = lang === 'fr' ? 'EN' : 'FR';
+      localStorage.setItem('lang', lang);
+    }
+    function toggleLang() {
+      applyLang(localStorage.getItem('lang') === 'fr' ? 'en' : 'fr');
+    }
+    applyLang(localStorage.getItem('lang') || (navigator.language.startsWith('fr') ? 'fr' : 'en'));
+  </script>
 </body>
 </html>
