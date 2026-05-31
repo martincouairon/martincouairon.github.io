@@ -262,6 +262,29 @@ p {
   padding-top: 0.15rem;
 }
 
+.cv-bullets {
+  list-style: none;
+  margin-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.cv-bullets li {
+  font-size: 0.9rem;
+  color: var(--muted);
+  padding-left: 1rem;
+  position: relative;
+  line-height: 1.5;
+}
+
+.cv-bullets li::before {
+  content: '–';
+  position: absolute;
+  left: 0;
+  color: #555;
+}
+
 /* ── Project page ── */
 .project-hero {
   margin-bottom: 3rem;
