@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>À propos — Martin Couairon</title>
+  <title>Discussion — Martin Couairon</title>
   <script>
     (function () {
       var saved = localStorage.getItem('lang') || (navigator.language.startsWith('fr') ? 'fr' : 'en');
@@ -23,10 +23,10 @@
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="projects/index.html"><span class="fr">Projets</span><span class="en">Projects</span></a></li>
-        <li><a href="discussion.html">Discussion</a></li>
+        <li><a href="discussion.html" class="active">Discussion</a></li>
         <li><a href="professional.html"><span class="fr">Comptes rendus</span><span class="en">Professional</span></a></li>
         <li><a href="cv.html">CV</a></li>
-        <li><a href="about.html" class="active"><span class="fr">À propos</span><span class="en">About</span></a></li>
+        <li><a href="about.html"><span class="fr">À propos</span><span class="en">About</span></a></li>
       </ul>
       <button id="lang-toggle" onclick="toggleLang()">EN</button>
     </div>
@@ -34,25 +34,21 @@
 
   <main>
     <div class="hero">
-      <h1 class="hero-title">Martin Couairon</h1>
+      <h1 class="hero-title">Discussion</h1>
       <p class="hero-bio fr">
-        Bienvenue ! Ce site constitue un portfolio de mes projets passés et en cours, ainsi que de mes domaines d'intérêt actuels.<br><br>
-        Passionné par l'apprentissage et l'innovation, je m'épanouis en explorant de nouveaux sujets et idées, et en développant des angles ou des approches créatives.<br><br>
-        Mon expertise et mes intérêts se situent principalement à l'intersection de la finance — notamment les normes comptables, la réglementation et l'audit — et de son interdisciplinarité avec d'autres champs comme la sociologie ou ses relations avec les dynamiques institutionnelles.<br><br>
-        J'utilise Claude Code pour donner vie à mes idées et suis toujours ouvert à de nouveaux projets collaboratifs stimulants.
+        Lectures, œuvres et pensées que j'ai envie de partager — en dehors de mes activités professionnelles. Livres, essais, films, ou toute autre forme culturelle qui mérite d'être mentionnée. Les entrées sont libres dans leur format et leur fréquence.
       </p>
       <p class="hero-bio en">
-        Welcome! This website serves as a portfolio of my past and ongoing projects, alongside my current areas of focus.<br><br>
-        As a passionate learner and innovation enthusiast, I thrive in exploring new topics and ideas and coming up with creative angles or approaches.<br><br>
-        My expertise and interests primarily lie at the intersection of finance—specifically accounting norms, regulations, and auditing—and its interdisciplinarity with other fields such as sociology or its relation to institutional dynamics.<br><br>
-        I leverage Claude Code to bring my ideas to life and am always open to exciting new collaborative projects.
+        Readings, works, and thoughts I want to share — beyond my professional activities. Books, essays, films, or any other cultural form worth mentioning. Entries are free in format and frequency.
       </p>
-      <div class="hero-links">
-        <a href="mailto:martincouaironprojets@gmail.com">martincouaironprojets@gmail.com</a>
-        <a href="https://linkedin.com/in/martin-couairon" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="https://github.com/martincouairon" target="_blank" rel="noopener">GitHub</a>
-      </div>
     </div>
+
+    <section class="section">
+      <p class="section-label fr">À venir</p>
+      <p class="section-label en">Coming soon</p>
+      <p class="fr">Les premières entrées seront publiées prochainement.</p>
+      <p class="en">First entries will be published soon.</p>
+    </section>
   </main>
 
   <footer>
