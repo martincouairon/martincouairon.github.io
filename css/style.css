@@ -481,6 +481,27 @@ p:last-child {
   opacity: 0.75;
 }
 
+/* ── Professional page layout ── */
+.professional-layout {
+  display: grid;
+  grid-template-columns: 1fr 200px;
+  gap: 0 4rem;
+  align-items: start;
+}
+
+.professional-sidebar-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.professional-sidebar-list li {
+  font-size: 0.8rem;
+  color: var(--muted);
+  line-height: 1.45;
+}
+
 /* ── Footer ── */
 footer {
   border-top: 1px solid var(--border);
@@ -504,6 +525,11 @@ footer {
   .project-item {
     grid-template-columns: 1fr;
     gap: 0.2rem;
+  }
+
+  .professional-layout {
+    grid-template-columns: 1fr;
+    gap: 2.5rem 0;
   }
 
   .cv-date,
