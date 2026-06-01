@@ -17,7 +17,9 @@
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <nav>
+  <button class="nav-toggle" id="nav-toggle" onclick="toggleNav()">&#9776;</button>
+  <div class="nav-backdrop" id="nav-backdrop" onclick="closeNav()"></div>
+  <nav id="nav-panel">
     <div class="nav-header">
       <span class="nav-brand">Martin Couairon</span>
       <button id="lang-toggle" onclick="toggleLang()">EN</button>
@@ -65,7 +67,18 @@
     <p>Martin Couairon &mdash; 2026</p>
   </footer>
   <script>
-    function applyLang(lang) {
+    function toggleNav() {
+      var panel = document.getElementById('nav-panel');
+      var backdrop = document.getElementById('nav-backdrop');
+      var open = panel.classList.contains('open');
+      panel.classList.toggle('open', !open);
+      backdrop.classList.toggle('open', !open);
+    }
+    function closeNav() {
+      document.getElementById('nav-panel').classList.remove('open');
+      document.getElementById('nav-backdrop').classList.remove('open');
+    }
+        function applyLang(lang) {
       document.documentElement.classList.remove('lang-fr', 'lang-en');
       document.documentElement.classList.add('lang-' + lang);
       var btn = document.getElementById('lang-toggle');
