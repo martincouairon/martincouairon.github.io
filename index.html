@@ -17,7 +17,7 @@
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <button class="nav-toggle" id="nav-toggle" onclick="toggleNav()">&#9776;</button>
+  <button class="nav-toggle" id="nav-toggle" onclick="toggleNav()">›</button>
   <div class="nav-backdrop" id="nav-backdrop" onclick="closeNav()"></div>
   <nav id="nav-panel">
     <div class="nav-header">
@@ -140,13 +140,16 @@
     function toggleNav() {
       var panel = document.getElementById('nav-panel');
       var backdrop = document.getElementById('nav-backdrop');
+      var btn = document.getElementById('nav-toggle');
       var open = panel.classList.contains('open');
       panel.classList.toggle('open', !open);
       backdrop.classList.toggle('open', !open);
+      btn.textContent = open ? '›' : '‹';
     }
     function closeNav() {
       document.getElementById('nav-panel').classList.remove('open');
       document.getElementById('nav-backdrop').classList.remove('open');
+      document.getElementById('nav-toggle').textContent = '›';
     }
         function applyLang(lang) {
       document.documentElement.classList.remove('lang-fr', 'lang-en');
