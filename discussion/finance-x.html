@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html class="lang-fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Finance × — Martin Couairon</title>
+  <script>
+    (function () {
+      var saved = localStorage.getItem('lang') || (navigator.language.startsWith('fr') ? 'fr' : 'en');
+      document.documentElement.className = 'lang-' + saved;
+    })();
+  </script>
+  <style>html.lang-fr .en,html.lang-en .fr{display:none!important}</style>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <nav>
+    <div class="nav-header">
+      <span class="nav-brand">Martin Couairon</span>
+      <button id="lang-toggle" onclick="toggleLang()">EN</button>
+    </div>
+    <ul class="nav-links">
+      <li><a href="/">Home</a></li>
+      <li>
+        <a href="/projects/"><span class="fr">Projets</span><span class="en">Projects</span></a>
+        <ul class="nav-sub">
+          <li><a href="../projects/utile.html">Utile</a></li>
+          <li><a href="../projects/academie.html">Académie</a></li>
+        </ul>
+      </li>
+      <li><a href="../discussion.html" class="active">Discussion</a></li>
+      <li><a href="../professional.html"><span class="fr">Comptes rendus</span><span class="en">Professional</span></a></li>
+      <li><a href="../cv.html">CV</a></li>
+      <li><a href="../about.html"><span class="fr">À propos</span><span class="en">About</span></a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <a href="../discussion.html" class="back-link">← Discussion</a>
+
+    <div class="project-hero">
+      <p class="hero-role">Discussion</p>
+      <h1 class="hero-title">Finance ×</h1>
+      <p class="hero-bio fr">
+        La finance ne s'analyse pas seule : elle s'inscrit dans des territoires, des régimes de valeur et des modes de gouvernement. Ces lectures explorent ses interactions avec la géographie, la sociologie et la science politique.
+      </p>
+      <p class="hero-bio en">
+        Finance does not exist in isolation: it is embedded in territories, value regimes, and modes of government. These readings explore its interactions with geography, sociology, and political science.
+      </p>
+    </div>
+
+    <section class="section">
+
+      <div class="disc-entry">
+        <h3 class="disc-title">Atlas de la finance</h3>
+        <p class="disc-author">Julien Migozzi</p>
+        <p class="disc-note fr">
+          Par une cartographie systématique des flux, des acteurs et des logiques qui structurent la finance mondiale, Migozzi propose un outil de visualisation autant qu'une thèse : la géographie de la finance révèle des concentrations de pouvoir et des inégalités spatiales que les représentations conventionnelles — chiffres agrégés, classements, indices — tendent à masquer. Voir la finance depuis l'espace, c'est déjà la comprendre autrement.
+        </p>
+        <p class="disc-note en">
+          Through a systematic mapping of the flows, actors, and logics that structure global finance, Migozzi offers a visualisation tool as much as an argument: the geography of finance reveals concentrations of power and spatial inequalities that conventional representations — aggregated figures, rankings, indices — tend to conceal. To see finance through space is already to understand it differently.
+        </p>
+        <p class="disc-ref fr">MIGOZZI, Julien. <em>Atlas de la finance.</em></p>
+        <p class="disc-ref en">Migozzi, J. <em>Atlas de la finance.</em></p>
+      </div>
+
+      <div class="disc-entry">
+        <h3 class="disc-title">L'édifice de la valeur</h3>
+        <p class="disc-author">Marine Duros</p>
+        <p class="disc-note fr">
+          Duros interroge la construction sociale de la valeur en finance — non pas comme donnée objective ou résultat de marchés efficients, mais comme un édifice institutionnel, conventionnel et symbolique. L'ouvrage déplace la question : il ne s'agit plus de savoir ce que vaut un actif, mais de comprendre qui a le pouvoir de le valoriser, selon quelles procédures et avec quels effets sur la distribution des richesses.
+        </p>
+        <p class="disc-note en">
+          Duros examines the social construction of value in finance — not as an objective given or the output of efficient markets, but as an institutional, conventional, and symbolic edifice. The work shifts the question: it is no longer about what an asset is worth, but about who has the power to value it, through what procedures, and with what effects on the distribution of wealth.
+        </p>
+        <p class="disc-ref fr">DUROS, Marine. <em>L'édifice de la valeur.</em></p>
+        <p class="disc-ref en">Duros, M. <em>L'édifice de la valeur.</em></p>
+      </div>
+
+      <div class="disc-entry">
+        <h3 class="disc-title fr">Quand les fonds immobiliers tirent profit de la crise des bureaux</h3>
+        <h3 class="disc-title en">When Real Estate Funds Profit from the Office Crisis</h3>
+        <p class="disc-note fr">
+          Face à la vacance croissante des bureaux post-Covid, certains fonds immobiliers ont développé des stratégies de valorisation qui transforment la dépreciation en opportunité. Ce texte décrit les mécanismes financiers et institutionnels par lesquels une crise d'actifs peut devenir un levier de profit pour des investisseurs suffisamment capitalisés — et les effets redistributifs qui en résultent sur les marchés urbains.
+        </p>
+        <p class="disc-note en">
+          Faced with growing post-Covid office vacancy, certain real estate funds developed valuation strategies that transform depreciation into opportunity. This text describes the financial and institutional mechanisms through which an asset crisis can become a profit lever for sufficiently capitalised investors — and the redistributive effects this produces on urban markets.
+        </p>
+      </div>
+
+      <div class="disc-entry">
+        <h3 class="disc-title">La démocratie disciplinée par la dette</h3>
+        <p class="disc-author">Benjamin Lemoine</p>
+        <p class="disc-note fr">
+          Lemoine montre comment la dette publique est devenue un instrument de gouvernement — non pas une contrainte subie, mais un dispositif construit pour imposer une discipline budgétaire qui court-circuite les arbitrages démocratiques. En reconstruisant la trajectoire historique et politique de la dette française, l'ouvrage en dévoile la dimension normative : la dette n'est pas un fait économique neutre, c'est un rapport de force.
+        </p>
+        <p class="disc-note en">
+          Lemoine shows how public debt has become an instrument of government — not a constraint endured, but a device constructed to impose fiscal discipline that short-circuits democratic deliberation. By reconstructing the historical and political trajectory of French public debt, the work exposes its normative dimension: debt is not a neutral economic fact, it is a power relation.
+        </p>
+        <p class="disc-ref fr">LEMOINE, Benjamin. <em>La démocratie disciplinée par la dette.</em> Paris : La Découverte, 2022.</p>
+        <p class="disc-ref en">Lemoine, B. (2022). <em>La démocratie disciplinée par la dette.</em> Paris: La Découverte.</p>
+      </div>
+
+    </section>
+  </main>
+
+  <footer>
+    <p>Martin Couairon &mdash; 2026</p>
+  </footer>
+  <script>
+    function applyLang(lang) {
+      document.documentElement.classList.remove('lang-fr', 'lang-en');
+      document.documentElement.classList.add('lang-' + lang);
+      var btn = document.getElementById('lang-toggle');
+      if (btn) btn.textContent = lang === 'fr' ? 'EN' : 'FR';
+      localStorage.setItem('lang', lang);
+    }
+    function toggleLang() {
+      applyLang(localStorage.getItem('lang') === 'fr' ? 'en' : 'fr');
+    }
+    applyLang(localStorage.getItem('lang') || (navigator.language.startsWith('fr') ? 'fr' : 'en'));
+  </script>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html class="lang-fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sciences sociales — Martin Couairon</title>
+  <script>
+    (function () {
+      var saved = localStorage.getItem('lang') || (navigator.language.startsWith('fr') ? 'fr' : 'en');
+      document.documentElement.className = 'lang-' + saved;
+    })();
+  </script>
+  <style>html.lang-fr .en,html.lang-en .fr{display:none!important}</style>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <nav>
+    <div class="nav-header">
+      <span class="nav-brand">Martin Couairon</span>
+      <button id="lang-toggle" onclick="toggleLang()">EN</button>
+    </div>
+    <ul class="nav-links">
+      <li><a href="/">Home</a></li>
+      <li>
+        <a href="/projects/"><span class="fr">Projets</span><span class="en">Projects</span></a>
+        <ul class="nav-sub">
+          <li><a href="../projects/utile.html">Utile</a></li>
+          <li><a href="../projects/academie.html">Académie</a></li>
+        </ul>
+      </li>
+      <li><a href="../discussion.html" class="active">Discussion</a></li>
+      <li><a href="../professional.html"><span class="fr">Comptes rendus</span><span class="en">Professional</span></a></li>
+      <li><a href="../cv.html">CV</a></li>
+      <li><a href="../about.html"><span class="fr">À propos</span><span class="en">About</span></a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <a href="../discussion.html" class="back-link">← Discussion</a>
+
+    <div class="project-hero">
+      <p class="hero-role">Discussion</p>
+      <h1 class="hero-title fr">Sciences sociales</h1>
+      <h1 class="hero-title en">Social Studies</h1>
+      <p class="hero-bio fr">
+        Trois lectures sur des mécanismes sociaux souvent inaperçus : les biais de genre dans la conception des systèmes, la logique du capital social et la puissance symbolique des rites d'institution.
+      </p>
+      <p class="hero-bio en">
+        Three readings on social mechanisms that often go unnoticed: gender bias in system design, the logic of social capital, and the symbolic power of institutional rites.
+      </p>
+    </div>
+
+    <section class="section">
+
+      <div class="disc-entry">
+        <h3 class="disc-title fr">Femmes invisibles</h3>
+        <h3 class="disc-title en">Invisible Women</h3>
+        <p class="disc-author">Caroline Criado Perez</p>
+        <p class="disc-note fr">
+          En documentant l'absence systématique des femmes dans les données qui servent à concevoir nos infrastructures, nos médicaments, nos algorithmes et nos villes, Criado Perez met au jour un angle mort structurel. Ce n'est pas une question de mauvaise volonté : c'est l'effet mécanique d'un défaut de représentation dans les processus de production de connaissance. Un plaidoyer rigoureux pour une conception désagrégée par genre, dont les implications dépassent largement le seul cadre féministe.
+        </p>
+        <p class="disc-note en">
+          By documenting the systematic absence of women from the data used to design our infrastructure, medicines, algorithms, and cities, Criado Perez exposes a structural blind spot. This is not a matter of ill will: it is the mechanical effect of a representation gap in how knowledge is produced. A rigorous case for gender-disaggregated design, with implications that extend well beyond a strictly feminist frame.
+        </p>
+        <p class="disc-ref fr">CRIADO PEREZ, Caroline. <em>Femmes invisibles : comment le monde est fait pour les hommes.</em> Paris : Éditions des équateurs, 2020.</p>
+        <p class="disc-ref en">Criado Perez, C. (2019). <em>Invisible Women: Data Bias in a World Designed for Men.</em> London: Chatto & Windus.</p>
+      </div>
+
+      <div class="disc-entry">
+        <h3 class="disc-title">Le capital social : notes provisoires</h3>
+        <p class="disc-author">Pierre Bourdieu</p>
+        <p class="disc-note fr">
+          Dans ce texte bref mais décisif, Bourdieu définit le capital social comme l'ensemble des ressources — actuelles ou potentielles — liées à l'appartenance à un réseau durable de relations. Sa contribution centrale est de montrer que ce capital est convertible : il peut se transformer en capital économique ou culturel, et il est inégalement distribué selon les positions sociales. Une grille d'analyse qui permet de comprendre pourquoi l'accès aux ressources n'est jamais seulement une question de mérite ou de compétence.
+        </p>
+        <p class="disc-note en">
+          In this brief but decisive text, Bourdieu defines social capital as the aggregate of actual or potential resources linked to membership in a durable network of relationships. His central contribution is to show that this capital is convertible: it can be transformed into economic or cultural capital, and it is unequally distributed according to social position. A framework for understanding why access to resources is never simply a matter of merit or competence.
+        </p>
+        <p class="disc-ref fr">BOURDIEU, Pierre. « Le capital social : notes provisoires ». <em>Actes de la recherche en sciences sociales,</em> vol. 31, 1980, p. 2-3.</p>
+        <p class="disc-ref en">Bourdieu, P. (1980). 'Le capital social: notes provisoires'. <em>Actes de la Recherche en Sciences Sociales,</em> 31, pp. 2–3.</p>
+      </div>
+
+      <div class="disc-entry">
+        <h3 class="disc-title">Les rites comme actes d'institution</h3>
+        <p class="disc-author">Pierre Bourdieu</p>
+        <p class="disc-note fr">
+          Bourdieu y déplace la question des rites de passage : l'enjeu n'est pas de marquer une transition, mais d'instituer une différence — de transformer une frontière sociale arbitraire en limite naturelle et légitime. Ce texte est une clé de lecture pour comprendre comment des catégories sociales (diplômé, noble, citoyen) sont produites et entretenues par des actes performatifs collectifs. La distinction n'est pas entre celui qui est passé et celui qui ne l'est pas encore, mais entre celui qui est institué et celui qui ne le sera jamais.
+        </p>
+        <p class="disc-note en">
+          Bourdieu shifts the question of rites of passage: the point is not to mark a transition, but to institute a difference — to transform an arbitrary social boundary into a natural and legitimate limit. This text is a key to understanding how social categories (graduate, noble, citizen) are produced and maintained through collective performative acts. The distinction is not between the one who has passed and the one who has not yet, but between the one who is instituted and the one who never will be.
+        </p>
+        <p class="disc-ref fr">BOURDIEU, Pierre. « Les rites comme actes d'institution ». <em>Actes de la recherche en sciences sociales,</em> vol. 43, 1982, p. 58-63.</p>
+        <p class="disc-ref en">Bourdieu, P. (1982). 'Les rites comme actes d'institution'. <em>Actes de la Recherche en Sciences Sociales,</em> 43, pp. 58–63.</p>
+      </div>
+
+    </section>
+  </main>
+
+  <footer>
+    <p>Martin Couairon &mdash; 2026</p>
+  </footer>
+  <script>
+    function applyLang(lang) {
+      document.documentElement.classList.remove('lang-fr', 'lang-en');
+      document.documentElement.classList.add('lang-' + lang);
+      var btn = document.getElementById('lang-toggle');
+      if (btn) btn.textContent = lang === 'fr' ? 'EN' : 'FR';
+      localStorage.setItem('lang', lang);
+    }
+    function toggleLang() {
+      applyLang(localStorage.getItem('lang') === 'fr' ? 'en' : 'fr');
+    }
+    applyLang(localStorage.getItem('lang') || (navigator.language.startsWith('fr') ? 'fr' : 'en'));
+  </script>
+</body>
+</html>
