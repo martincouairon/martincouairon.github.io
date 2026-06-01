@@ -593,6 +593,38 @@ p:last-child {
   line-height: 1.45;
 }
 
+/* ── Section navigation band ── */
+.section-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1.75rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.section-nav a {
+  font-size: 0.75rem;
+  color: var(--muted);
+  text-decoration: none;
+  padding: 0.2rem 0.55rem;
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  transition: color 0.15s, border-color 0.15s;
+}
+
+.section-nav a:hover {
+  color: var(--text);
+  border-color: var(--muted);
+}
+
+.section-nav a.active {
+  color: var(--text);
+  border-color: var(--text);
+  background: var(--surface);
+  font-weight: 500;
+}
+
 /* ── Discussion entries ── */
 .disc-entry {
   padding: 1.5rem 0;
