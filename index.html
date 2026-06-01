@@ -18,18 +18,24 @@
 </head>
 <body>
   <nav>
-    <span class="nav-brand">Martin Couairon</span>
-    <div class="nav-right">
-      <ul class="nav-links">
-        <li><a href="/" class="active">Home</a></li>
-        <li><a href="/projects/"><span class="fr">Projets</span><span class="en">Projects</span></a></li>
-        <li><a href="discussion.html">Discussion</a></li>
-        <li><a href="professional.html"><span class="fr">Comptes rendus</span><span class="en">Professional</span></a></li>
-        <li><a href="cv.html">CV</a></li>
-        <li><a href="about.html"><span class="fr">À propos</span><span class="en">About</span></a></li>
-      </ul>
+    <div class="nav-header">
+      <span class="nav-brand">Martin Couairon</span>
       <button id="lang-toggle" onclick="toggleLang()">EN</button>
     </div>
+    <ul class="nav-links">
+      <li><a href="/" class="active">Home</a></li>
+      <li>
+        <a href="/projects/"><span class="fr">Projets</span><span class="en">Projects</span></a>
+        <ul class="nav-sub">
+          <li><a href="projects/utile.html">Utile</a></li>
+          <li><a href="projects/academie.html">Académie</a></li>
+        </ul>
+      </li>
+      <li><a href="discussion.html">Discussion</a></li>
+      <li><a href="professional.html"><span class="fr">Comptes rendus</span><span class="en">Professional</span></a></li>
+      <li><a href="cv.html">CV</a></li>
+      <li><a href="about.html"><span class="fr">À propos</span><span class="en">About</span></a></li>
+    </ul>
   </nav>
 
   <main>
