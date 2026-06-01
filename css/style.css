@@ -627,6 +627,9 @@ p:last-child {
 
 /* ── Discussion entries ── */
 .disc-entry {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.75rem;
   padding: 1.5rem 0;
   border-bottom: 1px solid var(--border);
 }
@@ -638,6 +641,32 @@ p:last-child {
 .disc-entry:last-child {
   border-bottom: none;
   padding-bottom: 0;
+}
+
+.disc-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.disc-cover {
+  flex-shrink: 0;
+  text-decoration: none;
+  padding-top: 0.15rem;
+}
+
+.disc-cover img {
+  width: 80px;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  transition: opacity 0.2s;
+  display: block;
+}
+
+.disc-cover:hover img {
+  opacity: 0.75;
 }
 
 .disc-title {
@@ -714,7 +743,8 @@ footer {
     gap: 2.5rem 0;
   }
 
-  .project-preview-thumb {
+  .project-preview-thumb,
+  .disc-cover {
     display: none;
   }
 }
