@@ -54,13 +54,19 @@
     </div>
 
     <section class="section">
-      <p class="section-label"><span class="fr">Le problème</span><span class="en">The problem</span></p>
+      <p class="section-label"><span class="fr">État du projet</span><span class="en">Project status</span></p>
+      <p class="fr">La vision d'Académie me semble prometteuse, mais les résultats actuels ne sont pas encore à la hauteur de mes attentes. Je suis ouvert à tout retour, idée ou opportunité de collaboration pour faire avancer le projet — n'hésitez pas à me contacter.</p>
+      <p class="en">Académie's vision feels genuinely promising, but the current results don't yet live up to my expectations. I'm very open to feedback, ideas, or collaboration opportunities to move the project forward — feel free to reach out.</p>
+    </section>
+
+    <section class="section">
+      <p class="section-label"><span class="fr">L'idée</span><span class="en">The idea</span></p>
       <p class="fr">La recherche de ressources académiques en ligne est souvent fragmentée et peu fiable — il est difficile d'identifier rapidement des sources pertinentes et de qualité sur un sujet donné.</p>
       <p class="en">Finding quality academic resources online is often fragmented and unreliable — it is hard to quickly identify relevant, high-quality sources on a given topic.</p>
     </section>
 
     <section class="section">
-      <p class="section-label"><span class="fr">La solution</span><span class="en">The solution</span></p>
+      <p class="section-label"><span class="fr">Ma vision</span><span class="en">My vision</span></p>
       <p class="fr">Académie est un moteur de recherche de ressources académiques alimenté par Exa, avec un scoring par IA et des filtres avancés pour affiner les résultats par domaine, type de source ou période.</p>
       <p class="en">Académie is an academic resource search engine powered by Exa, with AI scoring and advanced filters to refine results by field, source type, or time period.</p>
     </section>
@@ -71,19 +77,28 @@
         <div class="project-item" style="pointer-events: none; cursor: default;">
           <span class="project-meta"></span>
           <div>
-            <p class="project-title fr">Recherche sémantique</p>
-            <p class="project-title en">Semantic search</p>
-            <p class="project-desc fr">Recherche de ressources académiques via Exa, moteur de recherche neuronal optimisé pour le contenu de qualité.</p>
-            <p class="project-desc en">Academic resource search powered by Exa, a neural search engine optimised for high-quality content.</p>
+            <p class="project-title fr">Trois modes de recherche</p>
+            <p class="project-title en">Three search modes</p>
+            <p class="project-desc fr">Auto (bascule intelligent entre sémantique et mots-clés), Sémantique (recherche neuronale Exa pour des requêtes conceptuelles) et Mots-clés (correspondance exacte pour des termes précis).</p>
+            <p class="project-desc en">Auto (smart switching between semantic and keyword), Semantic (Exa's neural search for conceptual queries), and Keywords (exact match for precise terms).</p>
           </div>
         </div>
         <div class="project-item" style="pointer-events: none; cursor: default;">
           <span class="project-meta"></span>
           <div>
-            <p class="project-title fr">Scoring IA</p>
-            <p class="project-title en">AI scoring</p>
-            <p class="project-desc fr">Classement des résultats par pertinence grâce à un modèle de scoring basé sur l'IA.</p>
-            <p class="project-desc en">Results ranked by relevance using an AI-based scoring model.</p>
+            <p class="project-title fr">Scoring IA en temps réel</p>
+            <p class="project-title en">Real-time AI scoring</p>
+            <p class="project-desc fr">Chaque résultat est évalué et reclassé par Claude selon sa pertinence académique — le score arrive en streaming sur les résultats bruts déjà affichés.</p>
+            <p class="project-desc en">Each result is evaluated and re-ranked by Claude for academic relevance — the score streams in on top of the raw results already on screen.</p>
+          </div>
+        </div>
+        <div class="project-item" style="pointer-events: none; cursor: default;">
+          <span class="project-meta"></span>
+          <div>
+            <p class="project-title fr">Streaming deux phases</p>
+            <p class="project-title en">Two-phase streaming</p>
+            <p class="project-desc fr">Les résultats Exa s'affichent immédiatement via React Suspense ; le scoring IA arrive ensuite par-dessus sans rechargement de page — expérience fluide même pour des requêtes longues.</p>
+            <p class="project-desc en">Exa results appear immediately via React Suspense; AI scoring streams in on top without a page reload — smooth experience even for slow queries.</p>
           </div>
         </div>
         <div class="project-item" style="pointer-events: none; cursor: default;">
@@ -91,17 +106,20 @@
           <div>
             <p class="project-title fr">Filtres avancés</p>
             <p class="project-title en">Advanced filters</p>
-            <p class="project-desc fr">Affinage des résultats par domaine, type de source et période de publication.</p>
-            <p class="project-desc en">Refine results by field, source type, and publication period.</p>
+            <p class="project-desc fr">Filtrage par domaine (catégories), fenêtre temporelle (1, 5 ou 10 ans), format (PDF uniquement ou exclu) et accès libre — tous propagés dans l'URL pour être partageables.</p>
+            <p class="project-desc en">Filter by field (categories), time window (1, 5, or 10 years), format (PDF only or excluded), and open access — all reflected in the URL for easy sharing.</p>
+          </div>
+        </div>
+        <div class="project-item" style="pointer-events: none; cursor: default;">
+          <span class="project-meta"></span>
+          <div>
+            <p class="project-title fr">Tableau de résultats structuré</p>
+            <p class="project-title en">Structured results table</p>
+            <p class="project-desc fr">Colonnes titre, auteurs, source, année et score IA ; sidebar latérale "À citer" avec les métadonnées de citation formatées pour chaque résultat sélectionné.</p>
+            <p class="project-desc en">Columns for title, authors, source, year and AI score; a "Cite" sidebar with formatted citation metadata for each selected result.</p>
           </div>
         </div>
       </div>
-    </section>
-
-    <section class="section">
-      <p class="section-label"><span class="fr">État du projet</span><span class="en">Project status</span></p>
-      <p class="fr">La vision d'Académie me semble prometteuse, mais les résultats actuels ne sont pas encore à la hauteur de mes attentes. Je suis ouvert à tout retour, idée ou opportunité de collaboration pour faire avancer le projet — n'hésitez pas à me contacter.</p>
-      <p class="en">Académie's vision feels genuinely promising, but the current results don't yet live up to my expectations. I'm very open to feedback, ideas, or collaboration opportunities to move the project forward — feel free to reach out.</p>
     </section>
 
     <section class="section">
@@ -110,6 +128,7 @@
         <span class="tag">Next.js 15</span>
         <span class="tag">TypeScript</span>
         <span class="tag">Exa API</span>
+        <span class="tag">Claude API</span>
         <span class="tag">Tailwind CSS</span>
         <span class="tag">Vercel</span>
       </div>
