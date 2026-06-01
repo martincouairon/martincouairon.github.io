@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html class="lang-fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carrefour — Martin Couairon</title>
+  <script>
+    (function () {
+      var saved = localStorage.getItem('lang') || (navigator.language.startsWith('fr') ? 'fr' : 'en');
+      document.documentElement.className = 'lang-' + saved;
+    })();
+  </script>
+  <style>html.lang-fr .en,html.lang-en .fr{display:none!important}</style>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <nav>
+    <div class="nav-header">
+      <span class="nav-brand">Martin Couairon</span>
+      <button id="lang-toggle" onclick="toggleLang()">EN</button>
+    </div>
+    <ul class="nav-links">
+      <li><a href="/">Home</a></li>
+      <li>
+        <a href="/projects/"><span class="fr">Projets</span><span class="en">Projects</span></a>
+        <ul class="nav-sub">
+          <li><a href="../projects/utile.html">Utile</a></li>
+          <li><a href="../projects/academie.html">Académie</a></li>
+        </ul>
+      </li>
+      <li><a href="../discussion.html">Discussion</a></li>
+      <li><a href="../professional.html" class="active"><span class="fr">Comptes rendus</span><span class="en">Professional</span></a></li>
+      <li><a href="../cv.html">CV</a></li>
+      <li><a href="../about.html"><span class="fr">À propos</span><span class="en">About</span></a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <a href="../professional.html" class="back-link">
+      ← <span class="fr">Comptes rendus</span><span class="en">Professional accounts</span>
+    </a>
+
+    <div class="project-hero">
+      <p class="hero-role">
+        <span class="fr">Services</span><span class="en">Services</span>
+        · Forvis Mazars
+      </p>
+      <h1 class="hero-title">Carrefour</h1>
+      <p class="hero-bio fr">Groupe de distribution alimentaire et non-alimentaire parmi les premiers mondiaux, coté en bourse.</p>
+      <p class="hero-bio en">One of the world's largest food and non-food retail groups, listed on the stock exchange.</p>
+    </div>
+
+    <section class="section">
+      <p class="section-label fr">Contexte</p>
+      <p class="section-label en">Context</p>
+      <p class="fr" style="color:var(--subtle)">À rédiger.</p>
+      <p class="en" style="color:var(--subtle)">To be written.</p>
+    </section>
+
+    <section class="section">
+      <p class="section-label">Mission</p>
+      <p class="fr" style="color:var(--subtle)">À rédiger.</p>
+      <p class="en" style="color:var(--subtle)">To be written.</p>
+    </section>
+
+    <section class="section">
+      <p class="section-label fr">Points marquants</p>
+      <p class="section-label en">Key highlights</p>
+      <p class="fr" style="color:var(--subtle)">À rédiger.</p>
+      <p class="en" style="color:var(--subtle)">To be written.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Martin Couairon &mdash; 2026</p>
+  </footer>
+  <script>
+    function applyLang(lang) {
+      document.documentElement.classList.remove('lang-fr', 'lang-en');
+      document.documentElement.classList.add('lang-' + lang);
+      var btn = document.getElementById('lang-toggle');
+      if (btn) btn.textContent = lang === 'fr' ? 'EN' : 'FR';
+      localStorage.setItem('lang', lang);
+    }
+    function toggleLang() {
+      applyLang(localStorage.getItem('lang') === 'fr' ? 'en' : 'fr');
+    }
+    applyLang(localStorage.getItem('lang') || (navigator.language.startsWith('fr') ? 'fr' : 'en'));
+  </script>
+</body>
+</html>
