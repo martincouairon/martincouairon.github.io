@@ -525,6 +525,24 @@ p:last-child {
   opacity: 0.75;
 }
 
+/* ── Sidebar group labels ── */
+.sidebar-group {
+  margin-bottom: 1.1rem;
+}
+
+.sidebar-group:last-child {
+  margin-bottom: 0;
+}
+
+.sidebar-group-label {
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--subtle);
+  margin-bottom: 0.35rem;
+}
+
 /* ── Professional page layout ── */
 .professional-layout {
   display: grid;
