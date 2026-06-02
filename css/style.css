@@ -410,7 +410,7 @@ p:last-child {
 }
 
 .project-hero-img img {
-  max-height: 800px;
+  max-height: 400px;
   width: auto;
   border-radius: 6px;
   border: 1px solid var(--border);
