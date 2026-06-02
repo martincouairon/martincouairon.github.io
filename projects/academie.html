@@ -72,8 +72,22 @@
 
     <section class="section">
       <p class="section-label"><span class="fr">État du projet</span><span class="en">Project status</span></p>
-      <p class="fr">La vision d'Académie me semble prometteuse, mais les résultats actuels ne sont pas encore à la hauteur de mes attentes. Je suis ouvert à tout retour, idée ou opportunité de collaboration pour faire avancer le projet — n'hésitez pas à me contacter.</p>
-      <p class="en">Académie's vision feels genuinely promising, but the current results don't yet live up to my expectations. I'm very open to feedback, ideas, or collaboration opportunities to move the project forward — feel free to reach out.</p>
+      <p class="fr">La vision d'Académie me semble prometteuse, mais plusieurs limites demeurent. La présentation en tableau ne garantit pas que toutes les informations affichées soient vraiment utiles — le type de source ou le domaine ne sont pas toujours parlants, et l'auteur ainsi que la date de publication restent difficiles à extraire de façon fiable. Plus fondamentalement, les sources sont filtrées manuellement en amont : des institutions non incluses dans la liste disparaissent des résultats, ce qui rend difficile de juger de la pertinence réelle de ce qui est remonté.</p>
+      <p class="en">Académie's vision feels genuinely promising, but a number of limitations remain. The table format does not guarantee that all displayed information is truly useful — the source type or domain name are not always meaningful, and extracting author and publication date reliably has proven difficult. More fundamentally, sources are filtered manually before results are rendered: institutions not included in the list simply disappear from the output, making it hard to assess the real relevance of what surfaces.</p>
+      <p class="fr">Trois questions restent ouvertes :</p>
+      <p class="en">Three questions remain open:</p>
+      <ol class="fr">
+        <li>Les résultats n'ont pas encore fait la preuve d'une pertinence incontestable.</li>
+        <li>La présentation mériterait d'être nettement mieux organisée.</li>
+        <li>L'outil est peut-être peu adapté aux chercheurs confirmés, qui par définition connaissent leur domaine en profondeur et savent souvent d'avance, via les conférences, quelles publications sont à venir.</li>
+      </ol>
+      <ol class="en">
+        <li>The results have yet to demonstrate unquestionable relevance.</li>
+        <li>The presentation would benefit from significantly better organisation.</li>
+        <li>The tool may not be well-suited to actual researchers, who by definition have deep expertise in their field and often know of upcoming publications before they appear, through conferences and professional networks.</li>
+      </ol>
+      <p class="fr">Je suis ouvert à tout retour, idée ou opportunité de collaboration — n'hésitez pas à me contacter.</p>
+      <p class="en">I remain open to feedback, ideas, or collaboration opportunities — feel free to reach out.</p>
     </section>
 
     <section class="section">
@@ -116,6 +130,28 @@
         <li>Allow you to distinguish between freely accessible publications and those behind a paywall, and let PDF files come to the surface — often the richest sources, yet among the least visible in standard search results.</li>
         <li>Copy a publication's reference straight from the results, in Harvard or AFNOR style, without having to reconstruct it later.</li>
       </ol>
+    </section>
+
+    <section class="section">
+      <p class="section-label"><span class="fr">La construction</span><span class="en">Building it</span></p>
+      <p class="fr">L'ambition de départ différait d'Utile : plutôt que de continuer à travailler avec Claude, je voulais construire des agents automatisés. En tant qu'IA générative, Claude me semblait moins sobre écologiquement qu'un simple appel occasionnel à une API — quelques lignes de code devant suffire à faire le travail. Les résultats n'ont pas été convaincants. C'est finalement en demandant à Claude de déployer le code directement sur jesuisutile.fr, à côté du site existant, que la page a pris la forme souhaitée. Académie y est donc hébergée depuis, sans être référencée depuis Utile.</p>
+      <p class="en">The initial ambition differed from Utile: rather than continuing to work with Claude, I wanted to build lightweight automated agents. As a generative AI, Claude seemed to me less environmentally friendly than the occasional API call — a few lines of code should have been enough to do the job. The results were not convincing. It was ultimately by asking Claude to deploy the code directly on jesuisutile.fr, alongside the existing site, that the page took the shape I had in mind. Académie has been hosted there since, unreferenced from Utile.</p>
+      <p class="fr">Pour le nom comme pour l'image, le choix s'est fait naturellement : Académie, et L'École d'Athènes de Raphaël.</p>
+      <p class="en">For the name and the image, the choice came naturally: Académie, and Raphael's School of Athens.</p>
+      <p class="fr">La partie la plus stimulante a été le choix du moteur de recherche. Trois pistes ont été explorées :</p>
+      <p class="en">The most exciting part was choosing the search engine. Three options were explored:</p>
+      <ol class="fr">
+        <li>Le moteur de recherche personnalisé de Google (Custom Search Engine) — permettait de sélectionner ses sources, mais se révélait incapable d'aller chercher des résultats au-delà de l'horizon habituel.</li>
+        <li>L'API Google Custom Search et l'API Vector Search — le service n'était plus disponible sous la forme nécessaire, et les recherches sémantiques par IA exigeaient des tokens coûteux.</li>
+        <li>Exa.ai — proposant une recherche sémantique via API. C'était exactement ce qu'il fallait.</li>
+      </ol>
+      <ol class="en">
+        <li>Google's Custom Search Engine — allowed choosing which sources to search from, but proved incapable of surfacing results beyond the obvious.</li>
+        <li>Google's Custom Search API and Vector Search API — the service was no longer available in the form needed, and AI-powered searches required expensive tokens.</li>
+        <li>Exa.ai — offering semantic search results via API. It fit the bill.</li>
+      </ol>
+      <p class="fr">À partir d'Exa, j'ai organisé les résultats : filtres par type de source (académique, presse, corps professionnel) et par accès (libre ou payant), mise en valeur des fichiers PDF, et option pour copier directement la référence d'une publication en style Harvard ou AFNOR.</p>
+      <p class="en">From there, I organised the results: filters by source type (academic, press, professional body) and by access (free or paywalled), surfacing of PDF files, and an option to copy each publication's reference directly in Harvard or AFNOR style.</p>
     </section>
 
     <section class="section">

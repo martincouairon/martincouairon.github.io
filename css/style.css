@@ -393,7 +393,7 @@ p:last-child {
 
 .project-hero.has-img {
   display: flex;
-  align-items: stretch;
+  align-items: flex-start;
   gap: 2.5rem;
 }
 
@@ -406,16 +406,15 @@ p:last-child {
   flex-shrink: 0;
   display: block;
   text-decoration: none;
+  padding-top: 0.2rem;
 }
 
 .project-hero-img img {
-  height: 100%;
+  max-height: 100px;
   width: auto;
   border-radius: 6px;
   border: 1px solid var(--border);
   display: block;
-  object-fit: cover;
-  object-position: top left;
   transition: opacity 0.2s;
 }
 
