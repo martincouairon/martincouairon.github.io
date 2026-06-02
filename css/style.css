@@ -231,6 +231,19 @@ p:last-child {
   margin-bottom: 3rem;
 }
 
+.section ol {
+  color: inherit;
+  padding-left: 1.75rem;
+  margin: 0.75rem 0;
+}
+
+.section ol li {
+  color: inherit;
+  padding-left: 0.25rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.65;
+}
+
 .section-label {
   font-size: 0.72rem;
   font-weight: 600;
