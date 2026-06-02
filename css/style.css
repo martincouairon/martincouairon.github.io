@@ -232,13 +232,12 @@ p:last-child {
 }
 
 .section ol {
-  color: inherit;
   padding-left: 1.75rem;
   margin: 0.75rem 0;
 }
 
 .section ol li {
-  color: inherit;
+  color: var(--muted);
   padding-left: 0.25rem;
   margin-bottom: 0.5rem;
   line-height: 1.65;
