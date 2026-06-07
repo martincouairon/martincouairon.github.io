@@ -15,42 +15,57 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../css/style.css" />
+  <meta name="description" content="Simulation Monte Carlo de la dérive génétique — modèle de Wright-Fisher et extensions. Monte Carlo simulation of genetic drift in the Wright-Fisher model." />
+  <meta property="og:title" content="Dérive génétique / Genetic Drift — Martin Couairon" />
+  <meta property="og:description" content="Monte Carlo simulation of genetic drift: bottlenecks, Cannings overdispersion, spatial structure, applied to human demography." />
+  <meta property="og:url" content="https://martincouairon.github.io/projects/lapins.html" />
+  <meta property="og:type" content="website" />
+  <link rel="canonical" href="https://martincouairon.github.io/projects/lapins.html" />
 </head>
 <body>
   <nav>
-    <span class="nav-brand">Martin Couairon</span>
-    <div class="nav-right">
-      <ul class="nav-links">
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="index.html" class="active"><span class="fr">Projets</span><span class="en">Projects</span></a></li>
-        <li><a href="../discussion.html">Discussion</a></li>
-        <li><a href="../professional.html"><span class="fr">Comptes rendus</span><span class="en">Professional</span></a></li>
-        <li><a href="../cv.html">CV</a></li>
-        <li><a href="../about.html"><span class="fr">À propos</span><span class="en">About</span></a></li>
-      </ul>
+    <div class="nav-header">
+      <span class="nav-brand">Martin Couairon</span>
       <button id="lang-toggle" onclick="toggleLang()">EN</button>
     </div>
+    <ul class="nav-links">
+      <li><a href="/">Home</a></li>
+      <li>
+        <a href="/projects/"><span class="fr">Projets</span><span class="en">Projects</span></a>
+        <ul class="nav-sub">
+          <li><a href="utile.html">Utile</a></li>
+          <li><a href="academie.html">Académie</a></li>
+          <li><a href="lapins.html" class="active"><span class="fr">Dérive génétique</span><span class="en">Genetic Drift</span></a></li>
+        </ul>
+      </li>
+      <li><a href="../discussion.html">Discussion</a></li>
+      <li><a href="../professional.html"><span class="fr">Comptes rendus</span><span class="en">Professional</span></a></li>
+      <li><a href="../cv.html">CV</a></li>
+      <li><a href="../about.html"><span class="fr">À propos</span><span class="en">About</span></a></li>
+    </ul>
   </nav>
 
   <main>
-    <a href="index.html" class="back-link">
+    <a href="/projects/" class="back-link">
       ← <span class="fr">Tous les projets</span><span class="en">All projects</span>
     </a>
 
     <div class="project-hero">
-      <p class="hero-role" style="margin-bottom: 0.5rem;">
-        2026 · <span class="fr">Recherche</span><span class="en">Research</span>
-      </p>
-      <h1 class="hero-title">
-        <span class="fr">Dérive génétique</span><span class="en">Genetic Drift</span>
-      </h1>
-      <p class="hero-bio fr">Simulation Monte Carlo du modèle de Wright-Fisher et de ses extensions — goulots d'étranglement, reproduction overdispersée, structure spatiale. Application aux populations humaines.</p>
-      <p class="hero-bio en">Monte Carlo simulation of the Wright-Fisher model and its extensions — bottlenecks, overdispersed reproduction, spatial structure. Applied to human demography.</p>
-      <p class="project-cta">
-        <a href="lapins-paper.html" class="project-cta-link"><span class="fr">Lire l'article</span><span class="en">Read the paper</span> →</a>
-      </p>
-      <div class="project-links">
-        <a href="https://github.com/martincouairon/lapins" target="_blank" rel="noopener">GitHub</a>
+      <div class="project-hero-body">
+        <p class="hero-role" style="margin-bottom: 0.5rem;">
+          2026 · <span class="fr">Recherche · ~40 h</span><span class="en">Research · ~40 h</span>
+        </p>
+        <h1 class="hero-title">
+          <span class="fr">Dérive génétique</span><span class="en">Genetic Drift</span>
+        </h1>
+        <p class="hero-bio fr">Simulation Monte Carlo du modèle de Wright-Fisher et de ses extensions — goulots d'étranglement, reproduction overdispersée, structure spatiale. Application aux populations humaines.</p>
+        <p class="hero-bio en">Monte Carlo simulation of the Wright-Fisher model and its extensions — bottlenecks, overdispersed reproduction, spatial structure. Applied to human demography.</p>
+        <p class="project-cta">
+          <a href="lapins-paper.html" class="project-cta-link"><span class="fr">Lire l'article</span><span class="en">Read the paper</span> →</a>
+        </p>
+        <div class="project-links">
+          <a href="https://github.com/martincouairon/lapins" target="_blank" rel="noopener">GitHub</a>
+        </div>
       </div>
     </div>
 
@@ -62,8 +77,8 @@
 
     <section class="section">
       <p class="section-label"><span class="fr">L'approche</span><span class="en">The approach</span></p>
-      <p class="fr">Une simulation Monte Carlo complète du modèle de Wright-Fisher, vérifiée empiriquement puis étendue dans quatre directions originales : sélection naturelle, goulots d'étranglement périodiques avec récupération lente, reproduction overdispersée (modèle de Cannings), et structure spatiale en métapopulation avec migration et attractivité locale. Chaque extension est comparée à la théorie analytique disponible.</p>
-      <p class="en">A full Monte Carlo simulation of the Wright-Fisher model, empirically verified then extended in four original directions: natural selection, periodic bottlenecks with slow recovery, overdispersed reproduction (Cannings model), and spatial metapopulation structure with migration and local attractivity. Each extension is benchmarked against available analytical theory.</p>
+      <p class="fr">Une simulation Monte Carlo complète du modèle de Wright-Fisher, vérifiée empiriquement puis étendue dans quatre directions originales : sélection naturelle, goulots d'étranglement périodiques avec récupération lente, reproduction overdispersée (modèle de Cannings), et structure spatiale en métapopulation avec migration et attractivité locale. Chaque extension est comparée à la théorie analytique disponible et les directions ouvertes sont identifiées.</p>
+      <p class="en">A full Monte Carlo simulation of the Wright-Fisher model, empirically verified then extended in four original directions: natural selection, periodic bottlenecks with slow recovery, overdispersed reproduction (Cannings model), and spatial metapopulation structure with migration and local attractivity. Each extension is benchmarked against available analytical theory and open directions are identified.</p>
     </section>
 
     <section class="section">
@@ -83,8 +98,8 @@
           <div>
             <p class="project-title fr">Modèle de Cannings : les iso-contours verticaux</p>
             <p class="project-title en">Cannings model: vertical iso-contours</p>
-            <p class="project-desc fr">Quand α ≪ 2N (régime de sweepstakes), le temps de fixation est déterminé uniquement par α, indépendamment de la taille censitaire N. Mesurer N est presque inutile pour prédire la dérive chez les espèces à reproduction inégale.</p>
-            <p class="project-desc en">When α ≪ 2N (sweepstakes regime), fixation time is determined entirely by α, independently of census size N. Measuring N is nearly useless for predicting drift in species with unequal reproduction.</p>
+            <p class="project-desc fr">Quand α ≪ 2N (régime sweepstakes), le temps de fixation est déterminé uniquement par α, indépendamment de la taille censitaire N. Mesurer N est presque inutile pour prédire la dérive chez les espèces à reproduction très inégale.</p>
+            <p class="project-desc en">When α ≪ 2N (sweepstakes regime), fixation time is set entirely by α, independently of census size N. Measuring N is nearly useless for predicting drift in species with highly unequal reproduction.</p>
           </div>
         </div>
         <div class="project-item" style="pointer-events: none; cursor: default;">
@@ -92,8 +107,8 @@
           <div>
             <p class="project-title fr">Structure spatiale : FST et réservoirs génétiques</p>
             <p class="project-title en">Spatial structure: FST and gene tanks</p>
-            <p class="project-desc fr">La topologie en archipel donne FST ≈ 1/(1+4Nm), confirmée par simulation. Des dèmes isolés avec sélection locale (gene tanks) préservent des allèles rares bien au-delà du temps de fixation neutre — un mécanisme pour les refuges génétiques en conservation.</p>
-            <p class="project-desc en">Island topology yields FST ≈ 1/(1+4Nm), confirmed by simulation. Isolated demes with local selection (gene tanks) preserve rare alleles far beyond the neutral fixation time — a mechanism for genetic refugia in conservation biology.</p>
+            <p class="project-desc fr">La topologie en archipel donne F_ST ≈ 1/(1+4Nm), confirmée par simulation. Des dèmes isolés avec sélection locale (gene tanks) préservent des allèles rares bien au-delà du temps de fixation neutre — un mécanisme pour les refuges génétiques en conservation.</p>
+            <p class="project-desc en">Island topology yields F_ST ≈ 1/(1+4Nm), confirmed by simulation. Isolated demes with local selection (gene tanks) preserve rare alleles far beyond the neutral fixation time — a mechanism for genetic refugia in conservation biology.</p>
           </div>
         </div>
       </div>
