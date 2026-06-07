@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html class="lang-fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dérive génétique — Martin Couairon</title>
+  <script>
+    (function () {
+      var saved = localStorage.getItem('lang') || (navigator.language.startsWith('fr') ? 'fr' : 'en');
+      document.documentElement.className = 'lang-' + saved;
+    })();
+  </script>
+  <style>html.lang-fr .en,html.lang-en .fr{display:none!important}</style>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <nav>
+    <span class="nav-brand">Martin Couairon</span>
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="index.html" class="active"><span class="fr">Projets</span><span class="en">Projects</span></a></li>
+        <li><a href="../discussion.html">Discussion</a></li>
+        <li><a href="../professional.html"><span class="fr">Comptes rendus</span><span class="en">Professional</span></a></li>
+        <li><a href="../cv.html">CV</a></li>
+        <li><a href="../about.html"><span class="fr">À propos</span><span class="en">About</span></a></li>
+      </ul>
+      <button id="lang-toggle" onclick="toggleLang()">EN</button>
+    </div>
+  </nav>
+
+  <main>
+    <a href="index.html" class="back-link">
+      ← <span class="fr">Tous les projets</span><span class="en">All projects</span>
+    </a>
+
+    <div class="project-hero">
+      <p class="hero-role" style="margin-bottom: 0.5rem;">
+        2026 · <span class="fr">Recherche</span><span class="en">Research</span>
+      </p>
+      <h1 class="hero-title">
+        <span class="fr">Dérive génétique</span><span class="en">Genetic Drift</span>
+      </h1>
+      <p class="hero-bio fr">Simulation Monte Carlo du modèle de Wright-Fisher et de ses extensions — goulots d'étranglement, reproduction overdispersée, structure spatiale. Application aux populations humaines.</p>
+      <p class="hero-bio en">Monte Carlo simulation of the Wright-Fisher model and its extensions — bottlenecks, overdispersed reproduction, spatial structure. Applied to human demography.</p>
+      <p class="project-cta">
+        <a href="lapins-paper.html" class="project-cta-link"><span class="fr">Lire l'article</span><span class="en">Read the paper</span> →</a>
+      </p>
+      <div class="project-links">
+        <a href="https://github.com/martincouairon/lapins" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+
+    <section class="section">
+      <p class="section-label"><span class="fr">Le problème</span><span class="en">The problem</span></p>
+      <p class="fr">La dérive génétique — la fluctuation aléatoire des fréquences alléliques dans une population finie — est le mécanisme central de l'évolution neutre. Mais combien de temps faut-il à une population pour perdre toute diversité génétique ? Comment les goulots d'étranglement, la reproduction inégale et la structure spatiale accélèrent-ils ou ralentissent-ils ce processus ?</p>
+      <p class="en">Genetic drift — the random fluctuation of allele frequencies in a finite population — is the central mechanism of neutral evolution. But how long does it take for a population to lose all genetic diversity? How do bottlenecks, unequal reproduction, and spatial structure speed up or slow down this process?</p>
+    </section>
+
+    <section class="section">
+      <p class="section-label"><span class="fr">L'approche</span><span class="en">The approach</span></p>
+      <p class="fr">Une simulation Monte Carlo complète du modèle de Wright-Fisher, vérifiée empiriquement puis étendue dans quatre directions originales : sélection naturelle, goulots d'étranglement périodiques avec récupération lente, reproduction overdispersée (modèle de Cannings), et structure spatiale en métapopulation avec migration et attractivité locale. Chaque extension est comparée à la théorie analytique disponible.</p>
+      <p class="en">A full Monte Carlo simulation of the Wright-Fisher model, empirically verified then extended in four original directions: natural selection, periodic bottlenecks with slow recovery, overdispersed reproduction (Cannings model), and spatial metapopulation structure with migration and local attractivity. Each extension is benchmarked against available analytical theory.</p>
+    </section>
+
+    <section class="section">
+      <p class="section-label"><span class="fr">Résultats clés</span><span class="en">Key findings</span></p>
+      <div class="project-list">
+        <div class="project-item" style="pointer-events: none; cursor: default;">
+          <span class="project-meta"></span>
+          <div>
+            <p class="project-title fr">Taille effective comme statistique suffisante</p>
+            <p class="project-title en">Effective size as a sufficient statistic</p>
+            <p class="project-desc fr">Pour les goulots d'étranglement, la reproduction overdispersée et les trajectoires démographiques variables, une seule quantité — la taille effective N_e — prédit le temps de fixation moyen à 2 % près, indépendamment des détails du modèle.</p>
+            <p class="project-desc en">For bottlenecks, overdispersed reproduction, and variable demographic trajectories, a single quantity — the effective size N_e — predicts mean fixation time to within 2%, regardless of model details.</p>
+          </div>
+        </div>
+        <div class="project-item" style="pointer-events: none; cursor: default;">
+          <span class="project-meta"></span>
+          <div>
+            <p class="project-title fr">Modèle de Cannings : les iso-contours verticaux</p>
+            <p class="project-title en">Cannings model: vertical iso-contours</p>
+            <p class="project-desc fr">Quand α ≪ 2N (régime de sweepstakes), le temps de fixation est déterminé uniquement par α, indépendamment de la taille censitaire N. Mesurer N est presque inutile pour prédire la dérive chez les espèces à reproduction inégale.</p>
+            <p class="project-desc en">When α ≪ 2N (sweepstakes regime), fixation time is determined entirely by α, independently of census size N. Measuring N is nearly useless for predicting drift in species with unequal reproduction.</p>
+          </div>
+        </div>
+        <div class="project-item" style="pointer-events: none; cursor: default;">
+          <span class="project-meta"></span>
+          <div>
+            <p class="project-title fr">Structure spatiale : FST et réservoirs génétiques</p>
+            <p class="project-title en">Spatial structure: FST and gene tanks</p>
+            <p class="project-desc fr">La topologie en archipel donne FST ≈ 1/(1+4Nm), confirmée par simulation. Des dèmes isolés avec sélection locale (gene tanks) préservent des allèles rares bien au-delà du temps de fixation neutre — un mécanisme pour les refuges génétiques en conservation.</p>
+            <p class="project-desc en">Island topology yields FST ≈ 1/(1+4Nm), confirmed by simulation. Isolated demes with local selection (gene tanks) preserve rare alleles far beyond the neutral fixation time — a mechanism for genetic refugia in conservation biology.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <p class="section-label">Stack</p>
+      <div class="tag-list">
+        <span class="tag">Python</span>
+        <span class="tag">NumPy</span>
+        <span class="tag">Matplotlib</span>
+        <span class="tag">Jupyter</span>
+        <span class="tag">Monte Carlo</span>
+        <span class="tag"><span class="fr">Génétique des populations</span><span class="en">Population genetics</span></span>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Martin Couairon &mdash; 2026</p>
+  </footer>
+  <script>
+    function applyLang(lang) {
+      document.documentElement.classList.remove('lang-fr', 'lang-en');
+      document.documentElement.classList.add('lang-' + lang);
+      var btn = document.getElementById('lang-toggle');
+      if (btn) btn.textContent = lang === 'fr' ? 'EN' : 'FR';
+      localStorage.setItem('lang', lang);
+    }
+    function toggleLang() {
+      applyLang(localStorage.getItem('lang') === 'fr' ? 'en' : 'fr');
+    }
+    applyLang(localStorage.getItem('lang') || (navigator.language.startsWith('fr') ? 'fr' : 'en'));
+  </script>
+</body>
+</html>
