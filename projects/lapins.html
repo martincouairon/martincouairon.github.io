@@ -58,8 +58,8 @@
         <h1 class="hero-title">
           <span class="fr">Dérive génétique</span><span class="en">Genetic Drift</span>
         </h1>
-        <p class="hero-bio fr">Simulation Monte Carlo du modèle de Wright-Fisher et de ses extensions — goulots d'étranglement, reproduction overdispersée, structure spatiale. Application aux populations humaines.</p>
-        <p class="hero-bio en">Monte Carlo simulation of the Wright-Fisher model and its extensions — bottlenecks, overdispersed reproduction, spatial structure. Applied to human demography.</p>
+        <p class="hero-bio fr">Simulation Monte Carlo du modèle de Wright-Fisher et de ses extensions — goulots d'étranglement, reproduction overdispersée, structure spatiale jusqu'à 100×100 dèmes, couplage éco-évolutif stochastique, et nouvelles formules analytiques asymptotiques. Application aux populations humaines.</p>
+        <p class="hero-bio en">Monte Carlo simulation of the Wright-Fisher model and its extensions — bottlenecks, overdispersed reproduction, spatial structure up to 100×100 demes, stochastic eco-evolutionary coupling, and new asymptotic analytical formulas. Applied to human demography.</p>
         <p class="project-cta">
           <a href="lapins-paper.html" class="project-cta-link"><span class="fr">Lire l'article</span><span class="en">Read the paper</span> →</a>
         </p>
@@ -77,8 +77,8 @@
 
     <section class="section">
       <p class="section-label"><span class="fr">L'approche</span><span class="en">The approach</span></p>
-      <p class="fr">Une simulation Monte Carlo complète du modèle de Wright-Fisher, vérifiée empiriquement puis étendue dans quatre directions originales : sélection naturelle, goulots d'étranglement périodiques avec récupération lente, reproduction overdispersée (modèle de Cannings), et structure spatiale en métapopulation avec migration et attractivité locale. Chaque extension est comparée à la théorie analytique disponible et les directions ouvertes sont identifiées.</p>
-      <p class="en">A full Monte Carlo simulation of the Wright-Fisher model, empirically verified then extended in four original directions: natural selection, periodic bottlenecks with slow recovery, overdispersed reproduction (Cannings model), and spatial metapopulation structure with migration and local attractivity. Each extension is benchmarked against available analytical theory and open directions are identified.</p>
+      <p class="fr">Une simulation Monte Carlo complète du modèle de Wright-Fisher, vérifiée empiriquement puis étendue dans sept directions : sélection, goulots d'étranglement asymétriques avec formule deux-étapes, modèle de Cannings avec expansion asymptotique P(fix) ≈ erf(p₀√β)/erf(√β), taille variable, structure spatiale (grilles jusqu'à 100×100 via convolution gaussienne 2D), comparaison de cinq topologies de graphe, et couplage éco-évolutif stochastique. Chaque limitation du modèle de base est levée et quantifiée.</p>
+      <p class="en">A full Monte Carlo simulation of the Wright-Fisher model, verified then extended in seven directions: selection, asymmetric bottlenecks with two-step formula, Cannings model with asymptotic expansion P(fix) ≈ erf(p₀√β)/erf(√β), variable N, spatial structure (grids up to 100×100 via 2D Gaussian convolution), five graph topologies, and stochastic eco-evolutionary coupling. Each simplifying assumption is lifted and quantified.</p>
     </section>
 
     <section class="section">
@@ -105,10 +105,28 @@
         <div class="project-item" style="pointer-events: none; cursor: default;">
           <span class="project-meta"></span>
           <div>
-            <p class="project-title fr">Structure spatiale : FST et réservoirs génétiques</p>
-            <p class="project-title en">Spatial structure: FST and gene tanks</p>
-            <p class="project-desc fr">La topologie en archipel donne F_ST ≈ 1/(1+4Nm), confirmée par simulation. Des dèmes isolés avec sélection locale (gene tanks) préservent des allèles rares bien au-delà du temps de fixation neutre — un mécanisme pour les refuges génétiques en conservation.</p>
-            <p class="project-desc en">Island topology yields F_ST ≈ 1/(1+4Nm), confirmed by simulation. Isolated demes with local selection (gene tanks) preserve rare alleles far beyond the neutral fixation time — a mechanism for genetic refugia in conservation biology.</p>
+            <p class="project-title fr">Structure spatiale : 100×100 dèmes, autocorrélation et fronts d'onde</p>
+            <p class="project-title en">Spatial structure: 100×100 demes, autocorrelation and wavefronts</p>
+            <p class="project-desc fr">Sur de grandes grilles (jusqu'à 100×100) via convolution gaussienne 2D, le F_ST atteint un quasi-équilibre croissant avec la taille de la grille. L'autocorrélation spatiale suit une loi exponentielle C(d) ≈ exp(-d√m/σ). La sélection locale génère des fronts d'onde propagatifs visibles sur 50 générations.</p>
+            <p class="project-desc en">On large grids (up to 100×100) via 2D Gaussian convolution, FST reaches a quasi-equilibrium that grows with grid size. Spatial autocorrelation follows C(d) ≈ exp(-d√m/σ). Local selection generates propagating wavefronts visible over 50 generations.</p>
+          </div>
+        </div>
+        <div class="project-item" style="pointer-events: none; cursor: default;">
+          <span class="project-meta"></span>
+          <div>
+            <p class="project-title fr">Formule asymptotique pour le modèle de Cannings asymétrique</p>
+            <p class="project-title en">Asymptotic formula for the asymmetric Cannings model</p>
+            <p class="project-desc fr">Pour α_A/α_B → ∞, la fonction d'échelle de Kolmogorov se réduit à P(fix) ≈ erf(p₀√β)/erf(√β), avec β = α_A/α_B. L'erreur relative suit 1/√β — une formule fermée, testée contre l'intégration numérique et la simulation.</p>
+            <p class="project-desc en">For α_A/α_B → ∞, the Kolmogorov scale function reduces to P(fix) ≈ erf(p₀√β)/erf(√β), β = α_A/α_B. Relative error scales as 1/√β — a closed form, benchmarked against numerical integration and MC.</p>
+          </div>
+        </div>
+        <div class="project-item" style="pointer-events: none; cursor: default;">
+          <span class="project-meta"></span>
+          <div>
+            <p class="project-title fr">Couplage éco-évolutif stochastique</p>
+            <p class="project-title en">Stochastic eco-evolutionary coupling</p>
+            <p class="project-desc fr">Le modèle standard suppose une récupération déterministe après le crash. Dans la version stochastique, N_A(t) est lui-même un processus aléatoire (croissance logistique avec bruit démographique). Le bruit élargit la distribution de T et génère un diagramme de phase dans l'espace (r_A/r_B, ε).</p>
+            <p class="project-desc en">The standard model assumes deterministic post-crash recovery. In the stochastic version, N_A(t) is itself a random process (logistic growth with demographic noise). Noise broadens the T distribution and generates a phase diagram in (r_A/r_B, ε) space.</p>
           </div>
         </div>
       </div>
@@ -122,7 +140,9 @@
         <span class="tag">Matplotlib</span>
         <span class="tag">Jupyter</span>
         <span class="tag">Monte Carlo</span>
+        <span class="tag">SciPy</span>
         <span class="tag"><span class="fr">Génétique des populations</span><span class="en">Population genetics</span></span>
+        <span class="tag"><span class="fr">Théorie analytique</span><span class="en">Analytical theory</span></span>
       </div>
     </section>
   </main>
