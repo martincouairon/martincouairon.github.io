@@ -75,8 +75,8 @@
         <h1 class="hero-title">
           <span class="fr">Dérive génétique</span><span class="en">Genetic Drift</span>
         </h1>
-        <p class="hero-bio fr">Simulation Monte Carlo du modèle de Wright-Fisher et de ses extensions — goulots d'étranglement, reproduction overdispersée, structure spatiale jusqu'à 100×100 dèmes, couplage éco-évolutif stochastique, et nouvelles formules analytiques asymptotiques. Application aux populations humaines.</p>
-        <p class="hero-bio en">Monte Carlo simulation of the Wright-Fisher model and its extensions — bottlenecks, overdispersed reproduction, spatial structure up to 100×100 demes, stochastic eco-evolutionary coupling, and new asymptotic analytical formulas. Applied to human demography.</p>
+        <p class="hero-bio fr">Simulation Monte Carlo du modèle de Wright-Fisher et de ses extensions — goulots d'étranglement, reproduction overdispersée, structure spatiale jusqu'à 100×100 dèmes, couplage éco-évolutif stochastique, nouvelles formules analytiques asymptotiques, et une carte mondiale hétérogène à 20 dèmes isolant chaque force évolutive l'une après l'autre. Application aux populations humaines.</p>
+        <p class="hero-bio en">Monte Carlo simulation of the Wright-Fisher model and its extensions — bottlenecks, overdispersed reproduction, spatial structure up to 100×100 demes, stochastic eco-evolutionary coupling, new asymptotic analytical formulas, and a 20-deme heterogeneous world map isolating each evolutionary force one at a time. Applied to human demography.</p>
         <p class="project-cta">
           <a href="lapins-paper.html" class="project-cta-link"><span class="fr">Lire l'article</span><span class="en">Read the paper</span> →</a>
         </p>
@@ -86,6 +86,12 @@
       </div>
     </div>
 
+    <section class="section" style="background:#f0f7ff;border-left:4px solid #2196F3;padding:18px 22px;border-radius:4px;margin-bottom:1.5rem">
+      <p class="section-label" style="color:#1565C0"><span class="fr">Note sur la genèse du projet</span><span class="en">A note on the making of this project</span></p>
+      <p class="fr">Ce projet est né d'un cours de biologie de lycée sur la génétique mendélienne. En partant du modèle de Wright-Fisher vu en classe, j'ai cherché à l'emmener aussi loin que possible — en utilisant Claude (l'assistant IA d'Anthropic) comme outil de recherche et de programmation. Mon rôle a été de fixer la direction scientifique : choisir les phénomènes à étudier, les extensions à explorer, et vérifier si les résultats avaient un sens biologique. Je ne revendique pas une expertise indépendante dans les mathématiques sous-jacentes — les dérivations analytiques et les arguments asymptotiques ont été développés en dialogue avec la littérature et avec Claude. Ce que je revendique, c'est la curiosité qui a motivé chaque question. Ce rapport est donc honnête sur son ambition — aller bien plus loin qu'un projet scolaire ordinaire — et sur son origine : un étudiant explorant ce qui devient possible quand une vraie curiosité rencontre des outils puissants.</p>
+      <p class="en">This project grew out of a high-school biology course on Mendelian genetics. Starting from the Wright-Fisher model taught in class, I set out to take it as far as I could — using Claude (Anthropic's AI assistant) as the primary research and coding tool. My role throughout was to drive the scientific direction: deciding which phenomena to study, which extensions to explore, and whether the results were biologically coherent. I do not claim independent expertise in the underlying mathematics — the analytical derivations and asymptotic arguments were developed in dialogue with the literature and with Claude. What I do claim is the curiosity that motivated each question. This report is therefore honest about both its ambition — going further than a typical school project — and its origin: a student exploring what becomes possible when genuine curiosity meets powerful tools.</p>
+    </section>
+
     <section class="section">
       <p class="section-label"><span class="fr">Le problème</span><span class="en">The problem</span></p>
       <p class="fr">La dérive génétique — la fluctuation aléatoire des fréquences alléliques dans une population finie — est le mécanisme central de l'évolution neutre. Mais combien de temps faut-il à une population pour perdre toute diversité génétique ? Comment les goulots d'étranglement, la reproduction inégale et la structure spatiale accélèrent-ils ou ralentissent-ils ce processus ?</p>
@@ -94,8 +100,8 @@
 
     <section class="section">
       <p class="section-label"><span class="fr">L'approche</span><span class="en">The approach</span></p>
-      <p class="fr">Une simulation Monte Carlo complète du modèle de Wright-Fisher, vérifiée empiriquement puis étendue dans sept directions : sélection, goulots d'étranglement asymétriques avec formule deux-étapes, modèle de Cannings avec expansion asymptotique P(fix) ≈ erf(p₀√β)/erf(√β), taille variable, structure spatiale (grilles jusqu'à 100×100 via convolution gaussienne 2D), comparaison de cinq topologies de graphe, et couplage éco-évolutif stochastique. Chaque limitation du modèle de base est levée et quantifiée.</p>
-      <p class="en">A full Monte Carlo simulation of the Wright-Fisher model, verified then extended in seven directions: selection, asymmetric bottlenecks with two-step formula, Cannings model with asymptotic expansion P(fix) ≈ erf(p₀√β)/erf(√β), variable N, spatial structure (grids up to 100×100 via 2D Gaussian convolution), five graph topologies, and stochastic eco-evolutionary coupling. Each simplifying assumption is lifted and quantified.</p>
+      <p class="fr">Une simulation Monte Carlo complète du modèle de Wright-Fisher, vérifiée empiriquement puis étendue dans huit directions : sélection, goulots d'étranglement asymétriques avec formule deux-étapes, modèle de Cannings avec expansion asymptotique P(fix) ≈ erf(p₀√β)/erf(√β), taille variable, structure spatiale (grilles jusqu'à 100×100 via convolution gaussienne 2D), cinq topologies de graphe, couplage éco-évolutif stochastique, et enfin une carte mondiale hétérogène à 20 dèmes et 4 allèles qui isole chaque force évolutive l'une après l'autre — en finissant par la sélection, pour montrer à quel point elle domine toutes les autres.</p>
+      <p class="en">A full Monte Carlo simulation of the Wright-Fisher model, verified then extended in eight directions: selection, asymmetric bottlenecks with two-step formula, Cannings model with asymptotic expansion P(fix) ≈ erf(p₀√β)/erf(√β), variable N, spatial structure (grids up to 100×100 via 2D Gaussian convolution), five graph topologies, stochastic eco-evolutionary coupling, and finally a 20-deme four-allele heterogeneous world map that isolates each evolutionary force one at a time — ending with selection, to show just how dominant it is.</p>
     </section>
 
     <section class="section">
@@ -146,7 +152,24 @@
             <p class="project-desc en">The standard model assumes deterministic post-crash recovery. In the stochastic version, N_A(t) is itself a random process (logistic growth with demographic noise). Noise broadens the T distribution and generates a phase diagram in (r_A/r_B, ε) space.</p>
           </div>
         </div>
+        <div class="project-item" style="pointer-events: none; cursor: default;">
+          <span class="project-meta"></span>
+          <div>
+            <p class="project-title fr">Carte mondiale : six forces évolutives, toutes choses égales par ailleurs</p>
+            <p class="project-title en">World map: six evolutionary forces, all else equal</p>
+            <p class="project-desc fr">20 dèmes, 4 allèles, 5 types d'obstacles géographiques. Six scénarios ajoutent chacun une seule force (dérive → migration → barrières → goulots → mutation → sélection). La sélection (s = 0,05) balaye le monde entier en ~100 générations, effaçant la mosaïque construite par les cinq autres forces — sauf dans les dèmes avec Ns &lt; 1, où la dérive résiste encore.</p>
+            <p class="project-desc en">20 demes, 4 alleles, 5 types of geographic obstacle. Six scenarios each add exactly one force (drift → migration → barriers → bottlenecks → mutation → selection). Selection (s = 0.05) sweeps the entire world in ~100 generations, erasing the mosaic built by the five prior forces — except in demes where Ns &lt; 1, where drift still wins.</p>
+          </div>
+        </div>
       </div>
+    </section>
+
+    <section class="section">
+      <p class="section-label"><span class="fr">Comment les forces s'équilibrent</span><span class="en">How the forces balance</span></p>
+      <p class="fr">La dérive génétique seule est une marche aléatoire vers la fixation, plus rapide dans les petites populations. La migration la contrecarre en important des allèles éliminés localement — mais l'homogénéisation géographique est le prix à payer. Les barrières géographiques (océans, chaînes de montagnes, isthmes étroits) restaurent la structure locale en ralentissant les échanges plutôt qu'en les stoppant. Les goulots d'étranglement sont les ponctuations de l'histoire génétique : brefs, violents, et d'une influence disproportionnée via la moyenne harmonique. La mutation fournit un plancher lent en dessous duquel la diversité ne peut pas disparaître définitivement. Et la sélection, enfin, change les règles : même un avantage modéré (s = 0,05) suffit à balayer un allèle à travers un monde hétérogène en quelques centaines de générations, ignorant les barrières, les goulots et les équilibres mutation-dérive.</p>
+      <p class="fr" style="margin-top:0.75rem">La seule résistance à la sélection : les très petites populations (Ns &lt; 1), où la dérive reste plus forte. C'est la base génétique des préoccupations de conservation pour les habitats fragmentés. La hiérarchie est claire : dérive domine quand N est petit ; migration domine quand Nm ≫ 1 ; sélection domine tout quand Ns ≫ 1. Les populations réelles se situent à l'intersection de toutes ces forces simultanément.</p>
+      <p class="en">Genetic drift alone is a random walk toward fixation, faster in smaller populations. Migration counters it by re-importing locally eliminated alleles — but geographic homogenisation is the price. Geographic barriers (oceans, mountain ranges, narrow isthmuses) restore local structure by throttling rather than blocking exchange. Bottlenecks are the punctuation marks of genetic history: brief, violent, and disproportionately influential through the harmonic mean. Mutation provides a slow restorative floor below which diversity cannot permanently disappear. And selection, finally, changes the rules entirely: even a moderate advantage (s = 0.05) sweeps an allele through a heterogeneous world in a few hundred generations, indifferent to barriers, bottleneck history, and mutation equilibria.</p>
+      <p class="en" style="margin-top:0.75rem">The only refuge from selection: very small populations (Ns &lt; 1), where drift remains stronger. This is the population-genetic basis of conservation concern for fragmented habitats. The hierarchy is clear — drift dominates when N is small; migration dominates when Nm ≫ 1; selection dominates everything when Ns ≫ 1. Real populations sit at the intersection of all these forces simultaneously, and the models in this report, taken together, tell that story.</p>
     </section>
 
     <section class="section">
