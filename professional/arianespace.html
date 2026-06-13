@@ -24,21 +24,21 @@
     .content-main { flex: 1; min-width: 0; }
     .content-aside {
       flex-shrink: 0;
-      width: 130px;
+      width: 200px;
       display: flex;
       flex-direction: column;
-      gap: 1.25rem;
+      gap: 1.5rem;
       padding-top: 0.1rem;
     }
     .aside-img {
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 0.3rem;
+      gap: 0.35rem;
     }
     .aside-img img {
       width: 100%;
-      max-height: 90px;
+      max-height: 120px;
       object-fit: contain;
       border-radius: 4px;
       border: 1px solid var(--border);
@@ -47,7 +47,7 @@
       display: block;
     }
     .aside-img img.photo {
-      max-height: 160px;
+      max-height: 240px;
       object-fit: cover;
       padding: 0;
     }
@@ -291,93 +291,83 @@
       </div>
 
       <!-- Bloc 2 : projet européen, ESA, CNES -->
-      <div class="mission-block content-with-aside">
-        <div class="content-main">
-          <p class="mission-subtitle fr">Un projet résolument européen</p>
-          <p class="mission-subtitle en">A resolutely European project</p>
-          <p class="fr">
-            Ariane est un projet résolument européen. Depuis les débuts de la création de fusées avec le projet Europa, jusqu'à Arianespace, le projet a toujours été le résultat d'une collaboration de pays européens, de l'European Space Agency (ESA), et du Centre National d'Études Spatiales (CNES).
-          </p>
-          <p class="fr">
-            L'idée est, depuis son initiation, de permettre à l'Europe un accès indépendant à l'espace, c'est-à-dire de mettre en orbite ses propres satellites, civils (télécommunications, observations météo) ou militaires.
-          </p>
-          <p class="en">
-            Ariane is a resolutely European project. From the early Europa rocket programme to Arianespace, it has always been the product of collaboration between European nations, the European Space Agency (ESA), and France's national space agency CNES. The founding idea: to guarantee Europe an independent path to space — the ability to place its own civilian (telecommunications, meteorology) and military satellites in orbit.
-          </p>
-        </div>
-        <div class="content-aside">
-          <div class="flag-grid">
-            <div class="flag-item">
-              <img src="img/flags/eu.svg" alt="EU" loading="lazy" />
-              <p class="flag-label">UE</p>
-            </div>
-            <div class="flag-item">
-              <img src="img/flags/fr.svg" alt="France" loading="lazy" />
-              <p class="flag-label">France</p>
-            </div>
-            <div class="flag-item">
-              <img src="img/flags/de.svg" alt="Allemagne" loading="lazy" />
-              <p class="flag-label">Allemagne</p>
-            </div>
-            <div class="flag-item">
-              <img src="img/flags/it.svg" alt="Italie" loading="lazy" />
-              <p class="flag-label">Italie</p>
-            </div>
-            <div class="flag-item">
-              <img src="img/flags/be.svg" alt="Belgique" loading="lazy" />
-              <p class="flag-label">Belgique</p>
-            </div>
-            <div class="flag-item">
-              <img src="img/flags/nl.svg" alt="Pays-Bas" loading="lazy" />
-              <p class="flag-label">Pays-Bas</p>
-            </div>
-            <div class="flag-item">
-              <img src="img/flags/se.svg" alt="Suède" loading="lazy" />
-              <p class="flag-label">Suède</p>
-            </div>
-            <div class="flag-item">
-              <img src="img/flags/es.svg" alt="Espagne" loading="lazy" />
-              <p class="flag-label">Espagne</p>
-            </div>
+      <div class="mission-block">
+        <p class="mission-subtitle fr">Un projet résolument européen</p>
+        <p class="mission-subtitle en">A resolutely European project</p>
+        <p class="fr">
+          Ariane est un projet résolument européen. Depuis les débuts de la création de fusées avec le projet Europa, jusqu'à Arianespace, le projet a toujours été le résultat d'une collaboration de pays européens, de l'European Space Agency (ESA), et du Centre National d'Études Spatiales (CNES).
+        </p>
+        <p class="fr">
+          L'idée est, depuis son initiation, de permettre à l'Europe un accès indépendant à l'espace, c'est-à-dire de mettre en orbite ses propres satellites, civils (télécommunications, observations météo) ou militaires.
+        </p>
+        <p class="en">
+          Ariane is a resolutely European project. From the early Europa rocket programme to Arianespace, it has always been the product of collaboration between European nations, the European Space Agency (ESA), and France's national space agency CNES. The founding idea: to guarantee Europe an independent path to space — the ability to place its own civilian (telecommunications, meteorology) and military satellites in orbit.
+        </p>
+        <div class="flag-grid">
+          <div class="flag-item">
+            <img src="img/flags/eu.svg" alt="EU" loading="lazy" />
+            <p class="flag-label">UE</p>
           </div>
-          <div class="aside-img">
-            <img src="img/ariane6-logo.svg" alt="Ariane 6" loading="lazy" />
-            <p class="aside-caption">Ariane 6</p>
+          <div class="flag-item">
+            <img src="img/flags/fr.svg" alt="France" loading="lazy" />
+            <p class="flag-label">France</p>
+          </div>
+          <div class="flag-item">
+            <img src="img/flags/de.svg" alt="Allemagne" loading="lazy" />
+            <p class="flag-label">Allemagne</p>
+          </div>
+          <div class="flag-item">
+            <img src="img/flags/it.svg" alt="Italie" loading="lazy" />
+            <p class="flag-label">Italie</p>
+          </div>
+          <div class="flag-item">
+            <img src="img/flags/be.svg" alt="Belgique" loading="lazy" />
+            <p class="flag-label">Belgique</p>
+          </div>
+          <div class="flag-item">
+            <img src="img/flags/nl.svg" alt="Pays-Bas" loading="lazy" />
+            <p class="flag-label">Pays-Bas</p>
+          </div>
+          <div class="flag-item">
+            <img src="img/flags/se.svg" alt="Suède" loading="lazy" />
+            <p class="flag-label">Suède</p>
+          </div>
+          <div class="flag-item">
+            <img src="img/flags/es.svg" alt="Espagne" loading="lazy" />
+            <p class="flag-label">Espagne</p>
           </div>
         </div>
       </div>
 
       <!-- Bloc 3 : flexibilité, Soyouz, Vega, ASL -->
-      <div class="mission-block content-with-aside">
-        <div class="content-main">
-          <p class="mission-subtitle fr">Vers plus de flexibilité : Soyouz, Vega et la naissance d'ArianeGroup</p>
-          <p class="mission-subtitle en">Gaining flexibility: Soyuz, Vega, and the birth of ArianeGroup</p>
-          <p class="fr">
-            Le système de lancement Ariane, comme tout bon projet européen, manquait de flexibilité. Le lanceur Ariane 5, impressionnant technologiquement et véritable fierté européenne, est lourd et ne convient pas à tous les satellites, qui eux sont de plus en plus légers.
-          </p>
-          <p class="fr">
-            Arianespace obtient d'abord, au milieu des années 2000, l'exploitation du mythique lanceur russe Soyouz, plus léger, fiable et relativement peu cher, puis en 2012 l'exploitation du lanceur italien Vega, réalisé par le constructeur Avio, également plus léger que le système Ariane.
-          </p>
-          <p class="fr">
-            Airbus et Safran, ayant participé ensemble aux constructions successives d'Ariane, longuement collaboré et développé une grande synergie, créent Airbus Safran Launchers (ASL) en 2014. Objectif : racheter le groupe Arianespace et développer la prochaine génération de lanceurs : Ariane 6. À l'issue du rachat en 2017, ASL devient ArianeGroup, en charge de la production, et détient Arianespace, en charge de la commercialisation.
-          </p>
-          <p class="en">
-            The Ariane launch system lacked flexibility. Ariane 5, technically impressive and a source of European pride, was too heavy for the growing number of lighter satellites. Arianespace secured operation of the legendary Russian Soyuz in the mid-2000s and of the Italian Vega launcher (built by Avio) in 2012, both lighter alternatives. Airbus and Safran — long-time collaborators across successive Ariane generations — created Airbus Safran Launchers (ASL) in 2014 to acquire Arianespace and develop Ariane 6. After the 2017 acquisition, ASL became ArianeGroup, handling production and owning Arianespace, which handles commercialisation.
-          </p>
-        </div>
-        <div class="content-aside">
-          <div class="aside-img">
-            <img src="img/airbus-logo.svg" alt="Airbus" loading="lazy" onerror="this.closest('.aside-img').style.display='none'" />
-            <p class="aside-caption">Airbus</p>
-          </div>
-          <div class="aside-img">
-            <img src="img/safran-logo.svg" alt="Safran" loading="lazy" onerror="this.closest('.aside-img').style.display='none'" />
-            <p class="aside-caption">Safran</p>
-          </div>
-          <div class="aside-img">
-            <img src="img/arianegroup-logo.svg" alt="ArianeGroup" loading="lazy" onerror="this.closest('.aside-img').style.display='none'" />
-            <p class="aside-caption">ArianeGroup</p>
-          </div>
+      <div class="mission-block">
+        <p class="mission-subtitle fr">Vers plus de flexibilité : Soyouz, Vega et la naissance d'ArianeGroup</p>
+        <p class="mission-subtitle en">Gaining flexibility: Soyuz, Vega, and the birth of ArianeGroup</p>
+        <p class="fr">
+          Le système de lancement Ariane, comme tout bon projet européen, manquait de flexibilité. Le lanceur Ariane 5, impressionnant technologiquement et véritable fierté européenne, est lourd et ne convient pas à tous les satellites, qui eux sont de plus en plus légers.
+        </p>
+        <p class="fr">
+          Arianespace obtient d'abord, au milieu des années 2000, l'exploitation du mythique lanceur russe Soyouz, plus léger, fiable et relativement peu cher, puis en 2012 l'exploitation du lanceur italien Vega, réalisé par le constructeur Avio, également plus léger que le système Ariane.
+        </p>
+        <p class="fr">
+          Airbus et Safran, ayant participé ensemble aux constructions successives d'Ariane, longuement collaboré et développé une grande synergie, créent Airbus Safran Launchers (ASL) en 2014. Objectif : racheter le groupe Arianespace et développer la prochaine génération de lanceurs : Ariane 6. À l'issue du rachat en 2017, ASL devient ArianeGroup, en charge de la production, et détient Arianespace, en charge de la commercialisation.
+        </p>
+        <p class="en">
+          The Ariane launch system lacked flexibility. Ariane 5, technically impressive and a source of European pride, was too heavy for the growing number of lighter satellites. Arianespace secured operation of the legendary Russian Soyuz in the mid-2000s and of the Italian Vega launcher (built by Avio) in 2012, both lighter alternatives. Airbus and Safran — long-time collaborators across successive Ariane generations — created Airbus Safran Launchers (ASL) in 2014 to acquire Arianespace and develop Ariane 6. After the 2017 acquisition, ASL became ArianeGroup, handling production and owning Arianespace, which handles commercialisation.
+        </p>
+        <div class="logo-grid">
+          <figure class="logo-item">
+            <img src="img/airbus-logo.svg" alt="Airbus" loading="lazy" onerror="this.closest('.logo-item').style.display='none'" />
+            <figcaption>Airbus</figcaption>
+          </figure>
+          <figure class="logo-item">
+            <img src="img/safran-logo.svg" alt="Safran" loading="lazy" onerror="this.closest('.logo-item').style.display='none'" />
+            <figcaption>Safran</figcaption>
+          </figure>
+          <figure class="logo-item">
+            <img src="img/arianegroup-logo.svg" alt="ArianeGroup" loading="lazy" onerror="this.closest('.logo-item').style.display='none'" />
+            <figcaption>ArianeGroup</figcaption>
+          </figure>
         </div>
       </div>
 
@@ -419,33 +409,29 @@
       </div>
 
       <!-- Bloc 5 : nuances -->
-      <div class="mission-block content-with-aside">
-        <div class="content-main">
-          <p class="mission-subtitle fr">Nuances et perspectives</p>
-          <p class="mission-subtitle en">Nuances and outlook</p>
-          <p class="fr">Il faut cependant relativiser cette mise en perspective :</p>
-          <p class="en">This picture deserves nuance:</p>
-          <ol class="nuances fr">
-            <li>Si Vega n'est désormais plus opéré par Arianespace, il reste un lanceur européen et garantit, au même titre qu'Ariane, l'accès à l'espace et la souveraineté de l'Europe.</li>
-            <li>Ariane 6 a été conçu pour être plus flexible et existe en version A62 ou A64, permettant d'adapter la puissance de la fusée à l'objet mis en orbite.</li>
-            <li>Sur 165 lancements de SpaceX, 120 étaient liés aux mises en orbite de ses propres constellations. L'entreprise tire profit de synergies entre ses différents pôles d'activités, ce que ne peut pas faire Ariane, dont la mission est uniquement la fabrication et la commercialisation des lanceurs.</li>
-            <li>La filière des lanceurs réutilisables est un projet déjà actif au sein du groupe avec Maiaspace.</li>
-          </ol>
-          <ol class="nuances en">
-            <li>Vega, though no longer operated by Arianespace, remains a European launcher and continues to guarantee European sovereign access to space.</li>
-            <li>Ariane 6 was designed to be more flexible and exists in two variants — A62 and A64 — matching the rocket's power to the payload.</li>
-            <li>Of SpaceX's 165 launches, 120 served its own constellation — a vertical integration advantage Arianespace cannot replicate, as its mission is solely to manufacture and commercialise launchers.</li>
-            <li>Reusable launcher development is already underway within the group via Maiaspace.</li>
-          </ol>
-          <p class="fr">Par ailleurs, la filière est soutenue par les États, qui y voient une garantie de leur indépendance.</p>
-          <p class="en">States also actively support the sector, seeing it as a guarantee of strategic independence.</p>
-        </div>
-        <div class="content-aside">
-          <div class="aside-img">
-            <img src="img/maiaspace-logo.svg" alt="Maiaspace" loading="lazy" />
-            <p class="aside-caption fr">Maiaspace — lanceurs réutilisables</p>
-            <p class="aside-caption en">Maiaspace — reusable launchers</p>
-          </div>
+      <div class="mission-block">
+        <p class="mission-subtitle fr">Nuances et perspectives</p>
+        <p class="mission-subtitle en">Nuances and outlook</p>
+        <p class="fr">Il faut cependant relativiser cette mise en perspective :</p>
+        <p class="en">This picture deserves nuance:</p>
+        <ol class="nuances fr">
+          <li>Si Vega n'est désormais plus opéré par Arianespace, il reste un lanceur européen et garantit, au même titre qu'Ariane, l'accès à l'espace et la souveraineté de l'Europe.</li>
+          <li>Ariane 6 a été conçu pour être plus flexible et existe en version A62 ou A64, permettant d'adapter la puissance de la fusée à l'objet mis en orbite.</li>
+          <li>Sur 165 lancements de SpaceX, 120 étaient liés aux mises en orbite de ses propres constellations. L'entreprise tire profit de synergies entre ses différents pôles d'activités, ce que ne peut pas faire Ariane, dont la mission est uniquement la fabrication et la commercialisation des lanceurs.</li>
+          <li>La filière des lanceurs réutilisables est un projet déjà actif au sein du groupe avec Maiaspace.</li>
+        </ol>
+        <ol class="nuances en">
+          <li>Vega, though no longer operated by Arianespace, remains a European launcher and continues to guarantee European sovereign access to space.</li>
+          <li>Ariane 6 was designed to be more flexible and exists in two variants — A62 and A64 — matching the rocket's power to the payload.</li>
+          <li>Of SpaceX's 165 launches, 120 served its own constellation — a vertical integration advantage Arianespace cannot replicate, as its mission is solely to manufacture and commercialise launchers.</li>
+          <li>Reusable launcher development is already underway within the group via Maiaspace.</li>
+        </ol>
+        <p class="fr">Par ailleurs, la filière est soutenue par les États, qui y voient une garantie de leur indépendance.</p>
+        <p class="en">States also actively support the sector, seeing it as a guarantee of strategic independence.</p>
+        <div style="margin-top:1rem;">
+          <img src="img/maiaspace-logo.svg" alt="Maiaspace" loading="lazy" style="height:40px;object-fit:contain;display:block;" />
+          <p style="font-size:0.65rem;color:var(--subtle);margin:0.3rem 0 0;letter-spacing:0.02em;" class="fr">Maiaspace — lanceurs réutilisables</p>
+          <p style="font-size:0.65rem;color:var(--subtle);margin:0.3rem 0 0;letter-spacing:0.02em;" class="en">Maiaspace — reusable launchers</p>
         </div>
       </div>
 
@@ -555,11 +541,6 @@
           </p>
         </div>
         <div class="content-aside">
-          <div class="aside-img">
-            <img src="img/kourou-plan.svg" alt="Centre Spatial Guyanais — plan" loading="lazy" onerror="this.closest('.aside-img').style.display='none'" />
-            <p class="aside-caption fr">Kourou, Guyane</p>
-            <p class="aside-caption en">Kourou, French Guiana</p>
-          </div>
           <div class="aside-img">
             <img src="img/ariane6-pad.jpg" alt="Ariane 6 sur la rampe — Kourou" loading="lazy" class="photo" />
             <p class="aside-caption fr">Rampe de lancement, Kourou</p>
