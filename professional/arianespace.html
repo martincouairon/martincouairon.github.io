@@ -140,6 +140,34 @@
       margin: 0;
       letter-spacing: 0.01em;
     }
+    .photo-strip {
+      display: flex;
+      gap: 0.75rem;
+      margin-top: 1rem;
+    }
+    .photo-strip-item {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+    }
+    .photo-strip-item img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+      border-radius: 4px;
+      display: block;
+    }
+    .photo-strip-item p {
+      font-size: 0.65rem;
+      color: var(--subtle);
+      margin: 0;
+      letter-spacing: 0.02em;
+    }
+    @media (max-width: 768px) {
+      .photo-strip { flex-direction: column; }
+      .photo-strip-item img { height: 180px; }
+    }
     @media (max-width: 768px) {
       .content-with-aside { flex-direction: column; }
       .content-aside { width: 100%; flex-direction: row; flex-wrap: wrap; gap: 0.75rem; }
@@ -304,7 +332,7 @@
           Ariane is a resolutely European project. From the early Europa rocket programme to Arianespace, it has always been the product of collaboration between European nations, the European Space Agency (ESA), and France's national space agency CNES. The founding idea: to guarantee Europe an independent path to space — the ability to place its own civilian (telecommunications, meteorology) and military satellites in orbit.
         </p>
         <div style="margin-top:1rem;">
-          <img src="img/ariane-zl4.jpg" alt="Retrait du portique mobile en ZL4 — Kourou, juin 2024" loading="lazy" class="photo" style="width:100%;max-height:320px;object-fit:cover;border-radius:4px;display:block;" />
+          <img src="img/ariane-zl4.jpg" alt="Retrait du portique mobile en ZL4 — Kourou, juin 2024" loading="lazy" class="photo" style="width:100%;max-height:320px;object-fit:cover;object-position:center top;border-radius:4px;display:block;" />
           <p style="font-size:0.65rem;color:var(--subtle);margin:0.3rem 0 0;letter-spacing:0.02em;" class="fr">Retrait du portique mobile, ZL4 — Kourou, juin 2024</p>
           <p style="font-size:0.65rem;color:var(--subtle);margin:0.3rem 0 0;letter-spacing:0.02em;" class="en">Mobile gantry removal, ZL4 — Kourou, June 2024</p>
         </div>
@@ -343,38 +371,36 @@
       </div>
 
       <!-- Bloc 4 : contexte dégradé, Ariane 6, concurrence -->
-      <div class="mission-block content-with-aside">
-        <div class="content-main">
-          <p class="mission-subtitle fr">Le contexte en 2025 : Ariane 6 face à une concurrence mondiale</p>
-          <p class="mission-subtitle en">The 2025 landscape: Ariane 6 facing global competition</p>
-          <p class="fr">
-            Le contexte dans lequel j'interviens se trouve dégradé : depuis la guerre en Ukraine, le lanceur Soyouz n'est plus utilisable, et Avio, le constructeur italien, a souhaité reprendre le contrôle de son lanceur Vega.
-          </p>
-          <p class="fr">
-            Heureusement, Ariane 6 est prête. L'année où j'audite les comptes, les lancements se sont enchaînés avec succès, mêlant lancements institutionnels et commerciaux, civils et militaires. SpaceX en revanche est un concurrent menaçant : la société possède des modèles de lanceurs variés, est en mesure de tous les exploiter, et réalise plus de la moitié des lancements de l'année — sur 324 lancements en 2025, SpaceX en a réalisé 165, soit 3 par semaine — et dispose d'une capacité de réutilisation largement supérieure, dont le premier étage du Falcon 9 a été réutilisé plus de 30 fois.
-          </p>
-          <p class="fr">
-            Ce n'est cependant pas le seul acteur : des puissances étatiques telles que la Chine, l'Inde ou le Japon se trouvent également en concurrence.
-          </p>
-          <p class="fr">
-            La place du groupe Ariane ici est donc incomparable : en 2025, la société se voit contrainte de n'utiliser que son lanceur Ariane 6, a réalisé 7 lancements (1 tous les 2 mois) et n'a réutilisé aucun étage de ses fusées.
-          </p>
-          <p class="en">
-            The context I audited was deteriorating: following the war in Ukraine, the Soyuz is no longer available; Avio has reclaimed control of Vega. Fortunately, Ariane 6 is operational, with launches coming in steady succession in 2025 — combining institutional and commercial, civilian and military missions. Yet SpaceX remains a formidable competitor, operating a diverse fleet and performing 165 of 324 global launches in 2025 (roughly 3 per week), with a Falcon 9 first stage reused more than 30 times. State actors — China, India, Japan — add further competition.
-          </p>
-          <p class="en">
-            Arianespace's position in this landscape is stark: in 2025 it operated only Ariane 6, completed 7 launches (one every two months), and reused no stages.
-          </p>
-        </div>
-        <div class="content-aside">
-          <div class="aside-img">
-            <img src="img/ariane6-pad.jpg" alt="Ariane 6 sur la rampe de lancement" loading="lazy" class="photo" />
-            <p class="aside-caption fr">Ariane 6 — rampe de lancement, Kourou</p>
-            <p class="aside-caption en">Ariane 6 — launch pad, Kourou</p>
+      <div class="mission-block">
+        <p class="mission-subtitle fr">Le contexte en 2025 : Ariane 6 face à une concurrence mondiale</p>
+        <p class="mission-subtitle en">The 2025 landscape: Ariane 6 facing global competition</p>
+        <p class="fr">
+          Le contexte dans lequel j'interviens se trouve dégradé : depuis la guerre en Ukraine, le lanceur Soyouz n'est plus utilisable, et Avio, le constructeur italien, a souhaité reprendre le contrôle de son lanceur Vega.
+        </p>
+        <p class="fr">
+          Heureusement, Ariane 6 est prête. L'année où j'audite les comptes, les lancements se sont enchaînés avec succès, mêlant lancements institutionnels et commerciaux, civils et militaires. SpaceX en revanche est un concurrent menaçant : la société possède des modèles de lanceurs variés, est en mesure de tous les exploiter, et réalise plus de la moitié des lancements de l'année — sur 324 lancements en 2025, SpaceX en a réalisé 165, soit 3 par semaine — et dispose d'une capacité de réutilisation largement supérieure, dont le premier étage du Falcon 9 a été réutilisé plus de 30 fois.
+        </p>
+        <p class="fr">
+          Ce n'est cependant pas le seul acteur : des puissances étatiques telles que la Chine, l'Inde ou le Japon se trouvent également en concurrence.
+        </p>
+        <p class="fr">
+          La place du groupe Ariane ici est donc incomparable : en 2025, la société se voit contrainte de n'utiliser que son lanceur Ariane 6, a réalisé 7 lancements (1 tous les 2 mois) et n'a réutilisé aucun étage de ses fusées.
+        </p>
+        <p class="en">
+          The context I audited was deteriorating: following the war in Ukraine, the Soyuz is no longer available; Avio has reclaimed control of Vega. Fortunately, Ariane 6 is operational, with launches coming in steady succession in 2025 — combining institutional and commercial, civilian and military missions. Yet SpaceX remains a formidable competitor, operating a diverse fleet and performing 165 of 324 global launches in 2025 (roughly 3 per week), with a Falcon 9 first stage reused more than 30 times. State actors — China, India, Japan — add further competition.
+        </p>
+        <p class="en">
+          Arianespace's position in this landscape is stark: in 2025 it operated only Ariane 6, completed 7 launches (one every two months), and reused no stages.
+        </p>
+        <div class="photo-strip">
+          <div class="photo-strip-item">
+            <img src="img/ariane6-pad.jpg" alt="Ariane 6 sur la rampe de lancement" loading="lazy" />
+            <p class="fr">Ariane 6 — rampe de lancement, Kourou</p>
+            <p class="en">Ariane 6 — launch pad, Kourou</p>
           </div>
-          <div class="aside-img">
+          <div class="photo-strip-item">
             <img src="img/falcon9.jpg" alt="SpaceX Falcon 9" loading="lazy" />
-            <p class="aside-caption">SpaceX Falcon 9</p>
+            <p>SpaceX Falcon 9</p>
           </div>
         </div>
       </div>
