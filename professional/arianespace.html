@@ -111,6 +111,35 @@
       font-style: italic;
       color: var(--subtle);
     }
+    .flag-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.3rem;
+      justify-content: center;
+      margin-bottom: 0.75rem;
+    }
+    .flag-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.15rem;
+      width: 52px;
+    }
+    .flag-item img {
+      width: 40px;
+      height: 26px;
+      object-fit: cover;
+      border: 1px solid var(--border);
+      border-radius: 2px;
+      display: block;
+    }
+    .flag-label {
+      font-size: 0.58rem;
+      color: var(--subtle);
+      text-align: center;
+      margin: 0;
+      letter-spacing: 0.01em;
+    }
     @media (max-width: 768px) {
       .content-with-aside { flex-direction: column; }
       .content-aside { width: 100%; flex-direction: row; flex-wrap: wrap; gap: 0.75rem; }
@@ -277,13 +306,43 @@
           </p>
         </div>
         <div class="content-aside">
-          <div class="aside-img">
-            <img src="img/esa-logo.svg" alt="ESA" loading="lazy" onerror="this.closest('.aside-img').style.display='none'" />
-            <p class="aside-caption">ESA</p>
+          <div class="flag-grid">
+            <div class="flag-item">
+              <img src="img/flags/eu.svg" alt="EU" loading="lazy" />
+              <p class="flag-label">UE</p>
+            </div>
+            <div class="flag-item">
+              <img src="img/flags/fr.svg" alt="France" loading="lazy" />
+              <p class="flag-label">France</p>
+            </div>
+            <div class="flag-item">
+              <img src="img/flags/de.svg" alt="Allemagne" loading="lazy" />
+              <p class="flag-label">Allemagne</p>
+            </div>
+            <div class="flag-item">
+              <img src="img/flags/it.svg" alt="Italie" loading="lazy" />
+              <p class="flag-label">Italie</p>
+            </div>
+            <div class="flag-item">
+              <img src="img/flags/be.svg" alt="Belgique" loading="lazy" />
+              <p class="flag-label">Belgique</p>
+            </div>
+            <div class="flag-item">
+              <img src="img/flags/nl.svg" alt="Pays-Bas" loading="lazy" />
+              <p class="flag-label">Pays-Bas</p>
+            </div>
+            <div class="flag-item">
+              <img src="img/flags/se.svg" alt="Suède" loading="lazy" />
+              <p class="flag-label">Suède</p>
+            </div>
+            <div class="flag-item">
+              <img src="img/flags/es.svg" alt="Espagne" loading="lazy" />
+              <p class="flag-label">Espagne</p>
+            </div>
           </div>
           <div class="aside-img">
-            <img src="img/cnes-logo.png" alt="CNES" loading="lazy" onerror="this.closest('.aside-img').style.display='none'" />
-            <p class="aside-caption">CNES</p>
+            <img src="img/ariane6-logo.svg" alt="Ariane 6" loading="lazy" />
+            <p class="aside-caption">Ariane 6</p>
           </div>
         </div>
       </div>
@@ -383,9 +442,9 @@
         </div>
         <div class="content-aside">
           <div class="aside-img">
-            <img src="img/ariane6-logo.svg" alt="Ariane 6" loading="lazy" />
-            <p class="aside-caption fr">Ariane 6 — programme réutilisable</p>
-            <p class="aside-caption en">Ariane 6 — reusable programme</p>
+            <img src="img/maiaspace-logo.svg" alt="Maiaspace" loading="lazy" />
+            <p class="aside-caption fr">Maiaspace — lanceurs réutilisables</p>
+            <p class="aside-caption en">Maiaspace — reusable launchers</p>
           </div>
         </div>
       </div>
@@ -502,8 +561,9 @@
             <p class="aside-caption en">Kourou, French Guiana</p>
           </div>
           <div class="aside-img">
-            <img src="img/cnes-logo.png" alt="CNES" loading="lazy" onerror="this.closest('.aside-img').style.display='none'" />
-            <p class="aside-caption">CNES</p>
+            <img src="img/ariane6-pad.jpg" alt="Ariane 6 sur la rampe — Kourou" loading="lazy" class="photo" />
+            <p class="aside-caption fr">Rampe de lancement, Kourou</p>
+            <p class="aside-caption en">Launch pad, Kourou</p>
           </div>
         </div>
       </div>
