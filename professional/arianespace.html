@@ -15,6 +15,111 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../css/style.css" />
+  <style>
+    .content-with-aside {
+      display: flex;
+      align-items: flex-start;
+      gap: 2.5rem;
+    }
+    .content-main { flex: 1; min-width: 0; }
+    .content-aside {
+      flex-shrink: 0;
+      width: 130px;
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+      padding-top: 0.1rem;
+    }
+    .aside-img {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.3rem;
+    }
+    .aside-img img {
+      width: 100%;
+      max-height: 90px;
+      object-fit: contain;
+      border-radius: 4px;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      padding: 0.5rem;
+      display: block;
+    }
+    .aside-img img.photo {
+      max-height: 160px;
+      object-fit: cover;
+      padding: 0;
+    }
+    .aside-caption {
+      font-size: 0.65rem;
+      color: var(--subtle);
+      margin: 0;
+      text-align: center;
+      letter-spacing: 0.02em;
+    }
+    .logo-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem 1.25rem;
+      margin-top: 0.75rem;
+    }
+    .logo-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.4rem;
+      width: 90px;
+      margin: 0;
+    }
+    .logo-item img {
+      width: 100%;
+      height: 48px;
+      object-fit: contain;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 0.45rem;
+    }
+    .logo-item figcaption {
+      font-size: 0.65rem;
+      color: var(--subtle);
+      text-align: center;
+      letter-spacing: 0.02em;
+    }
+    .mission-block { margin-bottom: 2.25rem; }
+    .mission-block:last-child { margin-bottom: 0; }
+    .mission-subtitle {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 0.75rem;
+    }
+    .section ol.nuances {
+      padding-left: 1.5rem;
+      margin: 0.5rem 0 0.75rem;
+    }
+    .section ol.nuances li {
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin-bottom: 0.55rem;
+      line-height: 1.65;
+    }
+    .note-ref {
+      font-style: italic;
+      color: var(--subtle);
+    }
+    @media (max-width: 768px) {
+      .content-with-aside { flex-direction: column; }
+      .content-aside { width: 100%; flex-direction: row; flex-wrap: wrap; gap: 0.75rem; }
+      .aside-img img { max-height: 60px; }
+      .aside-img img.photo { max-height: 100px; object-fit: cover; }
+      .logo-grid { gap: 0.75rem; }
+      .logo-item { width: 75px; }
+    }
+  </style>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -73,34 +178,313 @@
       <a href="audit-software.html" class="en">Audit Software</a>
     </div>
 
-    <div class="project-hero">
-      <p class="hero-role">
-        <span class="fr">Industrie</span><span class="en">Industry</span>
-        · Forvis Mazars
-      </p>
-      <h1 class="hero-title">Arianespace</h1>
-      <p class="hero-bio fr">Société de services de lancement de satellites et de vols habités — filiale d'ArianeGroup.</p>
-      <p class="hero-bio en">Satellite and crewed spaceflight launch services company — subsidiary of ArianeGroup.</p>
+    <div class="project-hero has-img">
+      <div class="project-hero-body">
+        <p class="hero-role">
+          <span class="fr">Industrie</span><span class="en">Industry</span>
+          · Forvis Mazars
+        </p>
+        <h1 class="hero-title">Arianespace</h1>
+        <p class="hero-bio fr">Société de services de lancement de satellites et de vols habités — filiale d'ArianeGroup.</p>
+        <p class="hero-bio en">Satellite and crewed spaceflight launch services company — subsidiary of ArianeGroup.</p>
+      </div>
+      <a class="project-hero-img" href="https://www.arianespace.com" target="_blank" rel="noopener noreferrer">
+        <img src="img/arianespace.png" alt="Logo Arianespace" loading="lazy" />
+      </a>
     </div>
 
+    <!-- CONTEXTE -->
     <section class="section">
       <p class="section-label fr">Contexte</p>
       <p class="section-label en">Context</p>
-      <p class="fr" style="color:var(--subtle)">À rédiger.</p>
-      <p class="en" style="color:var(--subtle)">To be written.</p>
+
+      <p class="fr" style="color:var(--muted); margin-bottom:1.25rem;">
+        Les acteurs du secteur spatial européen — de la fabrication à la commercialisation des lanceurs.
+      </p>
+      <p class="en" style="color:var(--muted); margin-bottom:1.25rem;">
+        Key players in the European space launch ecosystem — from manufacturing to commercialisation.
+      </p>
+
+      <div class="logo-grid">
+        <figure class="logo-item">
+          <img src="img/arianespace.png" alt="Arianespace" loading="lazy" onerror="this.closest('.logo-item').style.display='none'" />
+          <figcaption>Arianespace</figcaption>
+        </figure>
+        <figure class="logo-item">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/ArianeGroup_logo.svg/200px-ArianeGroup_logo.svg.png" alt="ArianeGroup" loading="lazy" onerror="this.closest('.logo-item').style.display='none'" />
+          <figcaption>ArianeGroup</figcaption>
+        </figure>
+        <figure class="logo-item">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Airbus_Logo_2017.svg/200px-Airbus_Logo_2017.svg.png" alt="Airbus" loading="lazy" onerror="this.closest('.logo-item').style.display='none'" />
+          <figcaption>Airbus</figcaption>
+        </figure>
+        <figure class="logo-item">
+          <img src="https://upload.wikimedia.org/wikipedia/fr/thumb/7/7a/Safran_-_Logo.svg/200px-Safran_-_Logo.svg.png" alt="Safran" loading="lazy" onerror="this.closest('.logo-item').style.display='none'" />
+          <figcaption>Safran</figcaption>
+        </figure>
+        <figure class="logo-item">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/ESA_logo_simple.svg/200px-ESA_logo_simple.svg.png" alt="ESA" loading="lazy" onerror="this.closest('.logo-item').style.display='none'" />
+          <figcaption>ESA</figcaption>
+        </figure>
+        <figure class="logo-item">
+          <img src="https://upload.wikimedia.org/wikipedia/fr/thumb/e/e3/Logo_CNES.svg/200px-Logo_CNES.svg.png" alt="CNES" loading="lazy" onerror="this.closest('.logo-item').style.display='none'" />
+          <figcaption>CNES</figcaption>
+        </figure>
+      </div>
     </section>
 
+    <!-- MISSION -->
     <section class="section">
       <p class="section-label">Mission</p>
-      <p class="fr" style="color:var(--subtle)">À rédiger.</p>
-      <p class="en" style="color:var(--subtle)">To be written.</p>
+
+      <!-- Bloc 1 : le contexte médiatique -->
+      <div class="mission-block">
+        <p class="fr">
+          Personne n'échappe au récit de la conquête de l'espace (Laïka, Gagarine, Armstrong et Apollo 11), au spectacle des lancements de fusées (ou de leurs échecs spectaculaires), à la mise en scène des satellites. Dans les années 2010 surtout, personne n'échappe à la montée en puissance de SpaceX qui multiplie les tests, développe lanceurs moyens, lanceurs lourds, et surtout ces dernières années lanceurs réutilisables.
+        </p>
+        <p class="fr">
+          Personne n'échappe également dans les années 2020 au lancement de constellations de satellites par Amazon, ou par SpaceX, colonisant les orbites rapidement.
+        </p>
+        <p class="fr">
+          L'espace prend de la place dans les médias avec la croissance effrénée de géants américains, dont les ambitions ne semblent reculer devant rien.
+        </p>
+        <p class="fr">
+          C'est dans ce contexte, en 2025, que j'ai l'opportunité d'intervenir sur la mission Arianespace en tant qu'auditeur financier, étant partiellement conscient des enjeux opérationnels, stratégiques ou politiques. C'est en faisant mes recherches sur le client et son environnement que je découvre l'histoire et les enjeux du secteur.
+        </p>
+        <p class="en">
+          No one escapes the narrative of space conquest — Laika, Gagarin, Apollo 11 — or the spectacle of rocket launches. In the 2010s, SpaceX's rise became impossible to ignore: successive tests, medium and heavy launchers, and above all reusable vehicles. By the 2020s, Amazon and SpaceX were racing to colonise orbits with satellite mega-constellations. Space seized the media spotlight, driven by American giants whose ambitions know no bounds.
+        </p>
+        <p class="en">
+          It was in this context that, in 2025, I had the opportunity to audit Arianespace as a financial auditor — entering the engagement aware of the operational, strategic and political stakes, but discovering the full depth of the sector through my own research.
+        </p>
+      </div>
+
+      <!-- Bloc 2 : projet européen, ESA, CNES -->
+      <div class="mission-block content-with-aside">
+        <div class="content-main">
+          <p class="mission-subtitle fr">Un projet résolument européen</p>
+          <p class="mission-subtitle en">A resolutely European project</p>
+          <p class="fr">
+            Ariane est un projet résolument européen. Depuis les débuts de la création de fusées avec le projet Europa, jusqu'à Arianespace, le projet a toujours été le résultat d'une collaboration de pays européens, de l'European Space Agency (ESA), et du Centre National d'Études Spatiales (CNES).
+          </p>
+          <p class="fr">
+            L'idée est, depuis son initiation, de permettre à l'Europe un accès indépendant à l'espace, c'est-à-dire de mettre en orbite ses propres satellites, civils (télécommunications, observations météo) ou militaires.
+          </p>
+          <p class="en">
+            Ariane is a resolutely European project. From the early Europa rocket programme to Arianespace, it has always been the product of collaboration between European nations, the European Space Agency (ESA), and France's national space agency CNES. The founding idea: to guarantee Europe an independent path to space — the ability to place its own civilian (telecommunications, meteorology) and military satellites in orbit.
+          </p>
+        </div>
+        <div class="content-aside">
+          <div class="aside-img">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/ESA_logo_simple.svg/200px-ESA_logo_simple.svg.png" alt="ESA" loading="lazy" onerror="this.closest('.aside-img').style.display='none'" />
+            <p class="aside-caption">ESA</p>
+          </div>
+          <div class="aside-img">
+            <img src="https://upload.wikimedia.org/wikipedia/fr/thumb/e/e3/Logo_CNES.svg/200px-Logo_CNES.svg.png" alt="CNES" loading="lazy" onerror="this.closest('.aside-img').style.display='none'" />
+            <p class="aside-caption">CNES</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bloc 3 : flexibilité, Soyouz, Vega, ASL -->
+      <div class="mission-block content-with-aside">
+        <div class="content-main">
+          <p class="mission-subtitle fr">Vers plus de flexibilité : Soyouz, Vega et la naissance d'ArianeGroup</p>
+          <p class="mission-subtitle en">Gaining flexibility: Soyuz, Vega, and the birth of ArianeGroup</p>
+          <p class="fr">
+            Le système de lancement Ariane, comme tout bon projet européen, manquait de flexibilité. Le lanceur Ariane 5, impressionnant technologiquement et véritable fierté européenne, est lourd et ne convient pas à tous les satellites, qui eux sont de plus en plus légers.
+          </p>
+          <p class="fr">
+            Arianespace obtient d'abord, au milieu des années 2000, l'exploitation du mythique lanceur russe Soyouz, plus léger, fiable et relativement peu cher, puis en 2012 l'exploitation du lanceur italien Vega, réalisé par le constructeur Avio, également plus léger que le système Ariane.
+          </p>
+          <p class="fr">
+            Airbus et Safran, ayant participé ensemble aux constructions successives d'Ariane, longuement collaboré et développé une grande synergie, créent Airbus Safran Launchers (ASL) en 2014. Objectif : racheter le groupe Arianespace et développer la prochaine génération de lanceurs : Ariane 6. À l'issue du rachat en 2017, ASL devient ArianeGroup, en charge de la production, et détient Arianespace, en charge de la commercialisation.
+          </p>
+          <p class="en">
+            The Ariane launch system lacked flexibility. Ariane 5, technically impressive and a source of European pride, was too heavy for the growing number of lighter satellites. Arianespace secured operation of the legendary Russian Soyuz in the mid-2000s and of the Italian Vega launcher (built by Avio) in 2012, both lighter alternatives. Airbus and Safran — long-time collaborators across successive Ariane generations — created Airbus Safran Launchers (ASL) in 2014 to acquire Arianespace and develop Ariane 6. After the 2017 acquisition, ASL became ArianeGroup, handling production and owning Arianespace, which handles commercialisation.
+          </p>
+        </div>
+        <div class="content-aside">
+          <div class="aside-img">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Airbus_Logo_2017.svg/200px-Airbus_Logo_2017.svg.png" alt="Airbus" loading="lazy" onerror="this.closest('.aside-img').style.display='none'" />
+            <p class="aside-caption">Airbus</p>
+          </div>
+          <div class="aside-img">
+            <img src="https://upload.wikimedia.org/wikipedia/fr/thumb/7/7a/Safran_-_Logo.svg/200px-Safran_-_Logo.svg.png" alt="Safran" loading="lazy" onerror="this.closest('.aside-img').style.display='none'" />
+            <p class="aside-caption">Safran</p>
+          </div>
+          <div class="aside-img">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/ArianeGroup_logo.svg/200px-ArianeGroup_logo.svg.png" alt="ArianeGroup" loading="lazy" onerror="this.closest('.aside-img').style.display='none'" />
+            <p class="aside-caption">ArianeGroup</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bloc 4 : contexte dégradé, Ariane 6, concurrence -->
+      <div class="mission-block content-with-aside">
+        <div class="content-main">
+          <p class="mission-subtitle fr">Le contexte en 2025 : Ariane 6 face à une concurrence mondiale</p>
+          <p class="mission-subtitle en">The 2025 landscape: Ariane 6 facing global competition</p>
+          <p class="fr">
+            Le contexte dans lequel j'interviens se trouve dégradé : depuis la guerre en Ukraine, le lanceur Soyouz n'est plus utilisable, et Avio, le constructeur italien, a souhaité reprendre le contrôle de son lanceur Vega.
+          </p>
+          <p class="fr">
+            Heureusement, Ariane 6 est prête. L'année où j'audite les comptes, les lancements se sont enchaînés avec succès, mêlant lancements institutionnels et commerciaux, civils et militaires. SpaceX en revanche est un concurrent menaçant : la société possède des modèles de lanceurs variés, est en mesure de tous les exploiter, et réalise plus de la moitié des lancements de l'année — sur 324 lancements en 2025, SpaceX en a réalisé 165, soit 3 par semaine — et dispose d'une capacité de réutilisation largement supérieure, dont le premier étage du Falcon 9 a été réutilisé plus de 30 fois.
+          </p>
+          <p class="fr">
+            Ce n'est cependant pas le seul acteur : des puissances étatiques telles que la Chine, l'Inde ou le Japon se trouvent également en concurrence.
+          </p>
+          <p class="fr">
+            La place du groupe Ariane ici est donc incomparable : en 2025, la société se voit contrainte de n'utiliser que son lanceur Ariane 6, a réalisé 7 lancements (1 tous les 2 mois) et n'a réutilisé aucun étage de ses fusées.
+          </p>
+          <p class="en">
+            The context I audited was deteriorating: following the war in Ukraine, the Soyuz is no longer available; Avio has reclaimed control of Vega. Fortunately, Ariane 6 is operational, with launches coming in steady succession in 2025 — combining institutional and commercial, civilian and military missions. Yet SpaceX remains a formidable competitor, operating a diverse fleet and performing 165 of 324 global launches in 2025 (roughly 3 per week), with a Falcon 9 first stage reused more than 30 times. State actors — China, India, Japan — add further competition.
+          </p>
+          <p class="en">
+            Arianespace's position in this landscape is stark: in 2025 it operated only Ariane 6, completed 7 launches (one every two months), and reused no stages.
+          </p>
+        </div>
+        <div class="content-aside">
+          <div class="aside-img">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Ariane_6_first_launch_VA261.jpg/320px-Ariane_6_first_launch_VA261.jpg" alt="Lancement Ariane 6" loading="lazy" class="photo" onerror="this.closest('.aside-img').style.display='none'" />
+            <p class="aside-caption">Ariane 6 — premier lancement, 2024</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bloc 5 : nuances -->
+      <div class="mission-block">
+        <p class="mission-subtitle fr">Nuances et perspectives</p>
+        <p class="mission-subtitle en">Nuances and outlook</p>
+        <p class="fr">Il faut cependant relativiser cette mise en perspective :</p>
+        <p class="en">This picture deserves nuance:</p>
+        <ol class="nuances fr">
+          <li>Si Vega n'est désormais plus opéré par Arianespace, il reste un lanceur européen et garantit, au même titre qu'Ariane, l'accès à l'espace et la souveraineté de l'Europe.</li>
+          <li>Ariane 6 a été conçu pour être plus flexible et existe en version A62 ou A64, permettant d'adapter la puissance de la fusée à l'objet mis en orbite.</li>
+          <li>Sur 165 lancements de SpaceX, 120 étaient liés aux mises en orbite de ses propres constellations. L'entreprise tire profit de synergies entre ses différents pôles d'activités, ce que ne peut pas faire Ariane, dont la mission est uniquement la fabrication et la commercialisation des lanceurs.</li>
+          <li>La filière des lanceurs réutilisables est un projet déjà actif au sein du groupe avec Maiaspace.</li>
+        </ol>
+        <ol class="nuances en">
+          <li>Vega, though no longer operated by Arianespace, remains a European launcher and continues to guarantee European sovereign access to space.</li>
+          <li>Ariane 6 was designed to be more flexible and exists in two variants — A62 and A64 — matching the rocket's power to the payload.</li>
+          <li>Of SpaceX's 165 launches, 120 served its own constellation — a vertical integration advantage Arianespace cannot replicate, as its mission is solely to manufacture and commercialise launchers.</li>
+          <li>Reusable launcher development is already underway within the group via Maiaspace.</li>
+        </ol>
+        <p class="fr">Par ailleurs, la filière est soutenue par les États, qui y voient une garantie de leur indépendance.</p>
+        <p class="en">States also actively support the sector, seeing it as a guarantee of strategic independence.</p>
+      </div>
+
+      <!-- Bloc 6 : analyse financière -->
+      <div class="mission-block content-with-aside">
+        <div class="content-main">
+          <p class="mission-subtitle fr">Reflet dans les comptes 2025</p>
+          <p class="mission-subtitle en">The financial picture — 2025 accounts</p>
+
+          <p class="fr">Financièrement, ces opérations se reflètent dans les comptes d'Arianespace de 2025 :</p>
+          <p class="en">These dynamics have clear traces in the 2025 financial statements:</p>
+
+          <p class="fr">
+            <strong class="fr">Le conflit russo-ukrainien.</strong> Dans la <span class="note-ref">note 1 « Immobilisations » (p.24)</span>, les droits d'utilisation de Soyouz ont été totalement sortis du bilan pour <strong>167 M€</strong>. Ils représentaient le droit d'Arianespace à commercialiser le lanceur. Dans la <span class="note-ref">note 11 « Provisions pour risques et charges »</span>, les acomptes versés à la Russie dans le cadre de l'exploitation de Soyouz sont gelés pour <strong>388 M€</strong> et font l'objet d'une provision intégrale — la société ne s'attend pas à récupérer ces acomptes versés, ni à restituer les acomptes reçus.
+          </p>
+          <p class="en">
+            <strong>The Ukraine conflict.</strong> In <span class="note-ref">note 1 on fixed assets (p.24)</span>, the Soyuz operating rights were fully written off at <strong>€167m</strong> — these represented the right to commercialise the launcher. <span class="note-ref">Note 11 on provisions</span> shows that <strong>€388m</strong> in advances paid to Russia have been frozen and fully provisioned: the company expects neither to recover these advances nor to return those received.
+          </p>
+
+          <p class="fr">
+            <strong>Le soutien étatique.</strong> Élément central du fonctionnement de la société, ce soutien a été renouvelé lors du sommet de Séville, actant l'engagement du secteur aérospatial pour plusieurs centaines de millions d'euros. Il permet à Airbus et Safran de maintenir les opérations et de recapitaliser la société — c'est-à-dire d'absorber les pertes et de témoigner de leur confiance dans l'exploitation future. <span class="note-ref">(Synthétisé en note 1 « Activité de la Société au cours de l'exercice », faits marquants, p.16.)</span>
+          </p>
+          <p class="en">
+            <strong>State support.</strong> Renewed at the Seville summit for several hundred million euros, state backing allows Airbus and Safran to sustain operations and recapitalise the company — absorbing losses and signalling confidence in future operations. <span class="note-ref">(Summarised in note 1, p.16.)</span>
+          </p>
+
+          <p class="fr">
+            Par ailleurs, la <span class="note-ref">note 11 « Provisions pour risques et charges »</span> révèle une provision pour risques techniques et commerciaux de <strong>20 M€</strong>, reflétant les pertes attendues sur certains contrats signés. S'agissant d'une estimation comptable, cet élément fait l'objet d'une attention particulière en audit <span class="note-ref">(ISA 540R)</span>. La subtilité est d'y voir non pas un échec commercial, mais un choix assumé : Arianespace accepte de réaliser certains lancements déficitaires au nom du maintien de la souveraineté européenne dans l'accès à l'espace.
+          </p>
+          <p class="en">
+            <span class="note-ref">Note 11</span> also reveals a <strong>€20m</strong> provision for technical and commercial risks, reflecting expected losses on certain contracts — an accounting estimate warranting particular audit attention <span class="note-ref">(ISA 540R)</span>. The key insight: this does not mean the company expects only loss-making launches. Rather, it accepts certain loss-making launches in the name of maintaining European sovereign access to space.
+          </p>
+        </div>
+        <div class="content-aside">
+          <div class="aside-img">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Guiana_Space_Centre_-_ELA-3.jpg/320px-Guiana_Space_Centre_-_ELA-3.jpg" alt="Centre Spatial Guyanais — ELA-3, Kourou" loading="lazy" class="photo" onerror="this.closest('.aside-img').style.display='none'" />
+            <p class="aside-caption fr">Centre Spatial Guyanais — Kourou</p>
+            <p class="aside-caption en">Guiana Space Centre — Kourou</p>
+          </div>
+        </div>
+      </div>
     </section>
 
+    <!-- CONCLUSION -->
     <section class="section">
-      <p class="section-label fr">Points marquants</p>
-      <p class="section-label en">Key highlights</p>
-      <p class="fr" style="color:var(--subtle)">À rédiger.</p>
-      <p class="en" style="color:var(--subtle)">To be written.</p>
+      <p class="section-label">Conclusion</p>
+      <p class="fr">
+        Il faut donc rappeler que les lanceurs européens remplissent pleinement leur rôle, ce pour quoi ils ont été conçus, et les services qu'ils doivent rendre. L'Europe reste compétitive et en capacité de produire des systèmes de qualité, flexibles, et de rejoindre les acteurs dominants sur leurs segments.
+      </p>
+      <p class="fr">
+        La capacité des États à garantir l'exploitation renforce la confiance et fait perdurer une filière historique de compétence technique et industrielle avancée, utile et nécessaire.
+      </p>
+      <p class="fr">
+        Les synergies restent encore à développer avec d'autres acteurs européens : un des exemples les plus évidents reste la domination des géants américains et leurs interconnexions, créant un écosystème presque fermé qui leur est extrêmement avantageux.
+      </p>
+      <p class="en">
+        European launchers are fulfilling the role for which they were designed. Europe remains competitive and capable of producing high-quality, flexible systems that can hold their ground against dominant players on each market segment.
+      </p>
+      <p class="en">
+        States' capacity to guarantee operations reinforces confidence and sustains a historic sector of advanced technical and industrial expertise — one that is both useful and necessary.
+      </p>
+      <p class="en">
+        What remains to be built are the synergies that American giants have developed across their ecosystems — an almost closed loop that gives them a decisive structural advantage and that Europe has yet to replicate.
+      </p>
+    </section>
+
+    <!-- ANECDOTES -->
+    <section class="section">
+      <p class="section-label">Anecdotes</p>
+      <div class="content-with-aside">
+        <div class="content-main">
+          <p class="fr">
+            Une des obligations du commissaire aux comptes lors de la prise de connaissance de l'entité et de son environnement <span class="note-ref">(ISA 315R)</span> est de prendre connaissance des lois et réglementations qui lui sont applicables. Les opérations spatiales ont fait l'objet de plusieurs lois (LOS : Lois sur les Opérations Spatiales) et sont encadrées par le fonctionnement du CNES et du Centre Spatial Guyanais à Kourou, d'où sont réalisés les lancements.
+          </p>
+          <p class="fr">
+            Les lancements sont également réalisés sous la supervision du CNES, qui dispose des compétences et du réseau d'observation pour piloter les missions.
+          </p>
+          <p class="fr">
+            Le CNES a des pouvoirs étendus sur le Centre Spatial Guyanais, qui fait sept fois la superficie de la ville de Paris et dispose d'une police spéciale à l'intérieur de la zone opérationnelle.
+          </p>
+          <p class="fr">
+            Les lancements sont soumis à un régime d'autorisation spécifique, impliquant le préfet de Guyane, sous la supervision du ministre chargé de l'Espace ainsi que du ministre des Armées.
+          </p>
+          <p class="fr">
+            La base du CSG fait l'objet d'une « bulle aérienne » nommée SOP3. Son survol est interdit.
+          </p>
+          <p class="en">
+            One of an auditor's obligations when gaining an understanding of the entity and its environment <span class="note-ref">(ISA 315R)</span> is to identify the laws and regulations applicable to it. Space operations are governed by the French Space Operations Act (LOS) and overseen by CNES and the Guiana Space Centre (CSG) in Kourou, from which all launches are conducted.
+          </p>
+          <p class="en">
+            Launches are conducted under CNES supervision, which holds the expertise and tracking network to pilot missions.
+          </p>
+          <p class="en">
+            CNES has extensive authority over the CSG — a site seven times the size of Paris, with its own security force within the operational zone.
+          </p>
+          <p class="en">
+            Launches require specific authorisation involving the Prefect of French Guiana, under the supervision of the Minister for Space and the Minister of Defence.
+          </p>
+          <p class="en">
+            The CSG sits under a protected airspace exclusion zone called SOP3. Overflight is prohibited.
+          </p>
+        </div>
+        <div class="content-aside">
+          <div class="aside-img">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Kourou_aerial_view.jpg/320px-Kourou_aerial_view.jpg" alt="Vue aérienne de Kourou" loading="lazy" class="photo" onerror="this.closest('.aside-img').style.display='none'" />
+            <p class="aside-caption fr">Kourou, Guyane</p>
+            <p class="aside-caption en">Kourou, French Guiana</p>
+          </div>
+          <div class="aside-img">
+            <img src="https://upload.wikimedia.org/wikipedia/fr/thumb/e/e3/Logo_CNES.svg/200px-Logo_CNES.svg.png" alt="CNES" loading="lazy" onerror="this.closest('.aside-img').style.display='none'" />
+            <p class="aside-caption">CNES</p>
+          </div>
+        </div>
+      </div>
     </section>
   </main>
 
