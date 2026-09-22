@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html class="lang-fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Utile — Martin Couairon</title>
+  <script>
+    (function () {
+      var saved = localStorage.getItem('lang') || (navigator.language.startsWith('fr') ? 'fr' : 'en');
+      document.documentElement.className = 'lang-' + saved;
+    })();
+  </script>
+  <style>html.lang-fr .en,html.lang-en .fr{display:none!important}</style>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <meta name="description" content="Utile — free skills-sharing platform. Offer or find help on any topic, locally and for free." />
+  <meta property="og:title" content="Utile — Martin Couairon" />
+  <meta property="og:description" content="Utile — free skills-sharing platform. Offer or find help on any topic, locally and for free." />
+  <meta property="og:url" content="https://martincouairon.github.io/projects/utile.html" />
+  <meta property="og:type" content="website" />
+  <link rel="canonical" href="https://martincouairon.github.io/projects/utile.html" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Utile",
+  "author": {
+    "@type": "Person",
+    "name": "Martin Couairon",
+    "url": "https://martincouairon.github.io"
+  },
+  "description": "Free skills-sharing platform. Find or offer help on any topic — tutoring, advice, practice.",
+  "url": "https://jesuisutile.fr",
+  "applicationCategory": "WebApplication",
+  "datePublished": "2026-01-01"
+}
+</script>
+</head>
+<body>
+  <nav>
+    <div class="nav-header">
+      <span class="nav-brand">Martin Couairon</span>
+      <button id="lang-toggle" onclick="toggleLang()">EN</button>
+    </div>
+    <ul class="nav-links">
+      <li><a href="/">Home</a></li>
+      <li>
+        <a href="/projects/"><span class="fr">Projets</span><span class="en">Projects</span></a>
+        <ul class="nav-sub">
+          <li><a href="utile.html" class="active">Utile</a></li>
+          <li><a href="academie.html">Académie</a></li>
+          <li><a href="drift.html"><span class="fr">Dérive génétique</span><span class="en">Genetic Drift</span></a></li>
+        </ul>
+      </li>
+      <li><a href="../discussion.html">Discussion</a></li>
+      <li><a href="../cv.html">CV</a></li>
+      <li><a href="../about.html"><span class="fr">À propos</span><span class="en">About</span></a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <a href="/projects/" class="back-link">
+      ← <span class="fr">Tous les projets</span><span class="en">All projects</span>
+    </a>
+
+    <div class="project-hero has-img">
+      <div class="project-hero-body">
+        <p class="hero-role" style="margin-bottom: 0.5rem;">
+          2026 · Web app · <span class="fr">Temps passé : ~10 h · En cours</span><span class="en">Time spent: ~10 h · Ongoing</span>
+        </p>
+        <h1 class="hero-title">Utile</h1>
+        <p class="hero-bio fr">Plateforme de partage de compétences gratuite.</p>
+        <p class="hero-bio en">Free skills-sharing platform.</p>
+        <p class="project-cta">
+          <span class="fr">Visitez le site ici :</span><span class="en">Go check the website here:</span>
+          <a href="https://jesuisutile.fr/fr" target="_blank" rel="noopener" class="project-cta-link">jesuisutile.fr →</a>
+        </p>
+        <div class="project-links">
+          <a href="https://github.com/martincouairon/utile" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </div>
+      <a href="https://jesuisutile.fr/fr" class="project-hero-img" target="_blank" rel="noopener">
+        <img src="img/utile.png" alt="Aperçu de jesuisutile.fr" />
+      </a>
+    </div>
+
+    <section class="section">
+      <p class="section-label"><span class="fr">Un mot aux visiteurs</span><span class="en">A note to visitors</span></p>
+      <p class="fr">Utile ne peut remplir son rôle qu'avec des utilisateurs. Si la plateforme vous semble intéressante, partagez-la autour de vous — c'est le meilleur moyen de lui permettre de se développer et d'avoir un impact réel. Je suis également toujours ouvert aux suggestions et retours pour améliorer l'expérience.</p>
+      <p class="en">Utile can only fulfil its purpose if people use it. If you find the platform worthwhile, sharing it with others is the best way to help it grow and make a real difference. I'm also always happy to hear suggestions or feedback for improvement.</p>
+    </section>
+
+    <section class="section">
+      <p class="section-label"><span class="fr">L'idée</span><span class="en">The idea</span></p>
+      <p class="fr">Il est souvent difficile de trouver une aide gratuite et de qualité sur un sujet précis — que ce soit pour apprendre quelque chose, progresser dans une compétence ou obtenir un conseil d'expert.</p>
+      <p class="en">Finding free, quality help on a specific topic is often difficult — whether to learn something, improve a skill, or get expert advice.</p>
+      <p class="fr">Les réseaux sociaux ont fait quelque chose de remarquable : connecter des gens à travers le monde entier, permettre de partager des expériences, de célébrer ce qui nous rapproche et de découvrir ce qui nous distingue.</p>
+      <p class="en">Social media has done something remarkable: connecting people across the world, making it possible to share experiences, celebrate what brings us together and discover what sets us apart.</p>
+      <p class="fr">Pourtant, au milieu de cette masse, je me suis souvent surpris à vouloir rencontrer les bonnes personnes près de chez moi — quelqu'un pour apprendre une nouvelle compétence, ou pour démarrer un projet ensemble.</p>
+      <p class="en">Yet amid this global mass, I often found myself wishing to meet the right people nearby — someone to pick up a new skill from, or to start a project with.</p>
+      <p class="fr">Ce désir m'a conduit à imaginer comment le concrétiser : offrir aux gens une façon de se rencontrer, plutôt que de tweeter.</p>
+      <p class="en">That desire led me to imagine how to make it happen: to offer people a way to meet, rather than just tweet.</p>
+    </section>
+
+    <section class="section">
+      <p class="section-label"><span class="fr">Ma vision</span><span class="en">My vision</span></p>
+      <p class="fr">L'idée resterait fidèle à son essence : une plateforme publique et gratuite, accessible à tous, conçue pour rapprocher les utilisateurs au sein de leur ville — en échangeant leurs coordonnées et en se rencontrant en personne.</p>
+      <p class="en">The idea would stay true to its core: a public, free platform for everyone, designed to bring users together within their own city — by sharing contact details and meeting in person.</p>
+      <p class="fr">Elle prendrait trois formes :</p>
+      <p class="en">It would take three forms:</p>
+      <ul class="fr">
+        <li><strong>Utile</strong> — où chacun peut proposer ses compétences. L'idée m'a en premier lieu été inspirée par ma grand-mère, professeure de mathématiques à la retraite, qui souhaitait aider mais ne savait pas comment se rendre disponible. Utile offre à chacun la possibilité d'être vraiment utile — selon ses propres conditions, en mobilisant ce qu'il a appris pendant des années et ce qu'il maîtrise le mieux.</li>
+        <li><strong>Aide</strong> — qui fonctionne dans le même esprit mais à rebours : les utilisateurs y expriment des besoins précis pour lesquels ils cherchent l'aide d'un voisin, faute de compétence ou de moyens pour faire appel à un professionnel.</li>
+        <li><strong>Projet</strong> — la partie du site qui me ressemble le plus. Je cherchais depuis longtemps un moyen de rencontrer des personnes pour lancer de nouveaux projets, tester des idées et prendre plaisir à construire quelque chose ensemble. Les utilisateurs y publient leurs idées, et d'autres peuvent les rejoindre, en apportant leurs compétences ou simplement leur enthousiasme.</li>
+      </ul>
+      <ul class="en">
+        <li><strong>Utile</strong> — where anyone can offer their skills to others. The idea was first inspired by my grandmother, a retired mathematics teacher who found herself wanting to help but unsure how to reach out. Utile gives people a way to be genuinely useful — on their own terms, through what they have spent years learning and what they do best.</li>
+        <li><strong>Help</strong> — which works in a similar spirit but in reverse: users share specific topics where they need a neighbour's assistance, because they lack either the skill or the means to hire a professional.</li>
+        <li><strong>Projects</strong> — the part of the platform I built most for myself. I had long been looking for a way to connect with people to start new things, test ideas, and enjoy building together. Users post their ideas, and others can join, bringing their skills or simply their enthusiasm.</li>
+      </ul>
+      <p class="fr">Utile permet à chacun de proposer ou de trouver une aide gratuite sur n'importe quel sujet. Un répertoire simple, filtrable, où des personnes compétentes partagent leur temps.</p>
+      <p class="en">Utile lets anyone offer or find free help on any topic. A simple, filterable directory where knowledgeable people share their time.</p>
+    </section>
+
+    <section class="section">
+      <p class="section-label"><span class="fr">La construction</span><span class="en">Building it</span></p>
+      <p class="fr">Mes expériences précédentes en conception web — WordPress, Wix — avaient été franchement décevantes. Les contraintes permanentes, les contournements, l'écart entre ce que je souhaitais construire et ce que les outils permettaient réellement.</p>
+      <p class="en">My previous experiences with web design — WordPress, Wix — had been genuinely frustrating. The constant constraints, the workarounds, the gap between what I wanted to build and what the tools actually allowed.</p>
+      <p class="fr">Quand l'idée de la plateforme a pris forme, j'ai pensé à Claude. Mes deux frères travaillent dans l'IA, et j'avais entendu comment Claude Code pouvait aider les développeurs de façon vraiment efficace. J'avais d'abord essayé de créer une application permettant aux utilisateurs de personnaliser leur fil d'actualité — mais comme c'était en Swift, l'expérience n'avait pas été concluante. J'avais encore mon abonnement, et quand l'idée d'Utile m'est venue, demander à Claude Code semblait être la suite logique.</p>
+      <p class="en">When the idea for the platform took shape, I thought of Claude. My two brothers work in AI, and I had heard how Claude Code could support developers in a genuinely efficient way. I had first tried building an app to let users customise their news feed — but as it was on Swift, the experience hadn't been conclusive. I still had my subscription, and when the idea for Utile came to me, asking Claude Code felt like the obvious next step.</p>
+      <p class="fr">Claude a posé l'infrastructure nécessaire, et j'ai vérifié chaque étape au fil du processus — apprenant beaucoup sur la façon dont les sites web sont réellement construits. Deux jours de vacances plus tard, un site entièrement fonctionnel était en ligne.</p>
+      <p class="en">Claude laid out the infrastructure, and I checked each step along the way — learning a great deal about how websites are actually built. Two days into a quiet holiday, a fully functioning website was live.</p>
+      <p class="fr">Je pouvais donner suite à chaque idée au moment où elle surgissait, en implémentant les fonctionnalités une à une : publier des annonces publiques, puis permettre aux utilisateurs de créer un compte pour gérer leurs offres, puis afficher l'ensemble des annonces sur une carte, puis vérifier les failles de sécurité, protéger les données contre le scraping, intégrer les mentions RGPD, et ainsi de suite.</p>
+      <p class="en">I could follow up on every idea as it came, implementing features one by one: hosting public listings, then letting users create accounts to manage their offers, then building a map to display everything nearby, then checking for security vulnerabilities, protecting data against scraping, adding GDPR disclosures, and so on.</p>
+      <p class="fr">Ce fut une expérience formidable. J'espère qu'Utile remplit le rôle pour lequel il a été conçu.</p>
+      <p class="en">It was a wonderful experience. I hope Utile fulfils the purpose it was built for.</p>
+    </section>
+
+    <section class="section">
+      <p class="section-label"><span class="fr">Fonctionnalités</span><span class="en">Features</span></p>
+      <div class="project-list">
+        <div class="project-item" style="pointer-events: none; cursor: default;">
+          <span class="project-meta"></span>
+          <div>
+            <p class="project-title fr">Trois espaces thématiques</p>
+            <p class="project-title en">Three themed spaces</p>
+            <p class="project-desc fr">Utile (offres de compétences), Projet (projets collaboratifs locaux) et Aide (demandes d'aide) — chacun avec sa propre identité visuelle et son univers.</p>
+            <p class="project-desc en">Utile (skills offers), Projet (local collaborative projects) and Aide (help requests) — each with its own visual identity and focus.</p>
+          </div>
+        </div>
+        <div class="project-item" style="pointer-events: none; cursor: default;">
+          <span class="project-meta"></span>
+          <div>
+            <p class="project-title fr">Recherche et filtres</p>
+            <p class="project-title en">Search and filters</p>
+            <p class="project-desc fr">Recherche full-text sur le titre, la description et les compétences ; filtrage par région et par catégorie ; résultats paginés en temps réel.</p>
+            <p class="project-desc en">Full-text search across title, description and skills; filtering by region and category; paginated results updated in real time.</p>
+          </div>
+        </div>
+        <div class="project-item" style="pointer-events: none; cursor: default;">
+          <span class="project-meta"></span>
+          <div>
+            <p class="project-title fr">Carte interactive</p>
+            <p class="project-title en">Interactive map</p>
+            <p class="project-desc fr">Visualisation géographique des annonces avec coordonnées GPS — pour trouver facilement ce qui se passe près de chez soi.</p>
+            <p class="project-desc en">Geographic visualisation of listings with GPS coordinates — to easily find what's happening nearby.</p>
+          </div>
+        </div>
+        <div class="project-item" style="pointer-events: none; cursor: default;">
+          <span class="project-meta"></span>
+          <div>
+            <p class="project-title fr">Dépôt d'annonce</p>
+            <p class="project-title en">Post a listing</p>
+            <p class="project-desc fr">Formulaire simplifié pour proposer une compétence, publier un projet ou décrire un besoin — modération avant mise en ligne.</p>
+            <p class="project-desc en">Streamlined form to offer a skill, publish a project or describe a need — with moderation before going live.</p>
+          </div>
+        </div>
+        <div class="project-item" style="pointer-events: none; cursor: default;">
+          <span class="project-meta"></span>
+          <div>
+            <p class="project-title fr">Espace personnel</p>
+            <p class="project-title en">Personal account</p>
+            <p class="project-desc fr">Création de compte, connexion et gestion de ses annonces depuis un espace dédié.</p>
+            <p class="project-desc en">Account creation, login and management of your own listings from a dedicated space.</p>
+          </div>
+        </div>
+        <div class="project-item" style="pointer-events: none; cursor: default;">
+          <span class="project-meta"></span>
+          <div>
+            <p class="project-title fr">Multi-langue</p>
+            <p class="project-title en">Multilingual</p>
+            <p class="project-desc fr">Interface entièrement disponible en français et en anglais, avec détection automatique de la langue du navigateur.</p>
+            <p class="project-desc en">Interface fully available in French and English, with automatic browser language detection.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <p class="section-label">Stack</p>
+      <div class="tag-list">
+        <span class="tag">Next.js 15</span>
+        <span class="tag">TypeScript</span>
+        <span class="tag">Supabase</span>
+        <span class="tag">Tailwind CSS</span>
+        <span class="tag">Vercel</span>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Martin Couairon &mdash; 2026</p>
+  </footer>
+  <script>
+        function applyLang(lang) {
+      document.documentElement.classList.remove('lang-fr', 'lang-en');
+      document.documentElement.classList.add('lang-' + lang);
+      var btn = document.getElementById('lang-toggle');
+      if (btn) btn.textContent = lang === 'fr' ? 'EN' : 'FR';
+      localStorage.setItem('lang', lang);
+    }
+    function toggleLang() {
+      applyLang(localStorage.getItem('lang') === 'fr' ? 'en' : 'fr');
+    }
+    applyLang(localStorage.getItem('lang') || (navigator.language.startsWith('fr') ? 'fr' : 'en'));
+  </script>
+</body>
+</html>

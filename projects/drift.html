@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html class="lang-fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dérive génétique — Martin Couairon</title>
+  <script>
+    (function () {
+      var saved = localStorage.getItem('lang') || (navigator.language.startsWith('fr') ? 'fr' : 'en');
+      document.documentElement.className = 'lang-' + saved;
+    })();
+  </script>
+  <style>html.lang-fr .en,html.lang-en .fr{display:none!important}</style>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <meta name="description" content="Simulation Monte Carlo de la dérive génétique — modèle de Wright-Fisher et extensions. Monte Carlo simulation of genetic drift in the Wright-Fisher model." />
+  <meta property="og:title" content="Dérive génétique / Genetic Drift — Martin Couairon" />
+  <meta property="og:description" content="Monte Carlo simulation of genetic drift: bottlenecks, Cannings overdispersion, spatial structure, applied to human demography." />
+  <meta property="og:url" content="https://martincouairon.github.io/projects/drift.html" />
+  <meta property="og:type" content="website" />
+  <link rel="canonical" href="https://martincouairon.github.io/projects/drift.html" />
+  <meta name="author" content="Martin Couairon" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CreativeWork",
+    "name": "Genetic Drift in a Finite Rabbit Population",
+    "author": {
+      "@type": "Person",
+      "name": "Martin Couairon",
+      "url": "https://martincouairon.github.io"
+    },
+    "datePublished": "2026-06-01",
+    "url": "https://martincouairon.github.io/projects/drift.html",
+    "sameAs": "https://martincouairon.github.io/projects/drift-paper.html",
+    "keywords": "genetic drift, Wright-Fisher model, Monte Carlo simulation, population genetics"
+  }
+  </script>
+</head>
+<body>
+  <nav>
+    <div class="nav-header">
+      <span class="nav-brand">Martin Couairon</span>
+      <button id="lang-toggle" onclick="toggleLang()">EN</button>
+    </div>
+    <ul class="nav-links">
+      <li><a href="/">Home</a></li>
+      <li>
+        <a href="/projects/"><span class="fr">Projets</span><span class="en">Projects</span></a>
+        <ul class="nav-sub">
+          <li><a href="utile.html">Utile</a></li>
+          <li><a href="academie.html">Académie</a></li>
+          <li><a href="drift.html" class="active"><span class="fr">Dérive génétique</span><span class="en">Genetic Drift</span></a></li>
+        </ul>
+      </li>
+      <li><a href="../discussion.html">Discussion</a></li>
+      <li><a href="../cv.html">CV</a></li>
+      <li><a href="../about.html"><span class="fr">À propos</span><span class="en">About</span></a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <a href="/projects/" class="back-link">
+      ← <span class="fr">Tous les projets</span><span class="en">All projects</span>
+    </a>
+
+    <div class="project-hero has-img">
+      <div class="project-hero-body">
+        <p class="hero-role" style="margin-bottom: 0.5rem;">
+          2026 · <span class="fr">Recherche · ~40 h</span><span class="en">Research · ~40 h</span>
+        </p>
+        <h1 class="hero-title">
+          <span class="fr">Dérive génétique</span><span class="en">Genetic Drift</span>
+        </h1>
+        <p class="hero-bio fr">Simulation Monte Carlo du modèle de Wright-Fisher et de ses extensions — goulots d'étranglement, reproduction surdispersée, structure spatiale jusqu'à 100×100 dèmes, couplage éco-évolutif stochastique, nouvelles formules analytiques asymptotiques, et une carte mondiale hétérogène à 20 dèmes isolant tour à tour chaque force évolutive. Application aux populations humaines.</p>
+        <p class="hero-bio en">Monte Carlo simulation of the Wright-Fisher model and its extensions — bottlenecks, overdispersed reproduction, spatial structure up to 100×100 demes, stochastic eco-evolutionary coupling, new asymptotic analytical formulas, and a 20-deme heterogeneous world map isolating each evolutionary force one at a time. Applied to human demography.</p>
+        <p class="project-cta">
+          <a href="drift-paper.html" class="project-cta-link"><span class="fr">Lire l'article</span><span class="en">Read the paper</span> →</a>
+        </p>
+        <div class="project-links">
+          <a href="https://github.com/martincouairon/lapins" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </div>
+      <a href="drift-data/sect35_diffusion_models.gif" class="project-hero-img" target="_blank" rel="noopener">
+        <img src="drift-data/sect35_diffusion_models.gif" alt="Allele frequency diffusion across a 35×35 spatial grid over time" />
+      </a>
+    </div>
+
+    <section class="section" style="background:#f0f7ff;border-left:4px solid #2196F3;padding:18px 22px;border-radius:4px;margin-bottom:1.5rem">
+      <p class="section-label" style="color:#1565C0"><span class="fr">Note sur la genèse du projet</span><span class="en">A note on the making of this project</span></p>
+      <p class="fr">Partant d'un projet, j'ai cherché à l'emmener aussi loin que possible — en utilisant Claude (l'assistant IA d'Anthropic) comme outil de recherche et de programmation. Mon rôle a été de fixer la direction scientifique : choisir les phénomènes à étudier, les extensions à explorer, et vérifier si les résultats avaient un sens biologique. Je ne revendique pas une expertise indépendante dans les mathématiques sous-jacentes — les dérivations analytiques et les développements asymptotiques ont été conduits en dialogue avec la littérature et avec Claude. Ce que je revendique, c'est la curiosité qui a motivé chaque question. Ce rapport assume donc son ambition — aller bien plus loin qu'un projet scolaire ordinaire — et ne cache pas son origine : un étudiant explorant ce qui devient possible quand une vraie curiosité rencontre des outils puissants.</p>
+      <p class="en">Starting from a project, I set out to take it as far as I could — using Claude (Anthropic's AI assistant) as the primary research and coding tool. My role throughout was to drive the scientific direction: deciding which phenomena to study, which extensions to explore, and whether the results were biologically coherent. I do not claim independent expertise in the underlying mathematics — the analytical derivations and asymptotic arguments were developed in dialogue with the literature and with Claude. What I do claim is the curiosity that motivated each question. This report is therefore honest about both its ambition — going further than a typical school project — and its origin: a student exploring what becomes possible when genuine curiosity meets powerful tools.</p>
+    </section>
+
+    <section class="section">
+      <p class="section-label"><span class="fr">Le problème</span><span class="en">The problem</span></p>
+      <p class="fr">La dérive génétique — la fluctuation aléatoire des fréquences alléliques dans une population finie — est le mécanisme central de l'évolution neutre. Mais combien de temps faut-il à une population pour perdre toute diversité génétique ? Comment les goulots d'étranglement, la reproduction inégale et la structure spatiale accélèrent-ils ou ralentissent-ils ce processus ?</p>
+      <p class="en">Genetic drift — the random fluctuation of allele frequencies in a finite population — is the central mechanism of neutral evolution. But how long does it take for a population to lose all genetic diversity? How do bottlenecks, unequal reproduction, and spatial structure speed up or slow down this process?</p>
+    </section>
+
+    <section class="section">
+      <p class="section-label"><span class="fr">Comment les forces s'équilibrent</span><span class="en">How the forces balance</span></p>
+
+      <p class="fr"><strong>La dérive : la loterie des petits nombres.</strong> Chaque génération, le hasard rebat les cartes génétiques. Dans un petit groupe isolé, quelques siècles suffisent pour qu'un trait rarissime devienne commun — non par avantage, mais par chance pure. Les communautés Amish de Pennsylvanie le montrent clairement : fondées par une poignée d'émigrants suisses du XVIIIe siècle, elles présentent des taux de certaines maladies génétiques rares dix à cent fois supérieurs à la population générale, simplement parce que les fondateurs les portaient par hasard. Plus le groupe est petit, plus le hasard l'emporte sur tout le reste. Le guépard en est l'illustration extrême : une espèce si génétiquement uniforme que les greffes de peau entre individus non apparentés ne sont pas rejetées. La diversité s'est effondrée lors d'un événement de quasi-extinction il y a des dizaines de milliers d'années — et avec elle, une grande partie du potentiel adaptatif de l'espèce face aux changements futurs.</p>
+
+      <p class="fr" style="margin-top:0.75rem"><strong>Goulots d'étranglement : la ponctuation de l'histoire.</strong> La taille actuelle d'une population ne dit pas tout — ce qui compte, c'est sa taille minimale au fil du temps. Un seul épisode de quasi-extinction laisse une empreinte permanente sur tous les descendants, aussi nombreux soient-ils ensuite. La migration hors d'Afrique, il y a soixante mille ans, a réduit la population fondatrice de tous les humains non-africains à peut-être quelques milliers d'individus : c'est pourquoi la diversité génétique est aujourd'hui systématiquement plus faible hors d'Afrique, partout dans le génome. Les éléphants de mer du Nord ont été réduits à une vingtaine d'individus dans les années 1890 — ils sont aujourd'hui deux cent mille, mais portent encore l'appauvrissement de ce goulot. Un goulot ne se referme jamais vraiment.</p>
+
+      <p class="fr" style="margin-top:0.75rem"><strong>La sélection : l'éditeur impitoyable.</strong> La sélection peut rester invisible pendant des millénaires, puis devenir décisive en un instant géologique. Il y a dix mille ans, aucune population humaine n'était capable de digérer le lait à l'âge adulte. Avec la domestication du bétail dans le Croissant fertile, les individus qui conservaient cette capacité disposaient d'une source d'alimentation supplémentaire dans les périodes de disette. Cet avantage modeste a suffi : en quelques milliers d'années — un clin d'œil à l'échelle de l'évolution — la tolérance au lactose a atteint plus de quatre-vingt-dix pour cent dans certaines populations d'Europe du Nord et d'Afrique de l'Est pastorale. La drépanocytose raconte une autre histoire : une mutation qui offre une protection partielle contre le paludisme s'est répandue exactement là où le paludisme sévit, et chute à quasi-zéro là où il est absent. Elle colle à la carte de la maladie avec une précision troublante. C'est la sélection à l'œuvre : elle ne juge pas, elle compte les descendants.</p>
+
+      <p class="en"><strong>Drift: the lottery of small numbers.</strong> Every generation, chance reshuffles the genetic deck. In a small isolated group, a few centuries are enough for a vanishingly rare trait to become common — not through any advantage, but through pure luck. The Amish communities of Pennsylvania make this visible: founded by a handful of 18th-century Swiss emigrants, they carry rates of certain rare genetic diseases tens to hundreds of times higher than the general population, simply because the founders happened to carry them. The smaller the group, the more chance overrides everything else. The cheetah is the extreme case: a species so genetically uniform that skin grafts between unrelated individuals are not rejected — diversity collapsed during a near-extinction event tens of thousands of years ago, taking with it much of the species' capacity to adapt to future change.</p>
+
+      <p class="en" style="margin-top:0.75rem"><strong>Bottlenecks: punctuation marks in history.</strong> The current size of a population does not tell the whole story — what matters is its minimum size over time. A single near-extinction event leaves a permanent imprint on all subsequent generations, however numerous they become. The migration out of Africa, sixty thousand years ago, reduced the founding population of all non-African humans to perhaps a few thousand individuals: this is why genetic diversity is systematically lower outside Africa, throughout the entire genome. Northern elephant seals were reduced to around twenty individuals in the 1890s — they number two hundred thousand today, but still carry the impoverishment of that bottleneck. A bottleneck never fully closes.</p>
+
+      <p class="en" style="margin-top:0.75rem"><strong>Selection: the ruthless editor.</strong> Selection can be invisible for millennia, then decisive in a geological instant. Ten thousand years ago, no human population could digest milk as an adult. With cattle domestication in the Fertile Crescent, individuals who kept that ability had an extra food source during famines. That modest advantage was enough: within a few thousand years — a blink of evolutionary time — lactose tolerance reached over ninety percent in some populations of Northern Europe and East Africa. Sickle-cell disease tells another story: a mutation that offers partial protection against malaria spread precisely where malaria is most intense, and drops to near zero where the disease is absent. It maps onto the geography of the disease with striking precision. That is selection at work: it does not judge, it counts descendants.</p>
+    </section>
+
+    <section class="section">
+      <p class="section-label"><span class="fr">Résultats clés</span><span class="en">Key findings</span></p>
+      <div class="project-list">
+        <div class="project-item" style="pointer-events: none; cursor: default;">
+          <span class="project-meta"></span>
+          <div>
+            <p class="project-title fr">Taille effective comme statistique suffisante</p>
+            <p class="project-title en">Effective size as a sufficient statistic</p>
+            <p class="project-desc fr">Pour les goulots d'étranglement, la reproduction surdispersée et les trajectoires démographiques variables, une seule quantité — la taille effective N_e — prédit le temps de fixation moyen à 2 % près, indépendamment des détails du modèle.</p>
+            <p class="project-desc en">For bottlenecks, overdispersed reproduction, and variable demographic trajectories, a single quantity — the effective size N_e — predicts mean fixation time to within 2%, regardless of model details.</p>
+          </div>
+        </div>
+        <div class="project-item" style="pointer-events: none; cursor: default;">
+          <span class="project-meta"></span>
+          <div>
+            <p class="project-title fr">Modèle de Cannings : les iso-contours verticaux</p>
+            <p class="project-title en">Cannings model: vertical iso-contours</p>
+            <p class="project-desc fr">Quand α ≪ 2N (régime sweepstakes), le temps de fixation est déterminé uniquement par α, indépendamment de la taille censitaire N. Mesurer N est presque inutile pour prédire la dérive chez les espèces à reproduction très inégale.</p>
+            <p class="project-desc en">When α ≪ 2N (sweepstakes regime), fixation time is set entirely by α, independently of census size N. Measuring N is nearly useless for predicting drift in species with highly unequal reproduction.</p>
+          </div>
+        </div>
+        <div class="project-item" style="pointer-events: none; cursor: default;">
+          <span class="project-meta"></span>
+          <div>
+            <p class="project-title fr">Structure spatiale : 100×100 dèmes, autocorrélation et fronts d'onde</p>
+            <p class="project-title en">Spatial structure: 100×100 demes, autocorrelation and wavefronts</p>
+            <p class="project-desc fr">Sur de grandes grilles (jusqu'à 100×100), la différenciation génétique entre dèmes atteint un quasi-équilibre qui croît avec la taille de la grille. La corrélation spatiale suit une décroissance exponentielle avec la distance. La sélection locale génère des fronts d'onde qui se propagent sur 50 générations.</p>
+            <p class="project-desc en">On large grids (up to 100×100), genetic differentiation between demes reaches a quasi-equilibrium that grows with grid size. Correlation between neighbours decays exponentially with distance. Local selection generates propagating wavefronts visible over 50 generations.</p>
+          </div>
+        </div>
+        <div class="project-item" style="pointer-events: none; cursor: default;">
+          <span class="project-meta"></span>
+          <div>
+            <p class="project-title fr">Formule asymptotique pour le modèle de Cannings asymétrique</p>
+            <p class="project-title en">Asymptotic formula for the asymmetric Cannings model</p>
+            <p class="project-desc fr">Quand la surdispersion d'un allèle domine largement l'autre, la probabilité de fixation admet une formule fermée faisant intervenir la fonction d'erreur. L'erreur relative décroît comme l'inverse de la racine du rapport de surdispersion — dérivée analytiquement et validée par simulation Monte Carlo.</p>
+            <p class="project-desc en">When one allele's overdispersion vastly outweighs the other's, fixation probability admits a closed-form expression involving the error function. Relative error decays as the inverse square root of the overdispersion ratio — derived analytically and validated against Monte Carlo.</p>
+          </div>
+        </div>
+        <div class="project-item" style="pointer-events: none; cursor: default;">
+          <span class="project-meta"></span>
+          <div>
+            <p class="project-title fr">Couplage éco-évolutif stochastique</p>
+            <p class="project-title en">Stochastic eco-evolutionary coupling</p>
+            <p class="project-desc fr">Le modèle standard suppose une récupération déterministe après l'effondrement. Dans la version stochastique, la taille de la population suit elle-même une dynamique logistique soumise au bruit démographique. Ce bruit élargit la distribution des temps de fixation et révèle un diagramme de phase selon les taux de croissance relatifs et l'intensité du couplage.</p>
+            <p class="project-desc en">The standard model assumes deterministic post-crash recovery. In the stochastic version, population size itself follows a noisy logistic growth process. Demographic noise broadens the fixation-time distribution and reveals a phase diagram driven by relative growth rates and coupling strength.</p>
+          </div>
+        </div>
+        <div class="project-item" style="pointer-events: none; cursor: default;">
+          <span class="project-meta"></span>
+          <div>
+            <p class="project-title fr">Carte mondiale : six forces évolutives, toutes choses égales par ailleurs</p>
+            <p class="project-title en">World map: six evolutionary forces, all else equal</p>
+            <p class="project-desc fr">20 dèmes, 4 allèles, 5 types d'obstacles géographiques. Six scénarios ajoutent chacun une seule force (dérive → migration → barrières → goulots → mutation → sélection). La sélection (s = 0,05) balaye le monde entier en ~100 générations, effaçant la mosaïque construite par les cinq autres forces — sauf dans les dèmes avec Ns &lt; 1, où la dérive résiste encore.</p>
+            <p class="project-desc en">20 demes, 4 alleles, 5 types of geographic obstacle. Six scenarios each add exactly one force (drift → migration → barriers → bottlenecks → mutation → selection). Selection (s = 0.05) sweeps the entire world in ~100 generations, erasing the mosaic built by the five prior forces — except in demes where Ns &lt; 1, where drift still wins.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:0.5rem">
+      <p class="project-cta">
+        <a href="drift-paper.html" class="project-cta-link"><span class="fr">Lire l'article complet</span><span class="en">Read the full paper</span> →</a>
+      </p>
+    </section>
+
+    <section class="section">
+      <p class="section-label">Stack</p>
+      <div class="tag-list">
+        <span class="tag">Python</span>
+        <span class="tag">NumPy</span>
+        <span class="tag">Matplotlib</span>
+        <span class="tag">Jupyter</span>
+        <span class="tag">Monte Carlo</span>
+        <span class="tag">SciPy</span>
+        <span class="tag"><span class="fr">Génétique des populations</span><span class="en">Population genetics</span></span>
+        <span class="tag"><span class="fr">Théorie analytique</span><span class="en">Analytical theory</span></span>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Martin Couairon &mdash; 2026</p>
+  </footer>
+  <script>
+    function applyLang(lang) {
+      document.documentElement.classList.remove('lang-fr', 'lang-en');
+      document.documentElement.classList.add('lang-' + lang);
+      var btn = document.getElementById('lang-toggle');
+      if (btn) btn.textContent = lang === 'fr' ? 'EN' : 'FR';
+      localStorage.setItem('lang', lang);
+    }
+    function toggleLang() {
+      applyLang(localStorage.getItem('lang') === 'fr' ? 'en' : 'fr');
+    }
+    applyLang(localStorage.getItem('lang') || (navigator.language.startsWith('fr') ? 'fr' : 'en'));
+  </script>
+</body>
+</html>

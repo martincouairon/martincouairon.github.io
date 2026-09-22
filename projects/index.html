@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html class="lang-fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projets — Martin Couairon</title>
+  <script>
+    (function () {
+      var saved = localStorage.getItem('lang') || (navigator.language.startsWith('fr') ? 'fr' : 'en');
+      document.documentElement.className = 'lang-' + saved;
+    })();
+  </script>
+  <style>html.lang-fr .en,html.lang-en .fr{display:none!important}</style>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <meta name="description" content="Projects by Martin Couairon — Utile, a free skills-sharing platform, and Académie, an AI-powered academic search engine." />
+  <meta property="og:title" content="Projets — Martin Couairon" />
+  <meta property="og:description" content="Projects by Martin Couairon — Utile, a free skills-sharing platform, and Académie, an AI-powered academic search engine." />
+  <meta property="og:url" content="https://martincouairon.github.io/projects/" />
+  <meta property="og:type" content="website" />
+  <link rel="canonical" href="https://martincouairon.github.io/projects/" />
+</head>
+<body>
+  <nav>
+    <div class="nav-header">
+      <span class="nav-brand">Martin Couairon</span>
+      <button id="lang-toggle" onclick="toggleLang()">EN</button>
+    </div>
+    <ul class="nav-links">
+      <li><a href="/">Home</a></li>
+      <li>
+        <a href="/projects/" class="active"><span class="fr">Projets</span><span class="en">Projects</span></a>
+        <ul class="nav-sub">
+          <li><a href="utile.html">Utile</a></li>
+          <li><a href="academie.html">Académie</a></li>
+          <li><a href="drift.html"><span class="fr">Dérive génétique</span><span class="en">Genetic Drift</span></a></li>
+        </ul>
+      </li>
+      <li><a href="../discussion.html">Discussion</a></li>
+      <li><a href="../cv.html">CV</a></li>
+      <li><a href="../about.html"><span class="fr">À propos</span><span class="en">About</span></a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <div class="hero">
+      <h1 class="hero-title"><span class="fr">Projets</span><span class="en">Projects</span></h1>
+      <p class="hero-role fr">Ce que j'ai construit — produits, expérimentations et travaux en cours.</p>
+      <p class="hero-role en">What I've built — products, experiments, and ongoing work.</p>
+    </div>
+
+    <section class="section">
+      <p class="section-label"><span class="fr">En cours</span><span class="en">Current</span></p>
+      <div class="project-list">
+        <div class="project-entry">
+          <a href="utile.html" class="project-item">
+            <span class="project-meta">2026 · Web app</span>
+            <div>
+              <p class="project-title">Utile</p>
+              <p class="project-desc fr">Plateforme de partage de compétences gratuite. Trouver ou proposer une aide sur n'importe quel sujet — tutorat, conseil, pratique.</p>
+              <p class="project-desc en">Free skills-sharing platform. Find or offer help on any topic — tutoring, advice, practice.</p>
+              <div class="tag-list">
+                <span class="tag">Next.js</span>
+                <span class="tag">Supabase</span>
+                <span class="tag">Tailwind CSS</span>
+                <span class="tag">TypeScript</span>
+              </div>
+            </div>
+          </a>
+          <a href="https://jesuisutile.fr/fr" target="_blank" rel="noopener" class="project-preview-thumb">
+            <img src="img/utile.png" alt="Aperçu de jesuisutile.fr" />
+          </a>
+        </div>
+        <div class="project-entry">
+          <a href="academie.html" class="project-item">
+            <span class="project-meta">2026 · Web app</span>
+            <div>
+              <p class="project-title">Académie</p>
+              <p class="project-desc fr">Site dédié à la recherche académique — moteur de recherche sémantique alimenté par Exa, scoring IA et filtres avancés.</p>
+              <p class="project-desc en">Website dedicated to academic research — semantic search engine powered by Exa, AI scoring and advanced filters.</p>
+              <div class="tag-list">
+                <span class="tag">Next.js</span>
+                <span class="tag">Exa API</span>
+                <span class="tag">Tailwind CSS</span>
+                <span class="tag">TypeScript</span>
+              </div>
+            </div>
+          </a>
+          <a href="https://jesuisutile.fr/academie" target="_blank" rel="noopener" class="project-preview-thumb">
+            <img src="img/academie.png" alt="Aperçu de jesuisutile.fr/academie" />
+          </a>
+        </div>
+        <div class="project-entry">
+          <a href="drift.html" class="project-item">
+            <span class="project-meta">2026 · <span class="fr">Recherche</span><span class="en">Research</span></span>
+            <div>
+              <p class="project-title"><span class="fr">Dérive génétique</span><span class="en">Genetic Drift</span></p>
+              <p class="project-desc fr">Simulation Monte Carlo de la dérive génétique dans le modèle de Wright-Fisher et ses extensions : goulots d'étranglement, reproduction overdispersée (modèle de Cannings), structure spatiale. Application aux populations humaines.</p>
+              <p class="project-desc en">Monte Carlo simulation of genetic drift in the Wright-Fisher model and extensions: bottlenecks, Cannings overdispersion, metapopulation spatial structure. Applied to human demography.</p>
+              <div class="tag-list">
+                <span class="tag">Python</span>
+                <span class="tag">NumPy</span>
+                <span class="tag">Monte Carlo</span>
+                <span class="tag"><span class="fr">Génétique des populations</span><span class="en">Population genetics</span></span>
+              </div>
+            </div>
+          </a>
+          <a href="drift.html" class="project-preview-thumb">
+            <img src="img/drift.png" alt="Dérive génétique — aperçu" />
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Martin Couairon &mdash; 2026</p>
+  </footer>
+  <script>
+        function applyLang(lang) {
+      document.documentElement.classList.remove('lang-fr', 'lang-en');
+      document.documentElement.classList.add('lang-' + lang);
+      var btn = document.getElementById('lang-toggle');
+      if (btn) btn.textContent = lang === 'fr' ? 'EN' : 'FR';
+      localStorage.setItem('lang', lang);
+    }
+    function toggleLang() {
+      applyLang(localStorage.getItem('lang') === 'fr' ? 'en' : 'fr');
+    }
+    applyLang(localStorage.getItem('lang') || (navigator.language.startsWith('fr') ? 'fr' : 'en'));
+  </script>
+</body>
+</html>

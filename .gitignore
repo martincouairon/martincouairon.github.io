@@ -1,0 +1,4 @@
+projects/drift-data/*
+!projects/drift-data/plots/
+!projects/drift-data/plots/**
+!projects/drift-data/sect35_diffusion_models.gif

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html class="lang-fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Académie — Martin Couairon</title>
+  <script>
+    (function () {
+      var saved = localStorage.getItem('lang') || (navigator.language.startsWith('fr') ? 'fr' : 'en');
+      document.documentElement.className = 'lang-' + saved;
+    })();
+  </script>
+  <style>html.lang-fr .en,html.lang-en .fr{display:none!important}</style>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <meta name="description" content="Académie — academic search engine powered by Exa with real-time AI scoring and advanced filters." />
+  <meta property="og:title" content="Académie — Martin Couairon" />
+  <meta property="og:description" content="Académie — academic search engine powered by Exa with real-time AI scoring and advanced filters." />
+  <meta property="og:url" content="https://martincouairon.github.io/projects/academie.html" />
+  <meta property="og:type" content="website" />
+  <link rel="canonical" href="https://martincouairon.github.io/projects/academie.html" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Académie",
+  "author": {
+    "@type": "Person",
+    "name": "Martin Couairon",
+    "url": "https://martincouairon.github.io"
+  },
+  "description": "Academic search engine powered by Exa with real-time AI scoring and advanced filters.",
+  "url": "https://jesuisutile.fr/academie",
+  "applicationCategory": "WebApplication",
+  "datePublished": "2026-01-01"
+}
+</script>
+</head>
+<body>
+  <nav>
+    <div class="nav-header">
+      <span class="nav-brand">Martin Couairon</span>
+      <button id="lang-toggle" onclick="toggleLang()">EN</button>
+    </div>
+    <ul class="nav-links">
+      <li><a href="/">Home</a></li>
+      <li>
+        <a href="/projects/"><span class="fr">Projets</span><span class="en">Projects</span></a>
+        <ul class="nav-sub">
+          <li><a href="utile.html">Utile</a></li>
+          <li><a href="academie.html" class="active">Académie</a></li>
+          <li><a href="drift.html"><span class="fr">Dérive génétique</span><span class="en">Genetic Drift</span></a></li>
+        </ul>
+      </li>
+      <li><a href="../discussion.html">Discussion</a></li>
+      <li><a href="../cv.html">CV</a></li>
+      <li><a href="../about.html"><span class="fr">À propos</span><span class="en">About</span></a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <a href="/projects/" class="back-link">
+      ← <span class="fr">Tous les projets</span><span class="en">All projects</span>
+    </a>
+
+    <div class="project-hero has-img">
+      <div class="project-hero-body">
+        <p class="hero-role" style="margin-bottom: 0.5rem;">
+          2026 · Web app · <span class="fr">Temps passé : ~6 h · En cours</span><span class="en">Time spent: ~6 h · Ongoing</span>
+        </p>
+        <h1 class="hero-title">Académie</h1>
+        <p class="hero-bio fr">Site dédié à la recherche académique.</p>
+        <p class="hero-bio en">Website dedicated to academic research.</p>
+        <p class="project-cta">
+          <span class="fr">Visitez le site ici :</span><span class="en">Go check the website here:</span>
+          <a href="https://jesuisutile.fr/academie" target="_blank" rel="noopener" class="project-cta-link">jesuisutile.fr/academie →</a>
+        </p>
+        <div class="project-links">
+          <a href="https://github.com/martincouairon/utile" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </div>
+      <a href="https://jesuisutile.fr/academie" class="project-hero-img" target="_blank" rel="noopener">
+        <img src="img/academie.png" alt="Aperçu de jesuisutile.fr/academie" />
+      </a>
+    </div>
+
+    <section class="section">
+      <p class="section-label"><span class="fr">Un mot aux visiteurs</span><span class="en">A note to visitors</span></p>
+      <p class="fr">La vision me semble prometteuse, mais les limites actuelles sont réelles. Je suis ouvert à tout retour, idée ou opportunité de collaboration — n'hésitez pas à me contacter.</p>
+      <p class="en">The vision feels promising, but the current limitations are real. I remain open to feedback, ideas, or collaboration opportunities — feel free to reach out.</p>
+    </section>
+
+    <section class="section">
+      <p class="section-label"><span class="fr">L'idée</span><span class="en">The idea</span></p>
+      <p class="fr">Je suis profondément curieux de la recherche académique et de la méthodologie qui la sous-tend — comment on plonge dans un sujet, explore les publications, ouvrages et conférences pertinents, identifie les sources de données, puis les collecte, les traite et les interprète.</p>
+      <p class="en">I am deeply curious about academic research and the methodology it rests on — how one dives into a subject, explores relevant publications, books and conferences, identifies data sources, and then collects, processes and interprets them.</p>
+      <p class="fr">Les moteurs de recherche classiques sont puissants, et je dépends désormais presque entièrement de Google pour sa rapidité à faire remonter des résultats. Mais j'ai rencontré un ensemble de frustrations récurrentes :</p>
+      <p class="en">Common search engines are powerful, and I now rely almost entirely on Google for its speed at surfacing results. But I kept running into the same frustrations:</p>
+      <ol class="fr">
+        <li>Les résultats sont principalement orientés par les mots-clés plutôt que par les idées qu'ils désignent — peu sémantiques. Une recherche remonte les pages qui contiennent les termes, pas nécessairement celles qui explorent le concept.</li>
+        <li>La première page de résultats est généralement occupée par des sites courants — Wikipédia, des blogs, des forums — toujours utiles dans un contexte général, mais rarement suffisants pour un usage académique. Les résultats issus d'institutions de recherche, d'éditeurs reconnus ou de conférences académiques y sont souvent absents.</li>
+        <li>Personne ne va au-delà de la première page. Si les bonnes ressources n'y figurent pas, elles restent introuvables dans la pratique.</li>
+        <li>Il faut savoir précisément ce que l'on cherche pour espérer trouver quelque chose d'utile — peu de place pour une recherche exploratoire ou ouverte.</li>
+      </ol>
+      <ol class="en">
+        <li>Results are primarily keyword-driven rather than idea-driven — not truly semantic. A search surfaces pages that contain the terms, not necessarily the ones that explore the concept.</li>
+        <li>The first page of results is usually dominated by common sites — Wikipedia, blogs, forums — always useful in a general context, but rarely sufficient for academic purposes. Results from research institutions, renowned publishers, or academic conferences are often nowhere to be found.</li>
+        <li>Nobody goes beyond the first page. If the right resources don't appear there, they effectively don't exist.</li>
+        <li>You need to know precisely what you are looking for to find anything useful — there is little room for exploratory or open-ended searching.</li>
+      </ol>
+      <p class="fr">En résumé : trouver des ressources académiques de qualité en ligne reste trop souvent fragmentaire et peu fiable.</p>
+      <p class="en">In short: finding quality academic resources online is still too often fragmented and unreliable.</p>
+    </section>
+
+    <section class="section">
+      <p class="section-label"><span class="fr">Ma vision</span><span class="en">My vision</span></p>
+      <p class="fr">Je voulais un moteur de recherche capable de quatre choses :</p>
+      <p class="en">I wanted a search engine capable of four things:</p>
+      <ol class="fr">
+        <li>Être sémantique — comprendre les idées derrière les mots, et non se contenter de faire correspondre des termes.</li>
+        <li>Remonter, pour n'importe quel sujet, les résultats académiques les plus pertinents en quelques mots — qu'ils viennent de chercheurs, d'institutions, de la presse spécialisée ou de corps professionnels.</li>
+        <li>Présenter des résultats rapides à parcourir, pour identifier les bonnes références sans perdre de temps.</li>
+        <li>Permettre de distinguer les publications en accès libre de celles qui sont payantes, et laisser remonter les fichiers PDF — souvent les plus complets, et pourtant parmi les moins visibles dans les résultats classiques.</li>
+        <li>Copier la référence d'une publication directement depuis les résultats, en style Harvard ou AFNOR, sans avoir à la reconstituer après coup.</li>
+      </ol>
+      <ol class="en">
+        <li>Be semantic — understanding the ideas behind the words, not just matching terms.</li>
+        <li>Surface, on any given topic, the most relevant academic results from a few words — from researchers, institutions, specialist press, or professional bodies.</li>
+        <li>Present results that are quick to scan, so you can identify the right references without losing time.</li>
+        <li>Allow you to distinguish between freely accessible publications and those behind a paywall, and let PDF files come to the surface — often the richest sources, yet among the least visible in standard search results.</li>
+        <li>Copy a publication's reference straight from the results, in Harvard or AFNOR style, without having to reconstruct it later.</li>
+      </ol>
+    </section>
+
+    <section class="section">
+      <p class="section-label"><span class="fr">La construction</span><span class="en">Building it</span></p>
+      <p class="fr">L'ambition de départ différait d'Utile : plutôt que de continuer à travailler avec Claude, je voulais construire des agents automatisés. En tant qu'IA générative, Claude me semblait moins sobre écologiquement qu'un simple appel occasionnel à une API — quelques lignes de code devant suffire à faire le travail. Les résultats n'ont pas été convaincants. C'est finalement en demandant à Claude de déployer le code directement sur jesuisutile.fr, à côté du site existant, que la page a pris la forme souhaitée. Académie y est donc hébergée depuis, sans être référencée depuis Utile.</p>
+      <p class="en">The initial ambition differed from Utile: rather than continuing to work with Claude, I wanted to build lightweight automated agents. As a generative AI, Claude seemed to me less environmentally friendly than the occasional API call — a few lines of code should have been enough to do the job. The results were not convincing. It was ultimately by asking Claude to deploy the code directly on jesuisutile.fr, alongside the existing site, that the page took the shape I had in mind. Académie has been hosted there since, unreferenced from Utile.</p>
+      <p class="fr">Pour le nom comme pour l'image, le choix s'est fait naturellement : Académie, et L'École d'Athènes de Raphaël.</p>
+      <p class="en">For the name and the image, the choice came naturally: Académie, and Raphael's School of Athens.</p>
+      <p class="fr">La partie la plus stimulante a été le choix du moteur de recherche. Trois pistes ont été explorées :</p>
+      <p class="en">The most exciting part was choosing the search engine. Three options were explored:</p>
+      <ol class="fr">
+        <li>Le moteur de recherche personnalisé de Google (Custom Search Engine) — permettait de sélectionner ses sources, mais se révélait incapable d'aller chercher des résultats au-delà de l'horizon habituel.</li>
+        <li>L'API Google Custom Search et l'API Vector Search — le service n'était plus disponible sous la forme nécessaire, et les recherches sémantiques par IA exigeaient des tokens coûteux.</li>
+        <li>Exa.ai — proposant une recherche sémantique via API. C'était exactement ce qu'il fallait.</li>
+      </ol>
+      <ol class="en">
+        <li>Google's Custom Search Engine — allowed choosing which sources to search from, but proved incapable of surfacing results beyond the obvious.</li>
+        <li>Google's Custom Search API and Vector Search API — the service was no longer available in the form needed, and AI-powered searches required expensive tokens.</li>
+        <li>Exa.ai — offering semantic search results via API. It fit the bill.</li>
+      </ol>
+      <p class="fr">À partir d'Exa, j'ai organisé les résultats : filtres par type de source (académique, presse, corps professionnel) et par accès (libre ou payant), mise en valeur des fichiers PDF, et option pour copier directement la référence d'une publication en style Harvard ou AFNOR.</p>
+      <p class="en">From there, I organised the results: filters by source type (academic, press, professional body) and by access (free or paywalled), surfacing of PDF files, and an option to copy each publication's reference directly in Harvard or AFNOR style.</p>
+    </section>
+
+    <section class="section">
+      <p class="section-label"><span class="fr">État du projet</span><span class="en">Project status</span></p>
+      <p class="fr">Ce qui a été mis en place fonctionne, mais plusieurs limites demeurent. La présentation en tableau ne garantit pas que toutes les informations affichées soient vraiment utiles — le type de source ou le domaine ne sont pas toujours parlants, et l'auteur ainsi que la date de publication restent difficiles à extraire de façon fiable. Plus fondamentalement, les sources sont filtrées manuellement en amont : des institutions non incluses dans la liste disparaissent des résultats, ce qui rend difficile de juger de la pertinence réelle de ce qui est remonté. Ces limites soulèvent trois questions ouvertes :</p>
+      <p class="en">What was built works, but a number of limitations remain. The table format does not guarantee that all displayed information is truly useful — source type or domain name are not always meaningful, and extracting author and publication date reliably has proven difficult. More fundamentally, sources are filtered manually before results are rendered: institutions not included in the list disappear from the output, making it hard to assess the real relevance of what surfaces. These limitations raise three open questions:</p>
+      <ol class="fr">
+        <li>Les résultats n'ont pas encore fait la preuve d'une pertinence incontestable.</li>
+        <li>La présentation mériterait d'être nettement mieux organisée.</li>
+        <li>L'outil est peut-être peu adapté aux chercheurs confirmés, qui par définition connaissent leur domaine en profondeur et savent souvent d'avance, via les conférences, quelles publications sont à venir.</li>
+      </ol>
+      <ol class="en">
+        <li>The results have yet to demonstrate unquestionable relevance.</li>
+        <li>The presentation would benefit from significantly better organisation.</li>
+        <li>The tool may not be well-suited to actual researchers, who by definition have deep expertise in their field and often know of upcoming publications before they appear, through conferences and professional networks.</li>
+      </ol>
+    </section>
+
+    <section class="section">
+      <p class="section-label"><span class="fr">Fonctionnalités</span><span class="en">Features</span></p>
+      <div class="project-list">
+        <div class="project-item" style="pointer-events: none; cursor: default;">
+          <span class="project-meta"></span>
+          <div>
+            <p class="project-title fr">Trois modes de recherche</p>
+            <p class="project-title en">Three search modes</p>
+            <p class="project-desc fr">Auto (bascule intelligent entre sémantique et mots-clés), Sémantique (recherche neuronale Exa pour des requêtes conceptuelles) et Mots-clés (correspondance exacte pour des termes précis).</p>
+            <p class="project-desc en">Auto (smart switching between semantic and keyword), Semantic (Exa's neural search for conceptual queries), and Keywords (exact match for precise terms).</p>
+          </div>
+        </div>
+        <div class="project-item" style="pointer-events: none; cursor: default;">
+          <span class="project-meta"></span>
+          <div>
+            <p class="project-title fr">Scoring IA en temps réel</p>
+            <p class="project-title en">Real-time AI scoring</p>
+            <p class="project-desc fr">Chaque résultat est évalué et reclassé par Claude selon sa pertinence académique — le score arrive en streaming sur les résultats bruts déjà affichés.</p>
+            <p class="project-desc en">Each result is evaluated and re-ranked by Claude for academic relevance — the score streams in on top of the raw results already on screen.</p>
+          </div>
+        </div>
+        <div class="project-item" style="pointer-events: none; cursor: default;">
+          <span class="project-meta"></span>
+          <div>
+            <p class="project-title fr">Streaming deux phases</p>
+            <p class="project-title en">Two-phase streaming</p>
+            <p class="project-desc fr">Les résultats Exa s'affichent immédiatement via React Suspense ; le scoring IA arrive ensuite par-dessus sans rechargement de page — expérience fluide même pour des requêtes longues.</p>
+            <p class="project-desc en">Exa results appear immediately via React Suspense; AI scoring streams in on top without a page reload — smooth experience even for slow queries.</p>
+          </div>
+        </div>
+        <div class="project-item" style="pointer-events: none; cursor: default;">
+          <span class="project-meta"></span>
+          <div>
+            <p class="project-title fr">Filtres avancés</p>
+            <p class="project-title en">Advanced filters</p>
+            <p class="project-desc fr">Filtrage par domaine (catégories), fenêtre temporelle (1, 5 ou 10 ans), format (PDF uniquement ou exclu) et accès libre — tous propagés dans l'URL pour être partageables.</p>
+            <p class="project-desc en">Filter by field (categories), time window (1, 5, or 10 years), format (PDF only or excluded), and open access — all reflected in the URL for easy sharing.</p>
+          </div>
+        </div>
+        <div class="project-item" style="pointer-events: none; cursor: default;">
+          <span class="project-meta"></span>
+          <div>
+            <p class="project-title fr">Tableau de résultats structuré</p>
+            <p class="project-title en">Structured results table</p>
+            <p class="project-desc fr">Colonnes titre, auteurs, source, année et score IA ; sidebar latérale "À citer" avec les métadonnées de citation formatées pour chaque résultat sélectionné.</p>
+            <p class="project-desc en">Columns for title, authors, source, year and AI score; a "Cite" sidebar with formatted citation metadata for each selected result.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <p class="section-label">Stack</p>
+      <div class="tag-list">
+        <span class="tag">Next.js 15</span>
+        <span class="tag">TypeScript</span>
+        <span class="tag">Exa API</span>
+        <span class="tag">Claude API</span>
+        <span class="tag">Tailwind CSS</span>
+        <span class="tag">Vercel</span>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Martin Couairon &mdash; 2026</p>
+  </footer>
+  <script>
+        function applyLang(lang) {
+      document.documentElement.classList.remove('lang-fr', 'lang-en');
+      document.documentElement.classList.add('lang-' + lang);
+      var btn = document.getElementById('lang-toggle');
+      if (btn) btn.textContent = lang === 'fr' ? 'EN' : 'FR';
+      localStorage.setItem('lang', lang);
+    }
+    function toggleLang() {
+      applyLang(localStorage.getItem('lang') === 'fr' ? 'en' : 'fr');
+    }
+    applyLang(localStorage.getItem('lang') || (navigator.language.startsWith('fr') ? 'fr' : 'en'));
+  </script>
+</body>
+</html>
