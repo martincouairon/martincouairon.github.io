@@ -102,7 +102,7 @@
     t.push(['Capitaux propres, mesurés indépendamment', n ? eur(s.mesure[fin]) : '—', 'départ : 120 000 €']);
     t.push(['Rendement net de frais', pct(pm.rendement_pct, true), 'MSCI World (IWDA) : ' + pct(pi.rendement_pct, true)]);
     var dv = D.divergence;
-    t.push(['Écart d’auto-notation (B5)', dv ? eurS(dv.divergence_eur) : '—',
+    t.push(['Écart déclaré − mesuré (B5)', dv ? eurS(dv.divergence_eur) : '—',
       dv ? 'soit ' + pct(dv.divergence_pct_des_capitaux_mesures, true) + ' des capitaux mesurés' : 'déclaré − mesuré, net d’impôt']);
     var c = D.couts;
     t.push(['Frais et impôt, mesurés', c ? eur(c.total_mesure_eur) : '—', c ? dec(c.total_points * 100, 0) + ' pb de rendement' : 'courtage, change, glissement, portage, PFU']);
@@ -206,7 +206,7 @@
       if (k === 'iwda') lignes.push({ groupe: 'Références pré-enregistrées' });
       if (k.indexOf('inv_') === 0 && !lignes.some(function (l) { return l.groupe && /Investisseurs/.test(l.groupe); }))
         lignes.push({ groupe: 'Investisseurs connus, véhicules cotés <span class="etiq">exploratoire</span>' });
-      lignes.push([esc(p.libelle) + (p.statut === 'piece' ? ' <span class="etiq">pièce</span>' : ''),
+      lignes.push([esc(p.libelle) + (p.statut === 'piece' ? ' <span class="etiq">déclaré</span>' : ''),
         n(pct(p.rendement_pct, true)), n(pct(p.volatilite_pct)), n(pct(p.perte_max_pct)), n(dec(p.sharpe, 2)), n(dec(p.beta, 2))]);
     });
     fixer('tab-profils', lignes.length ? table(['', 'Rendement', 'Volatilité ann.', 'Perte max.', 'Sharpe', 'Bêta (IWDA)'], lignes)
@@ -408,6 +408,132 @@
       '</div><div class="details"><span>Mesure : ' + exe + j + '</span></div></div>';
   }
 
+
+  // ------------------------------------------------------------------ page « Calculs »
+  function uniteFmt(u, v) {
+    if (vide(v)) return '—';
+    if (u === 'eur') return eur(v);
+    if (u === 'pct') return pct(v);
+    if (u === 'x') return dec(v, 2) + '×';
+    if (u === 'j') return dec(v, 1) + ' j';
+    if (u === 'n') return dec(v, 0);
+    return dec(v, 2);
+  }
+  function calculs(D) {
+    var M = D.mesures || [];
+    var nc = M.filter(function (m) { return vide(m.valeur); });
+    fixer('mesures-bilan', '<b>' + M.length + '</b> mesures publiées · <b>' + (M.length - nc.length) + '</b> calculées à la date d’arrêt' +
+      (D.arret_des_donnees ? ' (' + dateFr(D.arret_des_donnees) + ')' : '') + ' · <b>' + nc.length + '</b> non calculées' +
+      (nc.length ? ' : ' + nc.map(function (m) { return esc(m.nom) + ' <span class="muet">(' + esc(m.raison) + ')</span>'; }).join(', ') : ''));
+    var groupes = [];
+    M.forEach(function (m) { if (groupes.indexOf(m.groupe) < 0) groupes.push(m.groupe); });
+    fixer('mesures-sommaire', groupes.map(function (g, i) { return '<li><a href="#g' + i + '">' + esc(g) + '</a></li>'; }).join(''));
+    var h = '';
+    groupes.forEach(function (g, i) {
+      h += '<section id="g' + i + '"><h2>' + esc(g) + '</h2>';
+      M.filter(function (m) { return m.groupe === g; }).forEach(function (m) {
+        h += '<div class="mesure" id="m-' + esc(m.id) + '"><div class="tete"><h3>' + esc(m.nom) + '</h3>' +
+          '<span class="etiq">' + (m.statut === 'exploratoire' ? 'exploratoire' : 'pré-enregistré') + '</span>' +
+          '<span class="valeur-mesure">' + uniteFmt(m.unite, m.valeur) + '</span></div>' +
+          '<dl><dt>Définition</dt><dd>' + esc(m.litteral) + '</dd><dt>Calcul</dt><dd><code>' + esc(m.operationnel) + '</code></dd></dl>' +
+          (m.serie ? '<div class="cadre petit" data-mesure="' + esc(m.id) + '"></div>'
+            : '<p class="muet">Non calculée : ' + esc(m.raison || 'pas de série') + '.</p>') + '</div>';
+      });
+      h += '</section>';
+    });
+    fixer('mesures-liste', h);
+    var parId = {};
+    M.forEach(function (m) { parId[m.id] = m; });
+    var obs = 'IntersectionObserver' in window ? new IntersectionObserver(function (ents) {
+      ents.forEach(function (e) { if (e.isIntersecting) { obs.unobserve(e.target); petitGraphe(e.target, parId[e.target.getAttribute('data-mesure')]); } });
+    }, { rootMargin: '200px' }) : null;
+    document.querySelectorAll('[data-mesure]').forEach(function (el, i) {
+      el.id = 'mg-' + i;
+      if (obs) obs.observe(el); else petitGraphe(el, parId[el.getAttribute('data-mesure')]);
+    });
+  }
+  function petitGraphe(el, m) {
+    if (!m || !m.serie) return;
+    var pts = m.serie.valeurs.filter(function (v) { return !vide(v); }).length;
+    tracer(el.id, { type: pts === 1 ? 'bar' : 'line',
+      data: { labels: libelles(m.serie.dates), datasets: [{ label: m.nom, data: m.serie.valeurs, borderColor: C.mesure,
+        backgroundColor: C.mesure, borderWidth: 2, spanGaps: true, pointRadius: pts < 15 ? 3 : 0, maxBarThickness: 28 }] },
+      options: { scales: axes(function (v) { return uniteFmt(m.unite, v); }), plugins: { legend: { display: false },
+        tooltip: { callbacks: { label: function (c) { return uniteFmt(m.unite, c.parsed.y); } } } } } });
+  }
+
+  // ------------------------------------------------------------------ page « Données »
+  function lireCsv(txt) {
+    var lignes = [], champ = '', ligne = [], q = false;
+    for (var i = 0; i < txt.length; i++) {
+      var c = txt[i];
+      if (q) {
+        if (c === '"' && txt[i + 1] === '"') { champ += '"'; i++; } else if (c === '"') q = false; else champ += c;
+      } else if (c === '"') q = true;
+      else if (c === ',') { ligne.push(champ); champ = ''; }
+      else if (c === '\n') { ligne.push(champ.replace(/\r$/, '')); lignes.push(ligne); ligne = []; champ = ''; }
+      else champ += c;
+    }
+    if (champ || ligne.length) { ligne.push(champ); lignes.push(ligne); }
+    return lignes.filter(function (l) { return l.some(function (x) { return x !== ''; }); });
+  }
+  function donnees(D) {
+    var T = (D.tables || []).filter(function (t) { return t.present; });
+    fixer('tables-liste', table(['Fichier', 'Écrit par', 'Contenu', 'Lignes'], T.map(function (t) {
+      return ['<a href="#" data-table="' + esc(t.nom) + '"><code>' + esc(t.nom) + '</code></a>', esc(t.ecrit_par), esc(t.description), n(dec(t.lignes, 0))];
+    })));
+    var etat = { nom: null, entete: [], lignes: [], filtre: '', tri: -1, sens: 1, page: 0 };
+    var PAGE = 50;
+    function afficher() {
+      var f = etat.filtre.toLowerCase();
+      var L = etat.lignes.filter(function (l) { return !f || l.join(' ').toLowerCase().indexOf(f) >= 0; });
+      if (etat.tri >= 0) {
+        L = L.slice().sort(function (a, b) {
+          var x = a[etat.tri] || '', y = b[etat.tri] || '', nx = Number(x), ny = Number(y);
+          var r = (x !== '' && y !== '' && !isNaN(nx) && !isNaN(ny)) ? nx - ny : x.localeCompare(y);
+          return r * etat.sens;
+        });
+      }
+      var pages = Math.max(1, Math.ceil(L.length / PAGE));
+      etat.page = Math.min(etat.page, pages - 1);
+      var vue = L.slice(etat.page * PAGE, (etat.page + 1) * PAGE);
+      var h = '<div class="tableau"><table class="brut"><thead><tr>' + etat.entete.map(function (c, i) {
+        return '<th data-col="' + i + '">' + esc(c) + (etat.tri === i ? (etat.sens > 0 ? ' ▲' : ' ▼') : '') + '</th>';
+      }).join('') + '</tr></thead><tbody>' + vue.map(function (l) {
+        return '<tr>' + l.map(function (c) { return '<td>' + esc(c) + '</td>'; }).join('') + '</tr>';
+      }).join('') + '</tbody></table></div>';
+      fixer('table-vue', L.length ? h : '<p class="muet">Aucune ligne' + (f ? ' ne correspond au filtre' : ' : le fichier ne contient que son en-tête') + '.</p>');
+      fixer('table-pages', L.length > PAGE ? '<button data-p="-1">←</button> page ' + (etat.page + 1) + ' / ' + pages + ' <button data-p="1">→</button>' : '');
+      fixer('table-compte', L.length + ' ligne' + (L.length > 1 ? 's' : ''));
+    }
+    function ouvrir(nom) {
+      var t = T.filter(function (x) { return x.nom === nom; })[0];
+      etat.nom = nom; etat.filtre = ''; etat.tri = -1; etat.page = 0;
+      $('table-filtre').value = '';
+      fixer('table-titre', '<code>' + esc(nom) + '</code> <a href="trader-ia/donnees/' + esc(nom) + '" download>télécharger le CSV</a>');
+      fixer('table-description', esc(t ? t.description : ''));
+      $('table-panneau').hidden = false;
+      fetch('trader-ia/donnees/' + nom, { cache: 'no-cache' }).then(function (r) { return r.text(); }).then(function (txt) {
+        var L = lireCsv(txt);
+        etat.entete = L[0] || (t ? t.colonnes : []); etat.lignes = L.slice(1);
+        afficher();
+      });
+    }
+    document.addEventListener('click', function (e) {
+      var a = e.target.closest('[data-table]');
+      if (a) { e.preventDefault(); ouvrir(a.getAttribute('data-table')); $('table-panneau').scrollIntoView(); return; }
+      var th = e.target.closest('th[data-col]');
+      if (th && $('table-vue').contains(th)) {
+        var c = +th.getAttribute('data-col');
+        etat.sens = etat.tri === c ? -etat.sens : 1; etat.tri = c; afficher(); return;
+      }
+      var b = e.target.closest('#table-pages button');
+      if (b) { etat.page = Math.max(0, etat.page + (+b.getAttribute('data-p'))); afficher(); }
+    });
+    $('table-filtre').addEventListener('input', function (e) { etat.filtre = e.target.value; etat.page = 0; afficher(); });
+    if (T.length) ouvrir(T[0].nom);
+  }
+
   // ------------------------------------------------------------------ chargement
   var racine = document.querySelector('[data-donnees]');
   if (!racine) return;
@@ -415,7 +541,10 @@
     .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
     .then(function (D) {
       if (D.schema !== 'trader-ia/1') throw new Error('schéma inattendu : ' + D.schema);
-      if ($('decisions-liste')) registre(D); else rapport(D);
+      if ($('decisions-liste')) registre(D);
+      else if ($('mesures-liste')) calculs(D);
+      else if ($('tables-liste')) donnees(D);
+      else rapport(D);
     })
     .catch(function (e) {
       document.querySelectorAll('.cadre').forEach(function (el) { el.innerHTML = '<div class="attente">Données indisponibles (' + esc(e.message) + ').</div>'; });

@@ -51,18 +51,22 @@
       <div class="project-hero-body">
         <p class="hero-role" style="margin-bottom: 0.5rem;">Trader IA · <span class="fr">annexe au rapport</span><span class="en">report appendix</span></p>
         <h1 class="hero-title"><span class="fr">Registre des décisions</span><span class="en">Decision log</span></h1>
-        <p class="hero-bio fr">Chaque ordre du trader, le motif qu'il a donné au moment de décider, et ce que la mesure indépendante en a fait le lendemain.</p>
-        <p class="hero-bio en">Every order the trader placed, the reason it gave when deciding, and what the independent measurement made of it the next day. Entries are published in French.</p>
+        <p class="hero-bio fr">Les ordres du trader, le motif qu'il a indiqué et leur exécution mesurée.</p>
+        <p class="hero-bio en">The trader's orders, the reason it gave, and their measured execution. Entries are published in French.</p>
+        <div class="project-links">
+          <a href="trader-ia.html"><span class="fr">Rapport</span><span class="en">Report</span></a>
+          <a href="trader-ia-calculs.html"><span class="fr">Calculs</span><span class="en">Calculations</span></a>
+          <a href="trader-ia-donnees.html"><span class="fr">Données</span><span class="en">Data</span></a>
+        </div>
       </div>
     </div>
 
     <article class="rapport" data-donnees="trader-ia/donnees.json">
       <section id="synthese">
         <p class="section-label">Synthèse</p>
+        <p>Chaque entrée présente l'ordre tel que le trader l'a écrit (action, titre, quantité, stratégie déclarée, horizon annoncé, motif entre guillemets, fait invoqué et sa source), puis son exécution selon la mesure : date, prix, montant, frais, écart avec le prix supposé par le trader, ou motif de non-exécution. Le raisonnement complet de chaque fenêtre de décision est accessible par un lien lorsqu'il existe.</p>
 <!-- TEXTE:synthese-decisions:DEBUT -->
-        <p>Cette page tient deux registres en regard. Le premier est celui du trader : ce qu'il a décidé, pourquoi, sur quel fait. Le second est celui du mesureur : à quel prix l'ordre a réellement été servi, ce qu'il a coûté, ou pourquoi il ne l'a pas été. Le motif est cité tel que le trader l'a écrit, entre guillemets : c'est une pièce, pas un fait. Le raisonnement complet de chaque fenêtre est lié à sa source.</p>
-        <p>Chaque semaine, cette synthèse résumera les grandes lignes du raisonnement du trader — les thèses qu'il installe, celles qu'il abandonne, les justifications qui reviennent — sans les juger.</p>
-        <p class="muet">Aucune décision avant le 24 novembre 2026.</p>
+        <p>Aucune décision à ce jour. La première est fixée au 24 novembre 2026.</p>
 <!-- TEXTE:synthese-decisions:FIN -->
         <p class="compte" id="decisions-chiffres"></p>
       </section>
@@ -84,8 +88,8 @@
 
     <section class="section">
       <p class="section-label"><span class="fr">Avertissement</span><span class="en">Disclaimer</span></p>
-      <p class="fr">Rien sur cette page ne constitue une recommandation d'investissement. Les décisions sont produites par un modèle de langage sur un portefeuille fictif, dans le cadre d'une expérience. Les suivre serait une très mauvaise idée.</p>
-      <p class="en">Nothing on this page is investment advice. Decisions are produced by a language model on a fictitious portfolio, as part of an experiment. Following them would be a very bad idea.</p>
+      <p class="fr">Rien sur cette page ne constitue une recommandation d'investissement. Les décisions sont produites par un modèle de langage sur un portefeuille fictif, dans le cadre d'une expérience.</p>
+      <p class="en">Nothing on this page is investment advice. Decisions are produced by a language model on a fictitious portfolio, as part of an experiment.</p>
     </section>
   </main>
 

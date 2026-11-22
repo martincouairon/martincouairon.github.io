@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html class="lang-fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculs — Trader IA</title>
+  <script>
+    (function () {
+      var saved = localStorage.getItem('lang') || (navigator.language.startsWith('fr') ? 'fr' : 'en');
+      document.documentElement.className = 'lang-' + saved;
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="trader-ia/rapport.css" />
+  <meta name="description" content="Définition, formule et évolution de chaque mesure de l'expérience Trader IA." />
+  <link rel="canonical" href="https://martincouairon.github.io/projects/trader-ia-calculs.html" />
+  <meta name="author" content="Martin Couairon" />
+</head>
+<body>
+  <nav>
+    <div class="nav-header">
+      <span class="nav-brand">Martin Couairon</span>
+      <button id="lang-toggle" onclick="toggleLang()">EN</button>
+    </div>
+    <ul class="nav-links">
+      <li><a href="/">Home</a></li>
+      <li>
+        <a href="/projects/"><span class="fr">Projets</span><span class="en">Projects</span></a>
+        <ul class="nav-sub">
+          <li><a href="utile.html">Utile</a></li>
+          <li><a href="academie.html">Académie</a></li>
+          <li><a href="drift.html"><span class="fr">Dérive génétique</span><span class="en">Genetic Drift</span></a></li>
+          <li><a href="trader-ia.html" class="active"><span class="fr">Trader IA</span><span class="en">AI Trader</span></a></li>
+        </ul>
+      </li>
+      <li><a href="../discussion.html">Discussion</a></li>
+      <li><a href="../cv.html">CV</a></li>
+      <li><a href="../about.html"><span class="fr">À propos</span><span class="en">About</span></a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <a href="trader-ia.html" class="back-link">
+      ← <span class="fr">Le rapport</span><span class="en">The report</span>
+    </a>
+
+    <div class="project-hero">
+      <div class="project-hero-body">
+        <p class="hero-role" style="margin-bottom: 0.5rem;">Trader IA · <span class="fr">annexe au rapport</span><span class="en">report appendix</span></p>
+        <h1 class="hero-title"><span class="fr">Calculs</span><span class="en">Calculations</span></h1>
+        <p class="hero-bio fr">Chaque mesure publiée dans le rapport : sa définition, sa formule appliquée aux fichiers de données, sa valeur à la date d'arrêt et son évolution.</p>
+        <p class="hero-bio en">Every measure published in the report: definition, formula applied to the data files, value at the cut-off date and evolution. Published in French.</p>
+        <div class="project-links">
+          <a href="trader-ia.html"><span class="fr">Rapport</span><span class="en">Report</span></a>
+          <a href="trader-ia-decisions.html"><span class="fr">Décisions</span><span class="en">Decisions</span></a>
+          <a href="trader-ia-calculs.html"><span class="fr">Calculs</span><span class="en">Calculations</span></a>
+          <a href="trader-ia-donnees.html"><span class="fr">Données</span><span class="en">Data</span></a>
+        </div>
+      </div>
+    </div>
+
+    <article class="rapport" data-donnees="trader-ia/donnees.json">
+      <section>
+        <p>Chaque mesure est présentée sous deux formes : une définition en mots, et la formule appliquée aux colonnes des fichiers de données, consultables sur la page <a href="trader-ia-donnees.html">Données</a>. Les rendements quotidiens <code>r</code> sont calculés sur les jours ouvrés ; le taux sans risque <code>r_f</code> est celui du Livret A (1,7 % par an). Les mesures marquées « exploratoire » ne figuraient pas au pré-enregistrement. Les calculs sont faits par <code>tools/mesure.py</code>, <code>tools/reconciliation.py</code> et <code>tools/publication.py</code>.</p>
+        <p class="compte" id="mesures-bilan"></p>
+        <ol class="sommaire" id="mesures-sommaire"></ol>
+      </section>
+      <div id="mesures-liste"></div>
+    </article>
+
+    <section class="section">
+      <p class="section-label"><span class="fr">Avertissement</span><span class="en">Disclaimer</span></p>
+      <p class="fr">Rien sur cette page ne constitue une recommandation d'investissement. Les décisions sont produites par un modèle de langage sur un portefeuille fictif, dans le cadre d'une expérience.</p>
+      <p class="en">Nothing on this page is investment advice. Decisions are produced by a language model on a fictitious portfolio, as part of an experiment.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Martin Couairon &mdash; 2026</p>
+  </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+  <script src="trader-ia/rapport.js"></script>
+  <script>
+    function applyLang(lang) {
+      document.documentElement.classList.remove('lang-fr', 'lang-en');
+      document.documentElement.classList.add('lang-' + lang);
+      var btn = document.getElementById('lang-toggle');
+      if (btn) btn.textContent = lang === 'fr' ? 'EN' : 'FR';
+      localStorage.setItem('lang', lang);
+    }
+    function toggleLang() {
+      applyLang(localStorage.getItem('lang') === 'fr' ? 'en' : 'fr');
+    }
+    applyLang(localStorage.getItem('lang') || (navigator.language.startsWith('fr') ? 'fr' : 'en'));
+  </script>
+</body>
+</html>

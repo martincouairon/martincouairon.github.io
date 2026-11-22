@@ -114,7 +114,24 @@ dl.conventions dd { color: var(--muted); margin: 0; }
 .decision.vide .motif { font-size: 0.82rem; color: var(--muted); }
 .compte { font-size: 0.8rem; color: var(--muted); }
 
+/* Calculs */
+.mesure { border: 1px solid var(--border); border-radius: 6px; padding: 0.9rem 1rem; margin-bottom: 0.9rem; }
+.mesure .tete { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.4rem 0.7rem; }
+.mesure .tete h3 { margin: 0; font-size: 0.95rem; }
+.mesure .valeur-mesure { margin-left: auto; font-weight: 600; font-variant-numeric: tabular-nums; }
+.mesure dl { display: grid; grid-template-columns: 6rem 1fr; gap: 0.3rem 0.8rem; font-size: 0.85rem; margin: 0.6rem 0; }
+.mesure dt { color: var(--subtle); }
+.mesure dd { margin: 0; color: #3d3d3d; }
+.mesure dd code { white-space: normal; font-size: 0.8rem; line-height: 1.5; }
+.fig .cadre.petit, .cadre.petit { position: relative; height: 150px; }
+/* Données */
+table.brut { font-size: 0.75rem; }
+table.brut th { cursor: pointer; white-space: nowrap; text-transform: none; letter-spacing: 0; }
+table.brut td { white-space: nowrap; font-variant-numeric: tabular-nums; }
+#table-pages button { font: inherit; border: 1px solid var(--border); background: none; border-radius: 4px; cursor: pointer; padding: 0 0.5rem; }
+
 @media (max-width: 760px) {
+  .mesure dl { grid-template-columns: 1fr; }
   main { padding: 2rem 16px 4rem !important; }
   .sommaire { columns: 1; }
   .fig .cadre { height: 260px; }
