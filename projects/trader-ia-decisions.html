@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html class="lang-fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Registre des décisions — Trader IA</title>
+  <script>
+    (function () {
+      var saved = localStorage.getItem('lang') || (navigator.language.startsWith('fr') ? 'fr' : 'en');
+      document.documentElement.className = 'lang-' + saved;
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="trader-ia/rapport.css" />
+  <meta name="description" content="Toutes les décisions du trader IA, avec le motif qu'il a déclaré et ce que la mesure indépendante en a fait." />
+  <link rel="canonical" href="https://martincouairon.github.io/projects/trader-ia-decisions.html" />
+  <meta name="author" content="Martin Couairon" />
+</head>
+<body>
+  <nav>
+    <div class="nav-header">
+      <span class="nav-brand">Martin Couairon</span>
+      <button id="lang-toggle" onclick="toggleLang()">EN</button>
+    </div>
+    <ul class="nav-links">
+      <li><a href="/">Home</a></li>
+      <li>
+        <a href="/projects/"><span class="fr">Projets</span><span class="en">Projects</span></a>
+        <ul class="nav-sub">
+          <li><a href="utile.html">Utile</a></li>
+          <li><a href="academie.html">Académie</a></li>
+          <li><a href="drift.html"><span class="fr">Dérive génétique</span><span class="en">Genetic Drift</span></a></li>
+          <li><a href="trader-ia.html" class="active"><span class="fr">Trader IA</span><span class="en">AI Trader</span></a></li>
+        </ul>
+      </li>
+      <li><a href="../discussion.html">Discussion</a></li>
+      <li><a href="../cv.html">CV</a></li>
+      <li><a href="../about.html"><span class="fr">À propos</span><span class="en">About</span></a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <a href="trader-ia.html" class="back-link">
+      ← <span class="fr">Le rapport</span><span class="en">The report</span>
+    </a>
+
+    <div class="project-hero">
+      <div class="project-hero-body">
+        <p class="hero-role" style="margin-bottom: 0.5rem;">Trader IA · <span class="fr">annexe au rapport</span><span class="en">report appendix</span></p>
+        <h1 class="hero-title"><span class="fr">Registre des décisions</span><span class="en">Decision log</span></h1>
+        <p class="hero-bio fr">Chaque ordre du trader, le motif qu'il a donné au moment de décider, et ce que la mesure indépendante en a fait le lendemain.</p>
+        <p class="hero-bio en">Every order the trader placed, the reason it gave when deciding, and what the independent measurement made of it the next day. Entries are published in French.</p>
+      </div>
+    </div>
+
+    <article class="rapport" data-donnees="trader-ia/donnees.json">
+      <section id="synthese">
+        <p class="section-label">Synthèse</p>
+<!-- TEXTE:synthese-decisions:DEBUT -->
+        <p>Cette page tient deux registres en regard. Le premier est celui du trader : ce qu'il a décidé, pourquoi, sur quel fait. Le second est celui du mesureur : à quel prix l'ordre a réellement été servi, ce qu'il a coûté, ou pourquoi il ne l'a pas été. Le motif est cité tel que le trader l'a écrit, entre guillemets : c'est une pièce, pas un fait. Le raisonnement complet de chaque fenêtre est lié à sa source.</p>
+        <p>Chaque semaine, cette synthèse résumera les grandes lignes du raisonnement du trader — les thèses qu'il installe, celles qu'il abandonne, les justifications qui reviennent — sans les juger.</p>
+        <p class="muet">Aucune décision avant le 24 novembre 2026.</p>
+<!-- TEXTE:synthese-decisions:FIN -->
+        <p class="compte" id="decisions-chiffres"></p>
+      </section>
+
+      <div class="filtres">
+        <label>Action
+          <select id="filtre-action">
+            <option value="">toutes</option>
+            <option value="ouvrir">ouvrir</option><option value="renforcer">renforcer</option>
+            <option value="reduire">réduire</option><option value="fermer">fermer</option><option value="inverser">inverser</option>
+          </select></label>
+        <label>Stratégie <select id="filtre-strategie"><option value="">toutes</option></select></label>
+        <label><input type="search" id="filtre-ticker" placeholder="Ticker" size="9" aria-label="Filtrer par ticker" /></label>
+        <label><input type="checkbox" id="filtre-vides" /> fenêtres sans ordre</label>
+        <span class="compte" id="decisions-compte"></span>
+      </div>
+      <div id="decisions-liste"></div>
+    </article>
+
+    <section class="section">
+      <p class="section-label"><span class="fr">Avertissement</span><span class="en">Disclaimer</span></p>
+      <p class="fr">Rien sur cette page ne constitue une recommandation d'investissement. Les décisions sont produites par un modèle de langage sur un portefeuille fictif, dans le cadre d'une expérience. Les suivre serait une très mauvaise idée.</p>
+      <p class="en">Nothing on this page is investment advice. Decisions are produced by a language model on a fictitious portfolio, as part of an experiment. Following them would be a very bad idea.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Martin Couairon &mdash; 2026</p>
+  </footer>
+  <script src="trader-ia/rapport.js"></script>
+  <script>
+    function applyLang(lang) {
+      document.documentElement.classList.remove('lang-fr', 'lang-en');
+      document.documentElement.classList.add('lang-' + lang);
+      var btn = document.getElementById('lang-toggle');
+      if (btn) btn.textContent = lang === 'fr' ? 'EN' : 'FR';
+      localStorage.setItem('lang', lang);
+    }
+    function toggleLang() {
+      applyLang(localStorage.getItem('lang') === 'fr' ? 'en' : 'fr');
+    }
+    applyLang(localStorage.getItem('lang') || (navigator.language.startsWith('fr') ? 'fr' : 'en'));
+  </script>
+</body>
+</html>

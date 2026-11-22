@@ -1,0 +1,123 @@
+/* Trader IA — feuille de style du rapport et du registre des décisions.
+   Reprend les jetons du site (css/style.css) ; seules les couleurs de séries sont ajoutées. */
+.rapport {
+  --serie-mesure: #2a78d6;      /* trader, mesuré indépendamment */
+  --serie-declare: #eb6834;     /* trader, déclaré par le trader */
+  --serie-indice: #1baf7a;      /* MSCI World */
+  --serie-4: #eda100;
+  --serie-5: #e87ba4;
+  --serie-6: #008300;
+  --serie-7: #6250d6;
+  --serie-8: #e34948;
+  --neutre: #9a9a9a;
+  --ok: #008300;
+  --echec: #c0322f;
+  max-width: 860px;
+}
+.rapport h2 { font-size: 1.15rem; margin: 0 0 0.9rem; letter-spacing: -0.01em; }
+.rapport h3 { font-size: 0.95rem; margin: 1.6rem 0 0.5rem; }
+.rapport p, .rapport li { color: #3d3d3d; }
+.rapport ul, .rapport ol { padding-left: 1.4rem; margin: 0.5rem 0 0.9rem; }
+.rapport li { margin-bottom: 0.35rem; line-height: 1.6; font-size: 0.95rem; }
+.rapport .num { font-variant-numeric: tabular-nums; }
+.rapport code { font-size: 0.85em; background: var(--surface); padding: 0 0.25em; border-radius: 3px; }
+.rapport section { margin-bottom: 3.25rem; scroll-margin-top: 1.5rem; }
+.rapport .section-label { margin-bottom: 0.4rem; }
+
+/* En-tête du rapport */
+.meta-rapport { display: flex; flex-wrap: wrap; gap: 0.4rem 1.4rem; font-size: 0.82rem; color: var(--muted);
+  border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 0.7rem 0; margin: 1.5rem 0 2rem; }
+.meta-rapport b { color: var(--text); font-weight: 600; }
+.pastille { display: inline-flex; align-items: center; gap: 0.35rem; }
+.pastille::before { content: ""; width: 0.55rem; height: 0.55rem; border-radius: 50%; background: var(--neutre); }
+.pastille.ok::before { background: var(--ok); }
+.pastille.echec::before { background: var(--echec); }
+
+.resume { background: var(--surface); border-left: 3px solid var(--text); padding: 1.1rem 1.3rem; margin-bottom: 2rem; }
+.resume p { color: var(--text); font-size: 0.95rem; line-height: 1.7; }
+.resume .section-label { margin-bottom: 0.5rem; }
+
+/* Chiffres clés */
+.tuiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 0.75rem; margin: 0 0 2.5rem; }
+.tuile { border: 1px solid var(--border); border-radius: 6px; padding: 0.8rem 0.9rem; }
+.tuile .etiquette { font-size: 0.72rem; color: var(--muted); line-height: 1.35; min-height: 2em; }
+.tuile .valeur { font-size: 1.35rem; font-weight: 600; letter-spacing: -0.02em; margin: 0.15rem 0; font-variant-numeric: tabular-nums; }
+.tuile .contexte { font-size: 0.72rem; color: var(--subtle); line-height: 1.35; }
+
+/* Sommaire */
+.sommaire { font-size: 0.85rem; columns: 2; column-gap: 2rem; margin: 0 0 2.5rem; padding: 0; list-style: none; }
+.sommaire li { margin: 0 0 0.25rem; break-inside: avoid; font-size: 0.85rem; }
+.sommaire a { color: var(--muted); text-decoration: none; }
+.sommaire a:hover { color: var(--text); }
+
+/* Figures */
+figure.fig { margin: 1.2rem 0 1.6rem; }
+.fig .cadre { position: relative; height: 320px; }
+.fig.basse .cadre { height: 240px; }
+.fig figcaption { font-size: 0.8rem; color: var(--muted); margin-top: 0.6rem; line-height: 1.55; }
+.fig figcaption b { color: var(--text); }
+.fig .attente { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; text-align: center;
+  padding: 1.5rem; border: 1px dashed var(--border); border-radius: 6px; background: var(--surface);
+  font-size: 0.85rem; color: var(--muted); }
+.commandes { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 0.6rem; }
+.commandes button { font: inherit; font-size: 0.75rem; color: var(--muted); background: none; border: 1px solid var(--border);
+  border-radius: 999px; padding: 0.2rem 0.7rem; cursor: pointer; }
+.commandes button[aria-pressed="true"] { color: var(--bg); background: var(--text); border-color: var(--text); }
+.legende { display: flex; flex-wrap: wrap; gap: 0.3rem 1rem; font-size: 0.75rem; color: var(--muted); margin-bottom: 0.5rem; }
+.legende span { display: inline-flex; align-items: center; gap: 0.35rem; }
+.legende i { display: inline-block; width: 14px; height: 2px; border-radius: 1px; }
+.legende i.tirets { background: repeating-linear-gradient(90deg, currentColor 0 4px, transparent 4px 7px) !important; height: 2px; }
+
+/* Tableaux */
+.tableau { overflow-x: auto; margin: 0.8rem 0 1rem; }
+.rapport table { border-collapse: collapse; width: 100%; font-size: 0.85rem; }
+.rapport th, .rapport td { border-bottom: 1px solid var(--border); padding: 0.45rem 0.55rem; text-align: left; vertical-align: top; }
+.rapport thead th { font-size: 0.72rem; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: 0.04em; }
+.rapport td.n, .rapport th.n { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.rapport tr.groupe td { font-weight: 600; color: var(--text); background: var(--surface); font-size: 0.78rem; }
+.rapport .etiq { display: inline-block; font-size: 0.68rem; border: 1px solid var(--border); border-radius: 3px;
+  padding: 0 0.3rem; color: var(--muted); margin-left: 0.3rem; white-space: nowrap; }
+.rapport .muet { color: var(--subtle); }
+
+/* Encadrés */
+.encadre { border: 1px solid var(--border); border-radius: 6px; padding: 0.9rem 1.1rem; margin: 1rem 0; font-size: 0.9rem; }
+.encadre.important { border-left: 3px solid var(--serie-declare); }
+.trois-agents { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0.75rem; margin: 1rem 0; }
+.trois-agents div { border: 1px solid var(--border); border-radius: 6px; padding: 0.8rem 0.9rem; font-size: 0.85rem; color: var(--muted); }
+.trois-agents b { display: block; color: var(--text); margin-bottom: 0.3rem; }
+dl.conventions { display: grid; grid-template-columns: 9rem 1fr; gap: 0.4rem 1rem; font-size: 0.88rem; margin: 0.8rem 0; }
+dl.conventions dt { color: var(--text); font-weight: 600; }
+dl.conventions dd { color: var(--muted); margin: 0; }
+.lien-fort { display: inline-block; margin-top: 0.4rem; font-weight: 600; font-size: 0.9rem; }
+
+/* Registre des décisions */
+.filtres { display: flex; flex-wrap: wrap; gap: 0.6rem 1rem; align-items: center; padding: 0.7rem 0; margin-bottom: 1rem;
+  border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); font-size: 0.82rem; position: sticky; top: 0;
+  background: var(--bg); z-index: 5; }
+.filtres select, .filtres input[type="search"] { font: inherit; font-size: 0.82rem; border: 1px solid var(--border);
+  border-radius: 4px; padding: 0.25rem 0.45rem; background: var(--bg); color: var(--text); }
+.filtres label { color: var(--muted); display: inline-flex; gap: 0.35rem; align-items: center; }
+.jour { margin-bottom: 1.4rem; }
+.jour > h3 { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--subtle); margin: 0 0 0.5rem; }
+.decision { border: 1px solid var(--border); border-radius: 6px; padding: 0.75rem 0.9rem; margin-bottom: 0.5rem; }
+.decision .tete { display: flex; flex-wrap: wrap; gap: 0.3rem 0.6rem; align-items: baseline; font-size: 0.9rem; }
+.decision .tete b { font-weight: 600; }
+.decision .action { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 600;
+  border-radius: 3px; padding: 0.05rem 0.4rem; background: var(--surface); color: var(--text); }
+.decision .action.achat { box-shadow: inset 3px 0 0 var(--serie-mesure); }
+.decision .action.vente { box-shadow: inset 3px 0 0 var(--serie-declare); }
+.decision .motif { margin: 0.4rem 0 0.2rem; font-size: 0.88rem; color: #3d3d3d; }
+.decision .motif::before { content: "« "; color: var(--subtle); }
+.decision .motif::after { content: " »"; color: var(--subtle); }
+.decision .details { font-size: 0.76rem; color: var(--muted); display: flex; flex-wrap: wrap; gap: 0.2rem 1rem; }
+.decision.vide { border-style: dashed; padding: 0.5rem 0.9rem; }
+.decision.vide .motif { font-size: 0.82rem; color: var(--muted); }
+.compte { font-size: 0.8rem; color: var(--muted); }
+
+@media (max-width: 760px) {
+  main { padding: 2rem 16px 4rem !important; }
+  .sommaire { columns: 1; }
+  .fig .cadre { height: 260px; }
+  dl.conventions { grid-template-columns: 1fr; }
+  dl.conventions dd { margin-bottom: 0.5rem; }
+}
