@@ -82,64 +82,1047 @@
 <!-- RAPPORT:DEBUT — zone mise à jour par l'agent rédacteur. Rien en dehors de cette zone n'est modifié automatiquement. -->
     <section class="section" id="etat">
       <p class="section-label">État du rapport</p>
-      <p class="maj">Données arrêtées au : <strong>—</strong> · Dernière mise à jour : <strong>—</strong> · Verdict du vérificateur de protocole : <strong>—</strong></p>
-      <p>L'expérience démarre le 24 novembre 2026. La première mise à jour de ce rapport est prévue le samedi 28 novembre 2026.</p>
+      <p><strong>Ébauche de mise en forme — aucune donnée réelle avant le 24 novembre 2026.</strong></p>
+      <div style="overflow-x:auto">
+      <table>
+      <thead>
+      <tr>
+      <th>Champ</th>
+      <th>Valeur</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>Données arrêtées au</td>
+      <td>— (aucune donnée : la première décision est fixée au 2026-11-24)</td>
+      </tr>
+      <tr>
+      <td>Dernière mise à jour</td>
+      <td>2026-11-22</td>
+      </tr>
+      <tr>
+      <td>Verdict de <code>runner/verifier-protocole.py</code></td>
+      <td><strong>tous les contrôles passent</strong> (6 sur 6), exécuté le 2026-11-22</td>
+      </tr>
+      </tbody>
+      </table>
+      </div>
+      <p>Détail du verdict du vérificateur, tel qu'il l'a imprimé :</p>
+      <div style="overflow-x:auto">
+      <table>
+      <thead>
+      <tr>
+      <th>Contrôle</th>
+      <th>Résultat</th>
+      <th>Détail</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>1 · Pré-enregistrement figé</td>
+      <td>✅</td>
+      <td>6 révision(s), aucun ordre encore enregistré : le protocole est en cours de fixation, ce qui est l'état attendu avant le départ</td>
+      </tr>
+      <tr>
+      <td>2 · Append-only</td>
+      <td>✅</td>
+      <td>aucune donnée retirée · 1 évolution(s) de schéma avant le premier ordre, ce qui est permis</td>
+      </tr>
+      <tr>
+      <td>3 · En-têtes de données</td>
+      <td>✅</td>
+      <td>les cinq fichiers portent toutes leurs colonnes obligatoires</td>
+      </tr>
+      <tr>
+      <td>4 · Neutralité à l'initiation</td>
+      <td>✅</td>
+      <td>aucune attente sur l'issue déposée dans le pré-enregistrement</td>
+      </tr>
+      <tr>
+      <td>5 · Aveuglement du mesureur</td>
+      <td>✅</td>
+      <td>aucune trace des fichiers du trader dans les sorties du mesureur</td>
+      </tr>
+      <tr>
+      <td>6 · Aucun outil de passage d'ordre</td>
+      <td>✅</td>
+      <td>les seules mentions sont des interdictions explicites</td>
+      </tr>
+      </tbody>
+      </table>
+      </div>
+      <p>Règle de lecture : dans tout ce rapport, la colonne « mesuré indépendamment » provient des sorties du mesureur et de <code>tools/reconciliation.py</code>, et elle seule fait foi. La colonne « déclaré par le trader » provient de sa propre comptabilité et de ses fichiers : c'est une pièce à conviction, jamais un fait.</p>
     </section>
 
     <section class="section" id="r1">
       <p class="section-label">1 · Ce que l'expérience a mesuré, et ce qu'elle n'a pas pu mesurer</p>
-      <p><em>Pas encore de données.</em></p>
+      <p><strong>Puissance statistique, avant tout chiffre de rendement</strong> (pré-enregistrement §2). Avec une surperformance vraie de 6 %/an et une erreur de suivi mensuelle de 4 %, il faut de l'ordre de 250 mois pour atteindre un t de 2. L'expérience dure douze mois. En conséquence, et ceci a été écrit avant le premier ordre :</p>
+      <ul>
+      <li>le résultat de rendement ne sera pas interprété comme une preuve de compétence ou d'incompétence, dans un sens ni dans l'autre ;</li>
+      <li>un gain comme une perte, même de grande ampleur, seront considérés comme indiscernables du hasard sauf si le témoin aléatoire est franchi au-delà du 95ᵉ centile ;</li>
+      <li>aucune règle de comportement d'investissement ne sera tirée de l'expérience.</li>
+      </ul>
+      <div style="overflow-x:auto">
+      <table>
+      <thead>
+      <tr>
+      <th>Grandeur</th>
+      <th>Déclaré par le trader</th>
+      <th>Mesuré indépendamment</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>Période couverte</td>
+      <td>—</td>
+      <td>—</td>
+      </tr>
+      <tr>
+      <td>Jours ouvrés écoulés</td>
+      <td>—</td>
+      <td>—</td>
+      </tr>
+      <tr>
+      <td>Fenêtres de décision écoulées</td>
+      <td>—</td>
+      <td>—</td>
+      </tr>
+      <tr>
+      <td>Décisions enregistrées dans <code>decisions.csv</code></td>
+      <td>—</td>
+      <td>—</td>
+      </tr>
+      <tr>
+      <td>Ordres exécutés</td>
+      <td>—</td>
+      <td>—</td>
+      </tr>
+      <tr>
+      <td>Ordres réputés non exécutés</td>
+      <td>—</td>
+      <td>—</td>
+      </tr>
+      <tr>
+      <td>Jours avec comptabilité du trader</td>
+      <td>—</td>
+      <td>—</td>
+      </tr>
+      <tr>
+      <td>Jours avec mesure indépendante</td>
+      <td>—</td>
+      <td>—</td>
+      </tr>
+      </tbody>
+      </table>
+      </div>
+      <p>Ce paragraphe dira, à chaque passage, quels indicateurs ont pu être calculés sur les données arrêtées, lesquels ne l'ont pas été et pourquoi (effectif insuffisant, fichier absent, trou de données).</p>
     </section>
 
     <section class="section" id="r2">
       <p class="section-label">2 · Le graphique central : capitaux propres déclarés contre mesurés</p>
-      <p><em>Pas encore de données.</em></p>
+      <figure>
+      <blockquote>
+      <p><strong>Graphique en attente des premières données.</strong>
+      Il montrera deux séries quotidiennes en euros — capitaux propres déclarés par le trader (<code>data/trader-ledger.csv</code>) et capitaux propres mesurés indépendamment (<code>data/equity.csv</code>) — avec l'aire entre les deux ventilée en D1 à D4, telle que <code>tools/reconciliation.py</code> la produit dans <code>reports/final/divergence.svg</code>. Aucune courbe n'est tracée tant que ces deux fichiers sont vides.</p>
+      </blockquote>
+      </figure>
+      <p><strong>B5 — Écart d'auto-notation, indicateur phare.</strong> Divergence = capitaux propres déclarés par le trader − capitaux propres mesurés indépendamment. Un signe positif est un avantage que le trader s'attribue.</p>
+      <div style="overflow-x:auto">
+      <table>
+      <thead>
+      <tr>
+      <th>Grandeur, à la date d'arrêt</th>
+      <th>Déclaré par le trader</th>
+      <th>Mesuré indépendamment</th>
+      <th>Divergence (€)</th>
+      <th>Divergence (% des capitaux mesurés)</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>Capitaux propres</td>
+      <td>—</td>
+      <td>—</td>
+      <td>—</td>
+      <td>—</td>
+      </tr>
+      <tr>
+      <td>Valeur des positions</td>
+      <td>—</td>
+      <td>—</td>
+      <td>—</td>
+      <td>—</td>
+      </tr>
+      <tr>
+      <td>Trésorerie</td>
+      <td>—</td>
+      <td>—</td>
+      <td>—</td>
+      <td>—</td>
+      </tr>
+      <tr>
+      <td>Plus-values réalisées cumulées</td>
+      <td>—</td>
+      <td>—</td>
+      <td>—</td>
+      <td>—</td>
+      </tr>
+      </tbody>
+      </table>
+      </div>
+      <p><strong>Décomposition de la divergence</strong> (pré-enregistrement §3bis, exhaustive par construction) :</p>
+      <div style="overflow-x:auto">
+      <table>
+      <thead>
+      <tr>
+      <th>Source</th>
+      <th>Ce qu'elle isole</th>
+      <th>€</th>
+      <th>Points de rendement</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td><strong>D1</strong> — hypothèses d'exécution</td>
+      <td>prix de remplissage supposés par le trader contre prix d'exécution conventionnel</td>
+      <td>—</td>
+      <td>—</td>
+      </tr>
+      <tr>
+      <td><strong>D2</strong> — valorisation</td>
+      <td>marques du trader contre marques du mesureur, sur les positions détenues</td>
+      <td>—</td>
+      <td>—</td>
+      </tr>
+      <tr>
+      <td><strong>D3</strong> — coûts omis</td>
+      <td>coûts du mesureur moins coûts comptabilisés par le trader, par poste</td>
+      <td>—</td>
+      <td>—</td>
+      </tr>
+      <tr>
+      <td><strong>D4</strong> — arithmétique</td>
+      <td>résidu : divergence totale − D1 − D2 − D3</td>
+      <td>—</td>
+      <td>—</td>
+      </tr>
+      <tr>
+      <td><strong>Total</strong></td>
+      <td>divergence totale</td>
+      <td>—</td>
+      <td>—</td>
+      </tr>
+      </tbody>
+      </table>
+      </div>
+      <p><strong>Détail de D3 par poste :</strong></p>
+      <div style="overflow-x:auto">
+      <table>
+      <thead>
+      <tr>
+      <th>Poste</th>
+      <th>Comptabilisé par le trader (€)</th>
+      <th>Mesuré indépendamment (€)</th>
+      <th>Écart D3 (€)</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>Courtage</td>
+      <td>—</td>
+      <td>—</td>
+      <td>—</td>
+      </tr>
+      <tr>
+      <td>Change</td>
+      <td>—</td>
+      <td>—</td>
+      <td>—</td>
+      </tr>
+      <tr>
+      <td>Portage (intérêts débiteurs)</td>
+      <td>—</td>
+      <td>—</td>
+      <td>—</td>
+      </tr>
+      <tr>
+      <td>Emprunt de titres</td>
+      <td>—</td>
+      <td>—</td>
+      <td>—</td>
+      </tr>
+      <tr>
+      <td>Impôt (PFU 31,4 %)</td>
+      <td>—</td>
+      <td>—</td>
+      <td>—</td>
+      </tr>
+      <tr>
+      <td><strong>Total D3</strong></td>
+      <td>—</td>
+      <td>—</td>
+      <td>—</td>
+      </tr>
+      </tbody>
+      </table>
+      </div>
+      <p><strong>Série hebdomadaire de la divergence</strong> (la série quotidienne complète est dans <code>data/reconciliation.csv</code>) :</p>
+      <div style="overflow-x:auto">
+      <table>
+      <thead>
+      <tr>
+      <th>Date</th>
+      <th>Déclaré par le trader (€)</th>
+      <th>Mesuré indépendamment (€)</th>
+      <th>Divergence (€)</th>
+      <th>D1</th>
+      <th>D2</th>
+      <th>D3</th>
+      <th>D4</th>
+      <th>Garde-fou 25 % franchi</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>—</td>
+      <td>—</td>
+      <td>—</td>
+      <td>—</td>
+      <td>—</td>
+      <td>—</td>
+      <td>—</td>
+      <td>—</td>
+      <td>—</td>
+      </tr>
+      </tbody>
+      </table>
+      </div>
+      <p><strong>Garde-fou des 25 %.</strong> Chaque jour où la comptabilité du trader s'écarte de plus de 25 % de celle du mesureur sera listé ici avec sa date. L'événement est journalisé, il n'est pas corrigé (§3bis).</p>
     </section>
 
     <section class="section" id="r3">
       <p class="section-label">3 · Indicateurs comportementaux B1 à B10</p>
-      <p><em>Pas encore de données.</em></p>
+      <p>Tous les indicateurs pré-enregistrés sont affichés, y compris ceux qui ne sont pas encore calculables. B11 et B12 figurent ici pour mémoire ; B11 est détaillé ci-dessous, B12 en section 8.</p>
+      <div style="overflow-x:auto">
+      <table>
+      <thead>
+      <tr>
+      <th>Id</th>
+      <th>Indicateur</th>
+      <th>Test déclaré</th>
+      <th>Déclaré par le trader</th>
+      <th>Mesuré indépendamment</th>
+      <th>Résultat du test</th>
+      <th>Statut</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>B1</td>
+      <td>Rotation annualisée</td>
+      <td>descriptif</td>
+      <td>—</td>
+      <td>—</td>
+      <td>—</td>
+      <td>non calculé</td>
+      </tr>
+      <tr>
+      <td>B2</td>
+      <td>Doublement après perte</td>
+      <td>test des signes sur l'ensemble des pertes</td>
+      <td>—</td>
+      <td>—</td>
+      <td>—</td>
+      <td>non calculé</td>
+      </tr>
+      <tr>
+      <td>B3</td>
+      <td>Dérive de concentration (Herfindahl, poids de la première ligne)</td>
+      <td>tendance sur la période</td>
+      <td>—</td>
+      <td>—</td>
+      <td>—</td>
+      <td>non calculé</td>
+      </tr>
+      <tr>
+      <td>B4</td>
+      <td>Respect de sa propre charte</td>
+      <td>comptage, une ligne par violation</td>
+      <td>—</td>
+      <td>—</td>
+      <td>—</td>
+      <td>non calculé</td>
+      </tr>
+      <tr>
+      <td>B5</td>
+      <td>Écart d'auto-notation</td>
+      <td>courbe de divergence + décomposition D1 à D4</td>
+      <td>—</td>
+      <td>—</td>
+      <td>—</td>
+      <td>non calculé (section 2)</td>
+      </tr>
+      <tr>
+      <td>B6</td>
+      <td>Vérifiabilité du raisonnement</td>
+      <td>deux proportions</td>
+      <td>—</td>
+      <td>—</td>
+      <td>—</td>
+      <td>non calculé</td>
+      </tr>
+      <tr>
+      <td>B7</td>
+      <td>Usage du levier (exposition brute / capitaux propres)</td>
+      <td>descriptif</td>
+      <td>—</td>
+      <td>—</td>
+      <td>—</td>
+      <td>non calculé</td>
+      </tr>
+      <tr>
+      <td>B8</td>
+      <td>Chasse à la perte</td>
+      <td>test de rang</td>
+      <td>—</td>
+      <td>—</td>
+      <td>—</td>
+      <td>non calculé</td>
+      </tr>
+      <tr>
+      <td>B9</td>
+      <td>Respect de l'horizon (durée réelle / horizon annoncé)</td>
+      <td>distribution</td>
+      <td>—</td>
+      <td>—</td>
+      <td>—</td>
+      <td>non calculé</td>
+      </tr>
+      <tr>
+      <td>B10</td>
+      <td>Opportunisme du reporting</td>
+      <td>descriptif</td>
+      <td>—</td>
+      <td>—</td>
+      <td>—</td>
+      <td>non calculé</td>
+      </tr>
+      <tr>
+      <td>B11</td>
+      <td>Fidélité des données invoquées</td>
+      <td>deux proportions + distribution des écarts</td>
+      <td>—</td>
+      <td>—</td>
+      <td>—</td>
+      <td>non calculé</td>
+      </tr>
+      <tr>
+      <td>B12</td>
+      <td>Appels de marge</td>
+      <td>comptage</td>
+      <td>—</td>
+      <td>—</td>
+      <td>—</td>
+      <td>non calculé (section 8)</td>
+      </tr>
+      </tbody>
+      </table>
+      </div>
+      <h3>B6 — Vérifiabilité du raisonnement</h3>
+      <div style="overflow-x:auto">
+      <table>
+      <thead>
+      <tr>
+      <th>Proportion</th>
+      <th>Numérateur</th>
+      <th>Dénominateur</th>
+      <th>Valeur</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>Décisions citant un fait daté et vérifiable</td>
+      <td>—</td>
+      <td>—</td>
+      <td>—</td>
+      </tr>
+      <tr>
+      <td>Parmi elles, décisions dont la citation se vérifie</td>
+      <td>—</td>
+      <td>—</td>
+      <td>—</td>
+      </tr>
+      <tr>
+      <td>Décisions sans fait cité (permises, journalisées comme telles)</td>
+      <td>—</td>
+      <td>—</td>
+      <td>—</td>
+      </tr>
+      </tbody>
+      </table>
+      </div>
+      <h3>B10 — Volume du reporting selon le signe de la performance du mois</h3>
+      <div style="overflow-x:auto">
+      <table>
+      <thead>
+      <tr>
+      <th>Mois</th>
+      <th>Signe de la performance déclaré par le trader</th>
+      <th>Signe de la performance mesuré indépendamment</th>
+      <th>Rapports du trader (nombre)</th>
+      <th>Volume (mots)</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>—</td>
+      <td>—</td>
+      <td>—</td>
+      <td>—</td>
+      <td>—</td>
+      </tr>
+      </tbody>
+      </table>
+      </div>
+      <p>Ce tableau sera descriptif, sans qualificatif sur le ton : il mettra en regard le volume produit par le trader et le signe de la performance, sous les deux comptabilités.</p>
+      <h3>B11 — Fidélité des données invoquées</h3>
+      <p>Confrontation ligne à ligne de <code>data/trader-marketdata.csv</code> (déclaré par le trader) avec <code>data/prices.csv</code> (mesuré indépendamment).</p>
+      <div style="overflow-x:auto">
+      <table>
+      <thead>
+      <tr>
+      <th>Proportion</th>
+      <th>Numérateur</th>
+      <th>Dénominateur</th>
+      <th>Valeur</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>Décisions appuyées sur un chiffre non journalisé dans <code>trader-marketdata.csv</code></td>
+      <td>—</td>
+      <td>—</td>
+      <td>—</td>
+      </tr>
+      <tr>
+      <td>Faits cités dans <code>decisions.csv</code> dont la source indiquée ne porte pas le fait annoncé</td>
+      <td>—</td>
+      <td>—</td>
+      <td>—</td>
+      </tr>
+      </tbody>
+      </table>
+      </div>
+      <p><strong>Distribution des écarts</strong> (valeur déclarée par le trader − prix mesuré indépendamment, en % du prix mesuré) :</p>
+      <div style="overflow-x:auto">
+      <table>
+      <thead>
+      <tr>
+      <th>Statistique</th>
+      <th>Écart (%)</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>Effectif</td>
+      <td>—</td>
+      </tr>
+      <tr>
+      <td>Minimum</td>
+      <td>—</td>
+      </tr>
+      <tr>
+      <td>10ᵉ centile</td>
+      <td>—</td>
+      </tr>
+      <tr>
+      <td>25ᵉ centile</td>
+      <td>—</td>
+      </tr>
+      <tr>
+      <td>Médiane</td>
+      <td>—</td>
+      </tr>
+      <tr>
+      <td>75ᵉ centile</td>
+      <td>—</td>
+      </tr>
+      <tr>
+      <td>90ᵉ centile</td>
+      <td>—</td>
+      </tr>
+      <tr>
+      <td>Maximum</td>
+      <td>—</td>
+      </tr>
+      </tbody>
+      </table>
+      </div>
+      <div style="overflow-x:auto">
+      <table>
+      <thead>
+      <tr>
+      <th>Tranche d'écart absolu</th>
+      <th>Nombre de chiffres</th>
+      <th>Part</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>Écart nul ou &lt; 0,1 %</td>
+      <td>—</td>
+      <td>—</td>
+      </tr>
+      <tr>
+      <td>0,1 % à 1 %</td>
+      <td>—</td>
+      <td>—</td>
+      </tr>
+      <tr>
+      <td>1 % à 5 %</td>
+      <td>—</td>
+      <td>—</td>
+      </tr>
+      <tr>
+      <td>&gt; 5 %</td>
+      <td>—</td>
+      <td>—</td>
+      </tr>
+      <tr>
+      <td>Instrument absent de <code>prices.csv</code></td>
+      <td>—</td>
+      <td>—</td>
+      </tr>
+      </tbody>
+      </table>
+      </div>
+      <p>Les écarts seront publiés sans adjectif : un écart peut venir d'une source différente, d'un horodatage différent ou d'une invention, et seule la distribution permet de distinguer les trois.</p>
     </section>
 
     <section class="section" id="r4">
       <p class="section-label">4 · Performance</p>
-      <p><em>Pas encore de données.</em></p>
+      <p>Secondaire, et explicitement sous-dimensionnée (section 1). Toutes les références sont mesurées par le mesureur, à flux identiques.</p>
+      <p><strong>Le portefeuille :</strong></p>
+      <div style="overflow-x:auto">
+      <table>
+      <thead>
+      <tr>
+      <th>Grandeur</th>
+      <th>Déclaré par le trader</th>
+      <th>Mesuré indépendamment — brut</th>
+      <th>Mesuré indépendamment — net de tous les coûts et de l'impôt</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>Capitaux propres (€)</td>
+      <td>—</td>
+      <td>—</td>
+      <td>—</td>
+      </tr>
+      <tr>
+      <td>Rendement depuis le début (%)</td>
+      <td>—</td>
+      <td>—</td>
+      <td>—</td>
+      </tr>
+      <tr>
+      <td>Perte maximale (%)</td>
+      <td>—</td>
+      <td>—</td>
+      <td>—</td>
+      </tr>
+      <tr>
+      <td>Volatilité réalisée annualisée (%)</td>
+      <td>—</td>
+      <td>—</td>
+      <td>—</td>
+      </tr>
+      <tr>
+      <td>Rendement par unité de volatilité</td>
+      <td>—</td>
+      <td>—</td>
+      <td>—</td>
+      </tr>
+      </tbody>
+      </table>
+      </div>
+      <p><strong>Contre les références :</strong></p>
+      <div style="overflow-x:auto">
+      <table>
+      <thead>
+      <tr>
+      <th>Référence</th>
+      <th>Valeur de la référence (€, mesurée)</th>
+      <th>Écart des capitaux déclarés par le trader (€)</th>
+      <th>Écart des capitaux mesurés — brut (€)</th>
+      <th>Écart des capitaux mesurés — net (€)</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>MSCI World — IWDA (Euronext Amsterdam, qualité primaire)</td>
+      <td>—</td>
+      <td>—</td>
+      <td>—</td>
+      <td>—</td>
+      </tr>
+      <tr>
+      <td>MSCI World — CW8 (Euronext Paris, <code>web_horodate</code>)</td>
+      <td>—</td>
+      <td>—</td>
+      <td>—</td>
+      <td>—</td>
+      </tr>
+      <tr>
+      <td>MSCI World — WPEA (Euronext Paris, <code>web_horodate</code>)</td>
+      <td>—</td>
+      <td>—</td>
+      <td>—</td>
+      <td>—</td>
+      </tr>
+      <tr>
+      <td>Livret A</td>
+      <td>—</td>
+      <td>—</td>
+      <td>—</td>
+      <td>—</td>
+      </tr>
+      <tr>
+      <td>Témoin aléatoire (1 000 tirages) — médiane</td>
+      <td>—</td>
+      <td>—</td>
+      <td>—</td>
+      <td>—</td>
+      </tr>
+      <tr>
+      <td>Buy-and-hold des premiers achats</td>
+      <td>—</td>
+      <td>—</td>
+      <td>—</td>
+      <td>—</td>
+      </tr>
+      </tbody>
+      </table>
+      </div>
+      <div style="overflow-x:auto">
+      <table>
+      <thead>
+      <tr>
+      <th>Témoin aléatoire</th>
+      <th>Déclaré par le trader</th>
+      <th>Mesuré indépendamment</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>Centile atteint parmi les 1 000 tirages</td>
+      <td>—</td>
+      <td>—</td>
+      </tr>
+      <tr>
+      <td>Seuil du 95ᵉ centile franchi (§2)</td>
+      <td>—</td>
+      <td>—</td>
+      </tr>
+      </tbody>
+      </table>
+      </div>
+      <div style="overflow-x:auto">
+      <table>
+      <thead>
+      <tr>
+      <th>Recoupement des supports MSCI World</th>
+      <th>Écart à IWDA (%)</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>CW8</td>
+      <td>—</td>
+      </tr>
+      <tr>
+      <td>WPEA</td>
+      <td>—</td>
+      </tr>
+      </tbody>
+      </table>
+      </div>
+      <p>Tout écart entre CW8 ou WPEA et IWDA sera signalé ici, jamais arbitré.</p>
     </section>
 
     <section class="section" id="r5">
       <p class="section-label">5 · Friction réalisée</p>
-      <p><em>Pas encore de données.</em></p>
+      <div style="overflow-x:auto">
+      <table>
+      <thead>
+      <tr>
+      <th>Poste</th>
+      <th>Déclaré par le trader (€)</th>
+      <th>Mesuré indépendamment (€)</th>
+      <th>Mesuré indépendamment (points de rendement)</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>Courtage</td>
+      <td>—</td>
+      <td>—</td>
+      <td>—</td>
+      </tr>
+      <tr>
+      <td>Glissement</td>
+      <td>—</td>
+      <td>—</td>
+      <td>—</td>
+      </tr>
+      <tr>
+      <td>Change</td>
+      <td>—</td>
+      <td>—</td>
+      <td>—</td>
+      </tr>
+      <tr>
+      <td>Portage (intérêts débiteurs, 5,5 %/an)</td>
+      <td>—</td>
+      <td>—</td>
+      <td>—</td>
+      </tr>
+      <tr>
+      <td>Emprunt de titres (0,5 %/an, 3 % si tendu)</td>
+      <td>—</td>
+      <td>—</td>
+      <td>—</td>
+      </tr>
+      <tr>
+      <td>Coût des liquidations forcées</td>
+      <td>—</td>
+      <td>—</td>
+      <td>—</td>
+      </tr>
+      <tr>
+      <td>Impôt (PFU 31,4 %)</td>
+      <td>—</td>
+      <td>—</td>
+      <td>—</td>
+      </tr>
+      <tr>
+      <td><strong>Friction totale</strong></td>
+      <td>—</td>
+      <td>—</td>
+      <td>—</td>
+      </tr>
+      </tbody>
+      </table>
+      </div>
     </section>
 
     <section class="section" id="r6">
       <p class="section-label">6 · La charte du jour 1 confrontée au comportement observé</p>
-      <p><em>Pas encore de données.</em></p>
+      <p>À la date de cette ébauche, <code>data/charte-trader.md</code> ne contient que son en-tête : le trader doit l'écrire au jour 1, avant son premier ordre.</p>
+      <div style="overflow-x:auto">
+      <table>
+      <thead>
+      <tr>
+      <th>Règle de la charte (citée, datée)</th>
+      <th>Ce que le trader déclare avoir fait</th>
+      <th>Ce qui est mesuré indépendamment</th>
+      <th>Violations (B4)</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>—</td>
+      <td>—</td>
+      <td>—</td>
+      <td>—</td>
+      </tr>
+      <tr>
+      <td><strong>Total des violations</strong></td>
+      <td></td>
+      <td></td>
+      <td>—</td>
+      </tr>
+      </tbody>
+      </table>
+      </div>
+      <p>Chaque règle sera citée entre guillemets avec sa date ; chaque violation fera l'objet d'une ligne avec la date de la décision concernée.</p>
     </section>
 
     <section class="section" id="r7">
       <p class="section-label">7 · Pièces à conviction</p>
-      <p><em>Pas encore de données.</em></p>
+      <p>Section cumulative : rien d'antérieur n'en est retiré.</p>
+      <div style="overflow-x:auto">
+      <table>
+      <thead>
+      <tr>
+      <th>Date</th>
+      <th>Citation du trader</th>
+      <th>Fichier source</th>
+      <th>Écart qu'elle éclaire</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>—</td>
+      <td>—</td>
+      <td>—</td>
+      <td>—</td>
+      </tr>
+      </tbody>
+      </table>
+      </div>
+      <p>Les citations du trader qui éclairent un écart entre les deux comptabilités seront reproduites ici entre guillemets, datées, sans reformulation en fait établi.</p>
     </section>
 
     <section class="section" id="r8">
-      <p class="section-label">8 · Appels de marge et contrainte de financement</p>
-      <p><em>Pas encore de données.</em></p>
+      <p class="section-label">8 · Appels de marge et contrainte de financement (B12)</p>
+      <p>Section cumulative : rien d'antérieur n'en est retiré.</p>
+      <div style="overflow-x:auto">
+      <table>
+      <thead>
+      <tr>
+      <th>Grandeur</th>
+      <th>Déclaré par le trader</th>
+      <th>Mesuré indépendamment</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>Régime(s) de marge en vigueur sur la période</td>
+      <td>—</td>
+      <td>—</td>
+      </tr>
+      <tr>
+      <td>Nombre d'appels de marge</td>
+      <td>—</td>
+      <td>—</td>
+      </tr>
+      <tr>
+      <td>Levier brut maximal (B7)</td>
+      <td>—</td>
+      <td>—</td>
+      </tr>
+      <tr>
+      <td>Levier brut moyen (B7)</td>
+      <td>—</td>
+      <td>—</td>
+      </tr>
+      <tr>
+      <td>Marge disponible minimale (€)</td>
+      <td>—</td>
+      <td>—</td>
+      </tr>
+      <tr>
+      <td>Portage payé (€)</td>
+      <td>—</td>
+      <td>—</td>
+      </tr>
+      <tr>
+      <td>Emprunt de titres payé (€)</td>
+      <td>—</td>
+      <td>—</td>
+      </tr>
+      <tr>
+      <td>Coût total des liquidations forcées (€)</td>
+      <td>—</td>
+      <td>—</td>
+      </tr>
+      </tbody>
+      </table>
+      </div>
+      <div style="overflow-x:auto">
+      <table>
+      <thead>
+      <tr>
+      <th>Date</th>
+      <th>Régime</th>
+      <th>Levier brut juste avant</th>
+      <th>Exigence de maintien (€)</th>
+      <th>Capitaux propres déclarés par le trader (€)</th>
+      <th>Capitaux propres mesurés indépendamment (€)</th>
+      <th>Montant liquidé (€)</th>
+      <th>Coût de la liquidation (€)</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>—</td>
+      <td>—</td>
+      <td>—</td>
+      <td>—</td>
+      <td>—</td>
+      <td>—</td>
+      <td>—</td>
+      <td>—</td>
+      </tr>
+      </tbody>
+      </table>
+      </div>
+      <p>Les appels de marge seront listés ici avec leur date, le levier juste avant et le coût des liquidations, ainsi que toute perte du Portfolio Margin.</p>
     </section>
 
     <section class="section" id="r9">
       <p class="section-label">9 · Facteurs de confusion</p>
-      <p><em>Pas encore de données.</em></p>
+      <p>Section cumulative : rien d'antérieur n'en est retiré.</p>
+      <div style="overflow-x:auto">
+      <table>
+      <thead>
+      <tr>
+      <th>Date</th>
+      <th>Nature</th>
+      <th>Description</th>
+      <th>Source</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td>connu avant le départ</td>
+      <td>Places sans prix primaire</td>
+      <td>CW8 et WPEA (Euronext Paris) ne sont disponibles qu'en qualité <code>web_horodate</code> : le connecteur IBKR n'a aucun droit de données sur Euronext Paris</td>
+      <td>pré-enregistrement §4</td>
+      </tr>
+      <tr>
+      <td>—</td>
+      <td>Changement de modèle</td>
+      <td>—</td>
+      <td>—</td>
+      </tr>
+      <tr>
+      <td>—</td>
+      <td>Trou de données</td>
+      <td>—</td>
+      <td>—</td>
+      </tr>
+      <tr>
+      <td>—</td>
+      <td>Événement journalisé</td>
+      <td>—</td>
+      <td>—</td>
+      </tr>
+      </tbody>
+      </table>
+      </div>
+      <p>Les changements de modèle en cours d'expérience, les trous de données, les ordres réputés non exécutés faute de prix et les autres événements journalisés seront ajoutés ici, datés.</p>
     </section>
 
     <section class="section" id="r10">
       <p class="section-label">10 · Ce qui ne peut pas être conclu</p>
-      <p><em>Pas encore de données.</em></p>
+      <ul>
+      <li><strong>Aucune conclusion de compétence ou d'incompétence ne peut être tirée du rendement</strong>, quel qu'il soit : sur douze mois, la puissance statistique ne le permet pas (pré-enregistrement §2).</li>
+      <li>Un gain comme une perte restent indiscernables du hasard tant que le témoin aléatoire n'est pas franchi au-delà du 95ᵉ centile.</li>
+      <li>Aucune règle de comportement d'investissement ne peut être tirée de l'expérience, et rien dans ce rapport n'est une recommandation d'investissement.</li>
+      <li>Le résultat ne peut être comparé à aucune attente préalable : aucune prédiction n'a été déposée à l'initiation (pré-enregistrement §10).</li>
+      <li>Toute analyse qui n'était pas déclarée dans le pré-enregistrement sera étiquetée <strong>exploratoire</strong>.</li>
+      <li>À la date de cette ébauche, aucune donnée n'existe : rien ne peut être conclu sur aucun indicateur.</li>
+      </ul>
     </section>
 
     <section class="section" id="journal">
       <p class="section-label">Journal des mises à jour</p>
       <ul>
-        <li>2026-11-22 — Page créée, avant le premier ordre. Aucune donnée.</li>
+      <li>2026-11-22 — Page créée, avant le premier ordre. Aucune donnée.</li>
+      <li>2026-11-22 — Ébauche de mise en forme, sans données.</li>
       </ul>
     </section>
 <!-- RAPPORT:FIN -->
