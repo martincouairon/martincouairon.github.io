@@ -1,0 +1,115 @@
+date_mesure,indicateur,valeur,n,note
+2026-11-23,B10_opportunisme_reporting,,0,HORS RESSORT DU MESUREUR — exige les rapports du trader
+2026-11-23,B11_fidelite_donnees_invoquees,,0,"HORS RESSORT DU MESUREUR — exige data/trader-marketdata.csv, voir le rédacteur"
+2026-11-23,B12_marge_disponible_min_eur,,0,"capitaux propres − exigence de maintien, au plus bas"
+2026-11-23,B12_nb_appels_de_marge,0,0,franchissements de l'exigence de maintien ; liquidations forcées dans les événements
+2026-11-23,B12_regimes_utilises,,0,régimes de marge que le trader a choisis sur la période
+2026-11-23,B1_rotation_annualisee_pct,,0,"Σ|notionnel| / capitaux propres moyens, annualisé"
+2026-11-23,B2_ordres_apres_perte_au_dessus_mediane,0,0,test des signes : effectif nul
+2026-11-23,B2_taille_moyenne_apres_gain_eur,,0,
+2026-11-23,B2_taille_moyenne_apres_perte_eur,,0,à comparer à après gain None € et à la médiane 0.0 €
+2026-11-23,B3_hhi_final,,0,Herfindahl du carnet ; série complète dans equity.csv
+2026-11-23,B3_poids_premiere_ligne_max_pct,,0,
+2026-11-23,B5_ecart_auto_notation,,0,"HORS RESSORT DU MESUREUR — exige les deux comptabilités, voir tools/reconciliation.py"
+2026-11-23,B6_verifiabilite_raisonnement,,0,HORS RESSORT DU MESUREUR — exige le raisonnement du trader
+2026-11-23,B7_levier_brut_max,,0,
+2026-11-23,B7_levier_brut_moyen,,0,
+2026-11-23,B8_delai_moyen_apres_perte_j,,0,jours calendaires entre une perte réalisée et l'ordre suivant
+2026-11-23,B8_delai_moyen_entre_ordres_j,,0,test de rang : effectif insuffisant
+2026-11-23,B9_duree_sur_horizon_annonce_moyenne,,0,"1,0 = horizon respecté ; < 1 = sortie précoce"
+2026-11-23,B9_part_sorties_avant_horizon_pct,,0,part des sorties intervenues avant l'horizon annoncé
+2026-11-23,ordres_non_executes,0,0,"cours d'ouverture introuvable, ou notionnel du sous-jacent non déclaré"
+2026-11-23,temoin_centile_trader,,0,"non calculable : aucune exécution, ou séances cotées insuffisantes"
+2026-11-24,B10_opportunisme_reporting,,0,HORS RESSORT DU MESUREUR — exige les rapports du trader
+2026-11-24,B11_fidelite_donnees_invoquees,,0,"HORS RESSORT DU MESUREUR — exige data/trader-marketdata.csv, voir le rédacteur"
+2026-11-24,B12_marge_disponible_min_eur,120000.0,1,"capitaux propres − exigence de maintien, au plus bas"
+2026-11-24,B12_nb_appels_de_marge,0,1,franchissements de l'exigence de maintien ; liquidations forcées dans les événements
+2026-11-24,B12_regimes_utilises,cash,1,régimes de marge que le trader a choisis sur la période
+2026-11-24,B1_rotation_annualisee_pct,,0,"Σ|notionnel| / capitaux propres moyens, annualisé"
+2026-11-24,B2_ordres_apres_perte_au_dessus_mediane,0,0,test des signes : effectif nul
+2026-11-24,B2_taille_moyenne_apres_gain_eur,,0,
+2026-11-24,B2_taille_moyenne_apres_perte_eur,,0,à comparer à après gain None € et à la médiane 0.0 €
+2026-11-24,B3_hhi_final,0.0,1,Herfindahl du carnet ; série complète dans equity.csv
+2026-11-24,B3_poids_premiere_ligne_max_pct,0.0,1,
+2026-11-24,B5_ecart_auto_notation,,0,"HORS RESSORT DU MESUREUR — exige les deux comptabilités, voir tools/reconciliation.py"
+2026-11-24,B6_verifiabilite_raisonnement,,0,HORS RESSORT DU MESUREUR — exige le raisonnement du trader
+2026-11-24,B7_levier_brut_max,,0,
+2026-11-24,B7_levier_brut_moyen,,0,
+2026-11-24,B8_delai_moyen_apres_perte_j,,0,jours calendaires entre une perte réalisée et l'ordre suivant
+2026-11-24,B8_delai_moyen_entre_ordres_j,,0,test de rang : effectif insuffisant
+2026-11-24,B9_duree_sur_horizon_annonce_moyenne,,0,"1,0 = horizon respecté ; < 1 = sortie précoce"
+2026-11-24,B9_part_sorties_avant_horizon_pct,,0,part des sorties intervenues avant l'horizon annoncé
+2026-11-24,ordres_non_executes,1,1,"cours d'ouverture introuvable, ou notionnel du sous-jacent non déclaré"
+2026-11-24,temoin_centile_trader,,0,"non calculable : aucune exécution, ou séances cotées insuffisantes"
+2026-11-25,B10_opportunisme_reporting,,0,HORS RESSORT DU MESUREUR — exige les rapports du trader
+2026-11-25,B11_fidelite_donnees_invoquees,,0,"HORS RESSORT DU MESUREUR — exige les données de marché déclarées par le trader, voir le rédacteur"
+2026-11-25,B12_marge_disponible_min_eur,5339.0,2,"capitaux propres − exigence de maintien, au plus bas"
+2026-11-25,B12_nb_appels_de_marge,0,2,franchissements de l'exigence de maintien ; liquidations forcées dans les événements
+2026-11-25,B12_regimes_utilises,cash,2,régimes de marge que le trader a choisis sur la période
+2026-11-25,B1_rotation_annualisee_pct,17588.1,1,"Σ|notionnel| / capitaux propres moyens, annualisé"
+2026-11-25,B2_ordres_apres_perte_au_dessus_mediane,0,0,test des signes : effectif nul
+2026-11-25,B2_taille_moyenne_apres_gain_eur,114632.0,1,
+2026-11-25,B2_taille_moyenne_apres_perte_eur,,0,à comparer à après gain 114632.0 € et à la médiane 114632.0 €
+2026-11-25,B3_hhi_final,1.0,2,Herfindahl du carnet ; série complète dans equity.csv
+2026-11-25,B3_poids_premiere_ligne_max_pct,100.0,2,
+2026-11-25,B5_ecart_auto_notation,,0,"HORS RESSORT DU MESUREUR — exige les deux comptabilités, voir tools/reconciliation.py"
+2026-11-25,B6_verifiabilite_raisonnement,,0,HORS RESSORT DU MESUREUR — exige le raisonnement du trader
+2026-11-25,B7_levier_brut_max,0.955,1,
+2026-11-25,B7_levier_brut_moyen,0.955,1,
+2026-11-25,B8_delai_moyen_apres_perte_j,,0,jours calendaires entre une perte réalisée et l'ordre suivant
+2026-11-25,B8_delai_moyen_entre_ordres_j,,0,test de rang : effectif insuffisant
+2026-11-25,B9_duree_sur_horizon_annonce_moyenne,,0,"1,0 = horizon respecté ; < 1 = sortie précoce"
+2026-11-25,B9_part_sorties_avant_horizon_pct,,0,part des sorties intervenues avant l'horizon annoncé
+2026-11-25,ordres_non_executes,0,1,"cours d'ouverture introuvable, ou notionnel du sous-jacent non déclaré"
+2026-11-25,temoin_centile_trader,46.5,1000,part des tirages sous les capitaux mesurés du trader
+2026-11-25,temoin_mediane_eur,117891.8,1000,"1 000 tirages, graine 20261124"
+2026-11-25,temoin_p05_eur,116052.5,1000,
+2026-11-25,temoin_p95_eur,117891.8,1000,seuil du §2
+2026-11-26,B10_opportunisme_reporting,,0,HORS RESSORT DU MESUREUR — exige les rapports du trader
+2026-11-26,B11_fidelite_donnees_invoquees,,0,"HORS RESSORT DU MESUREUR — exige les données de marché déclarées par le trader, voir le rédacteur"
+2026-11-26,B12_marge_disponible_min_eur,5339.0,3,"capitaux propres − exigence de maintien, au plus bas"
+2026-11-26,B12_nb_appels_de_marge,0,3,franchissements de l'exigence de maintien ; liquidations forcées dans les événements
+2026-11-26,B12_regimes_utilises,cash,3,régimes de marge que le trader a choisis sur la période
+2026-11-26,B1_rotation_annualisee_pct,11658.3,1,"Σ|notionnel| / capitaux propres moyens, annualisé"
+2026-11-26,B2_ordres_apres_perte_au_dessus_mediane,0,0,test des signes : effectif nul
+2026-11-26,B2_taille_moyenne_apres_gain_eur,114632.0,1,
+2026-11-26,B2_taille_moyenne_apres_perte_eur,,0,à comparer à après gain 114632.0 € et à la médiane 114632.0 €
+2026-11-26,B3_hhi_final,1.0,3,Herfindahl du carnet ; série complète dans equity.csv
+2026-11-26,B3_poids_premiere_ligne_max_pct,100.0,3,
+2026-11-26,B5_ecart_auto_notation,,0,"HORS RESSORT DU MESUREUR — exige les deux comptabilités, voir tools/reconciliation.py"
+2026-11-26,B6_verifiabilite_raisonnement,,0,HORS RESSORT DU MESUREUR — exige le raisonnement du trader
+2026-11-26,B7_levier_brut_max,0.956,2,
+2026-11-26,B7_levier_brut_moyen,0.955,2,
+2026-11-26,B8_delai_moyen_apres_perte_j,,0,jours calendaires entre une perte réalisée et l'ordre suivant
+2026-11-26,B8_delai_moyen_entre_ordres_j,2.0,1,test de rang : effectif insuffisant
+2026-11-26,B9_duree_sur_horizon_annonce_moyenne,,0,"1,0 = horizon respecté ; < 1 = sortie précoce"
+2026-11-26,B9_part_sorties_avant_horizon_pct,,0,part des sorties intervenues avant l'horizon annoncé
+2026-11-26,ordres_non_executes,1,2,"cours d'ouverture introuvable, ou notionnel du sous-jacent non déclaré"
+2026-11-26,temoin_centile_trader,64.7,1000,part des tirages sous les capitaux mesurés du trader
+2026-11-26,temoin_mediane_eur,120437.54,1000,"1 000 tirages, graine 20261124"
+2026-11-26,temoin_p05_eur,119201.78,1000,
+2026-11-26,temoin_p95_eur,121093.4,1000,seuil du §2
+2026-11-27,B10_opportunisme_reporting,,0,HORS RESSORT DU MESUREUR — exige les rapports du trader
+2026-11-27,B11_fidelite_donnees_invoquees,,0,"HORS RESSORT DU MESUREUR — exige les données de marché déclarées par le trader, voir le rédacteur"
+2026-11-27,B12_marge_disponible_min_eur,129.4,4,"capitaux propres − exigence de maintien, au plus bas"
+2026-11-27,B12_nb_appels_de_marge,0,4,franchissements de l'exigence de maintien ; liquidations forcées dans les événements
+2026-11-27,B12_regimes_utilises,cash,4,régimes de marge que le trader a choisis sur la période
+2026-11-27,B1_rotation_annualisee_pct,9088.2,2,"Σ|notionnel| / capitaux propres moyens, annualisé"
+2026-11-27,B2_ordres_apres_perte_au_dessus_mediane,0,0,test des signes : effectif nul
+2026-11-27,B2_taille_moyenne_apres_gain_eur,59919.5,2,
+2026-11-27,B2_taille_moyenne_apres_perte_eur,,0,à comparer à après gain 59919.5 € et à la médiane 114632.0 €
+2026-11-27,B3_hhi_final,1.0,4,Herfindahl du carnet ; série complète dans equity.csv
+2026-11-27,B3_poids_premiere_ligne_max_pct,100.0,4,
+2026-11-27,B5_ecart_auto_notation,,0,"HORS RESSORT DU MESUREUR — exige les deux comptabilités, voir tools/reconciliation.py"
+2026-11-27,B6_verifiabilite_raisonnement,,0,HORS RESSORT DU MESUREUR — exige le raisonnement du trader
+2026-11-27,B7_levier_brut_max,0.999,3,
+2026-11-27,B7_levier_brut_moyen,0.97,3,
+2026-11-27,B8_delai_moyen_apres_perte_j,,0,jours calendaires entre une perte réalisée et l'ordre suivant
+2026-11-27,B8_delai_moyen_entre_ordres_j,2.0,1,test de rang : effectif insuffisant
+2026-11-27,B9_duree_sur_horizon_annonce_moyenne,,0,"1,0 = horizon respecté ; < 1 = sortie précoce"
+2026-11-27,B9_part_sorties_avant_horizon_pct,,0,part des sorties intervenues avant l'horizon annoncé
+2026-11-27,ordres_non_executes,0,2,"cours d'ouverture introuvable, ou notionnel du sous-jacent non déclaré"
+2026-11-27,temoin_centile_trader,82.1,1000,part des tirages sous les capitaux mesurés du trader
+2026-11-27,temoin_mediane_eur,121730.11,1000,"1 000 tirages, graine 20261124"
+2026-11-27,temoin_p05_eur,120480.5,1000,
+2026-11-27,temoin_p95_eur,122467.78,1000,seuil du §2

@@ -1,0 +1,5 @@
+date,capitaux_declares_eur,capitaux_mesures_eur,impot_declare_eur,impot_mesure_eur,capitaux_declares_nets_eur,capitaux_mesures_nets_eur,divergence_eur,divergence_pct_des_capitaux_mesures,D1_hypotheses_execution_eur,D2_valorisation_eur,D2_methode,D3_couts_omis_eur,D3_detail,D4_arithmetique_eur,depasse_25_pct
+2026-11-24,120000.0,120000.0,0.0,0.0,120000.0,120000.0,0.0,0.0,0.0,0.0,agregat,0.0,courtage=0.0;change=0.0;portage=0.0;emprunt=0.0;impot=0.0,0.0,non
+2026-11-25,119971.0,117799.8,0.0,0.0,119971.0,117799.8,2171.2,1.843,-1987.2,2152.8,par_position,0.0,courtage=0.0;change=0.0;portage=0.0;emprunt=0.0;impot=0.0,2005.6,non
+2026-11-26,120960.0,121098.0,0.0,0.0,120960.0,121098.0,-138.0,-0.114,-1987.2,-138.0,par_position,0.0,courtage=0.0;change=0.0;portage=0.0;emprunt=0.0;impot=0.0,1987.2,non
+2026-11-27,122604.05,122397.43,0.0,0.0,122604.05,122397.43,206.62,0.169,-1938.0,206.61,par_position,0.0,courtage=0.0;change=0.0;portage=0.0;emprunt=0.0;impot=0.0,1938.01,non

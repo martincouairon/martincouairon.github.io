@@ -1,0 +1,5 @@
+date,capitaux_propres_eur,capitaux_propres_net_pfu_eur,iwda_flux_identiques_eur,ecart_vs_iwda_eur,ecart_net_vs_iwda_eur,cw8_flux_identiques_eur,ecart_vs_cw8_eur,ecart_net_vs_cw8_eur,ecart_cw8_vs_iwda_pct,wpea_flux_identiques_eur,ecart_vs_wpea_eur,ecart_net_vs_wpea_eur,ecart_wpea_vs_iwda_pct,livret_a_eur,ecart_vs_livret_eur,iwda_liquidatif_net_eur,buy_and_hold_eur,ecart_vs_buy_and_hold_eur
+2026-11-24,120000.0,120000.0,120000.0,0.0,0.0,120000.0,0.0,0.0,0.0,120000.0,-0.0,-0.0,0.0,120000.0,0.0,120000.0,,
+2026-11-25,117799.8,117799.8,117760.21,39.59,39.59,117812.0,-12.2,-12.2,0.044,117838.63,-38.83,-38.83,0.067,120005.54,-2205.74,117760.21,117799.8,0.0
+2026-11-26,121098.0,121098.0,121213.82,-115.82,-115.82,121144.49,-46.49,-46.49,-0.057,,,,,120011.08,1086.92,120832.68,121098.0,0.0
+2026-11-27,122397.43,122397.43,122567.33,-169.9,-169.9,122464.38,-66.95,-66.95,-0.084,122442.52,-45.09,-45.09,-0.102,120016.63,2380.8,121761.19,122390.6,6.83

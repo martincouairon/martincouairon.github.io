@@ -1,1 +1,70 @@
 date,ticker,devise,ouverture,haut,bas,cloture,source,qualite
+2026-11-17,IWDA,EUR,128.76,129.15,126.75,127.08,IBKR get_price_history conid 100292038 AEB ONE_DAY - releve 2026-11-23T22:42Z (differe 15 min),primaire
+2026-11-18,IWDA,EUR,128.24,128.55,126.84,127.105,IBKR get_price_history conid 100292038 AEB ONE_DAY - releve 2026-11-23T22:42Z (differe 15 min),primaire
+2026-11-19,IWDA,EUR,128.34,128.39,126.25,126.79,IBKR get_price_history conid 100292038 AEB ONE_DAY - releve 2026-11-23T22:42Z (differe 15 min),primaire
+2026-11-20,IWDA,EUR,124.34,124.92,122.71,122.715,IBKR get_price_history conid 100292038 AEB ONE_DAY - releve 2026-11-23T22:42Z (differe 15 min),primaire
+2026-11-23,IWDA,EUR,122.98,127.19,122.94,126.76,IBKR get_price_history conid 100292038 AEB ONE_DAY - releve 2026-11-23T22:42Z (differe 15 min),primaire
+2026-11-17,EURUSD,USD,1.099875,1.102375,1.096825,1.09985,IBKR get_price_history conid 12087792 IDEALPRO ONE_DAY - releve 2026-11-23T22:42Z MidPoint; barre horodatee J-1 22:15Z = seance J,primaire
+2026-11-18,EURUSD,USD,1.099925,1.099925,1.095325,1.0975,IBKR get_price_history conid 12087792 IDEALPRO ONE_DAY - releve 2026-11-23T22:42Z MidPoint; barre horodatee J-1 22:15Z = seance J,primaire
+2026-11-19,EURUSD,USD,1.09755,1.101025,1.095575,1.096675,IBKR get_price_history conid 12087792 IDEALPRO ONE_DAY - releve 2026-11-23T22:42Z MidPoint; barre horodatee J-1 22:15Z = seance J,primaire
+2026-11-20,EURUSD,USD,1.0969,1.100025,1.0957,1.096725,IBKR get_price_history conid 12087792 IDEALPRO ONE_DAY - releve 2026-11-23T22:42Z MidPoint; barre horodatee J-1 22:15Z = seance J,primaire
+2026-11-23,EURUSD,USD,1.097675,1.100575,1.088125,1.0903,IBKR get_price_history conid 12087792 IDEALPRO ONE_DAY - releve 2026-11-23T22:42Z MidPoint; barre horodatee J-1 22:15Z = seance J,primaire
+2026-11-17,BRK-B,USD,589.98,592.01,586.04,586.76,IBKR get_price_history conid 72063691 SMART ONE_DAY - releve 2026-11-23T22:42Z (BRK B NYSE),primaire
+2026-11-18,BRK-B,USD,583.03,583.72,573.09,574.62,IBKR get_price_history conid 72063691 SMART ONE_DAY - releve 2026-11-23T22:42Z (BRK B NYSE),primaire
+2026-11-19,BRK-B,USD,572.25,573.13,565.6,572.04,IBKR get_price_history conid 72063691 SMART ONE_DAY - releve 2026-11-23T22:42Z (BRK B NYSE),primaire
+2026-11-20,BRK-B,USD,573.25,576.89,566.52,570,IBKR get_price_history conid 72063691 SMART ONE_DAY - releve 2026-11-23T22:42Z (BRK B NYSE),primaire
+2026-11-23,BRK-B,USD,572.53,575.6,568.35,572.36,IBKR get_price_history conid 72063691 SMART ONE_DAY - releve 2026-11-23T22:42Z (BRK B NYSE),primaire
+2026-11-17,ARKK,USD,71.73,72.31,69.53,70.84,IBKR get_price_history conid 172522644 SMART ONE_DAY - releve 2026-11-23T22:42Z,primaire
+2026-11-18,ARKK,USD,71.63,72.08,70.4,71.06,IBKR get_price_history conid 172522644 SMART ONE_DAY - releve 2026-11-23T22:42Z,primaire
+2026-11-19,ARKK,USD,72.6,73.16,68.65,68.93,IBKR get_price_history conid 172522644 SMART ONE_DAY - releve 2026-11-23T22:42Z,primaire
+2026-11-20,ARKK,USD,67.71,68.47,64.04,64.22,IBKR get_price_history conid 172522644 SMART ONE_DAY - releve 2026-11-23T22:42Z,primaire
+2026-11-23,ARKK,USD,70.47,70.82,69.04,69.36,IBKR get_price_history conid 172522644 SMART ONE_DAY - releve 2026-11-23T22:42Z,primaire
+2026-11-17,PSH,USD,51,51.56,50.5,50.5,IBKR get_price_history conid 170204225 LSE ONE_DAY - releve 2026-11-23T22:42Z ligne USD PSHD Londres (cotation Amsterdam introuvable au connecteur; differe 15 min),primaire
+2026-11-18,PSH,USD,50.5,50.66,50,50.1,IBKR get_price_history conid 170204225 LSE ONE_DAY - releve 2026-11-23T22:42Z ligne USD PSHD Londres (cotation Amsterdam introuvable au connecteur; differe 15 min),primaire
+2026-11-19,PSH,USD,50.5,51.36,50.4,50.4,IBKR get_price_history conid 170204225 LSE ONE_DAY - releve 2026-11-23T22:42Z ligne USD PSHD Londres (cotation Amsterdam introuvable au connecteur; differe 15 min),primaire
+2026-11-20,PSH,USD,49.22,49.52,48.76,48.76,IBKR get_price_history conid 170204225 LSE ONE_DAY - releve 2026-11-23T22:42Z ligne USD PSHD Londres (cotation Amsterdam introuvable au connecteur; differe 15 min),primaire
+2026-11-23,PSH,USD,48.6,49.8,48.6,49.76,IBKR get_price_history conid 170204225 LSE ONE_DAY - releve 2026-11-23T22:42Z ligne USD PSHD Londres (cotation Amsterdam introuvable au connecteur; differe 15 min),primaire
+2026-11-19,CW8,EUR,697.3,697.99,686.65,688.72,boursedirect.fr page seance bloc Euronext MasterFile TradingDate 19/11/2026 - releve 2026-11-23T22:50Z,web_horodate
+2026-11-19,WPEA,EUR,7.028,7.036,6.92,6.945,boursedirect.fr page seance bloc Euronext MasterFile TradingDate 19/11/2026 - releve 2026-11-23T22:50Z,web_horodate
+2026-11-19,CARMPAT,EUR,827.89,827.89,827.89,827.89,bourse.fortuneo.fr VL quotidienne datee 19 novembre 10:00 (page datee 19.11.2026) - releve 2026-11-23T22:50Z,web_horodate
+2026-11-23,IWDA,EUR,122.98,127.19,122.94,126.645,IBKR get_price_history conid 100292038 AEB ONE_DAY - releve 2026-11-24T22:42Z (differe 15 min) - correction de la cloture 126.76 relevee 2026-11-23T22:42Z,primaire
+2026-11-24,IWDA,EUR,126.67,126.67,124.25,124.58,IBKR get_price_history conid 100292038 AEB ONE_DAY - releve 2026-11-24T22:42Z (differe 15 min),primaire
+2026-11-24,EURUSD,USD,1.089975,1.098025,1.089625,1.0966,IBKR get_price_history conid 12087792 IDEALPRO ONE_DAY - releve 2026-11-24T22:42Z MidPoint; barre horodatee J-1 22:15Z = seance J,primaire
+2026-11-24,BRK-B,USD,574,579.79,571.34,577.21,IBKR get_price_history conid 72063691 SMART ONE_DAY - releve 2026-11-24T22:42Z (BRK B NYSE),primaire
+2026-11-24,ARKK,USD,68.28,68.92,66.15,67.46,IBKR get_price_history conid 172522644 SMART ONE_DAY - releve 2026-11-24T22:42Z,primaire
+2026-11-24,PSH,USD,49.76,50.15,48.84,49.72,IBKR get_price_history conid 170204225 LSE ONE_DAY - releve 2026-11-24T22:42Z ligne USD PSHD Londres (cotation Amsterdam introuvable au connecteur; differe 15 min),primaire
+2026-11-20,CW8,EUR,675.77,679.08,667.22,667.22,abcbourse.com download/valeur/CW8p ligne datee 20/11/2026 (concorde boursedirect Euronext RawDATA TradingDate 20/11/2026) - releve 2026-11-24T22:55Z,web_horodate
+2026-11-23,CW8,EUR,668.37,690.77,668.37,688.72,abcbourse.com download/valeur/CW8p ligne datee 23/11/2026 (cloture veille 688.72 confirmee boursedirect et fortuneo) - releve 2026-11-24T22:55Z,web_horodate
+2026-11-24,CW8,EUR,688.04,688.30,675.01,677.33,abcbourse.com download/valeur/CW8p ligne datee 24/11/2026 (dernier 677.33 a 17:35:18 apres fermeture) - releve 2026-11-24T22:55Z,web_horodate
+2026-11-20,WPEA,EUR,6.815,6.849,6.726,6.727,boursedirect.fr page seance bloc Euronext RawDATA TradingDate 20/11/2026 - releve 2026-11-24T22:55Z,web_horodate
+2026-11-23,WPEA,EUR,6.74,6.97,6.74,6.949,twelvedata.com historique ligne datee Nov 23 2026 pour O/H/L (2 decimales) ; cloture 6.949 fortuneo 23 novembre 17:35 et boursedirect cloture veille - releve 2026-11-24T22:55Z,web_horodate
+2026-11-24,WPEA,EUR,6.94,6.94,6.81,6.83,sa.investing.com etfs/wpea-paris statut Closed date 24/11/2026 (2 decimales ; date tiree de la FAQ de la page) - releve 2026-11-24T22:55Z,web_horodate
+2026-11-20,CARMPAT,EUR,819.31,819.31,819.31,819.31,abcbourse.com opcvm FR0010135103 VL datee 20/11/2026 (concorde borsaitaliana 20/11/26) - releve 2026-11-24T22:55Z,web_horodate
+2026-11-23,CARMPAT,EUR,827.91,827.91,827.91,827.91,easybourse.com opcvm FR0010135103 VL datee 23/11/2026 (concorde carmignac.com Data as of Nov 23 2026) - releve 2026-11-24T22:55Z,web_horodate
+2026-11-24,IWDA,EUR,126.67,126.67,124.25,124.565,IBKR get_price_history conid 100292038 AEB ONE_DAY - releve 2026-11-25T22:42Z (differe 15 min) - correction de la cloture 124.58 relevee 2026-11-24T22:42Z,primaire
+2026-11-25,IWDA,EUR,124.6,124.99,121.96,122.34,IBKR get_price_history conid 100292038 AEB ONE_DAY - releve 2026-11-25T22:42Z (differe 15 min),primaire
+2026-11-25,EURUSD,USD,1.096425,1.099275,1.093125,1.097425,IBKR get_price_history conid 12087792 IDEALPRO ONE_DAY - releve 2026-11-25T22:42Z MidPoint; barre horodatee J-1 22:15Z = seance J,primaire
+2026-11-25,BRK-B,USD,576.75,581.47,573.28,579.32,IBKR get_price_history conid 72063691 SMART ONE_DAY - releve 2026-11-25T22:42Z (BRK B NYSE),primaire
+2026-11-25,ARKK,USD,64.6,67.73,62.68,67.36,IBKR get_price_history conid 172522644 SMART ONE_DAY - releve 2026-11-25T22:42Z,primaire
+2026-11-25,PSH,USD,49.6,49.86,48.54,48.7,IBKR get_price_history conid 170204225 LSE ONE_DAY - releve 2026-11-25T22:42Z ligne USD PSHD Londres (cotation Amsterdam introuvable au connecteur; differe 15 min),primaire
+2026-11-25,IWDA,EUR,124.6,124.99,121.96,122.24,IBKR get_price_history conid 100292038 AEB ONE_DAY - releve 2026-11-26T22:45Z (differe 15 min) - correction de la cloture 122.34 relevee 2026-11-25T22:42Z,primaire
+2026-11-26,IWDA,EUR,125.31,126.03,125.3,125.82,IBKR get_price_history conid 100292038 AEB ONE_DAY - releve 2026-11-26T22:45Z (differe 15 min),primaire
+2026-11-26,EURUSD,USD,1.097525,1.098925,1.095725,1.0969,IBKR get_price_history conid 12087792 IDEALPRO ONE_DAY - releve 2026-11-26T22:45Z MidPoint; barre horodatee J-1 22:15Z = seance J,primaire
+2026-11-24,PSH,USD,49.76,50.16,48.84,49.72,IBKR get_price_history conid 170204225 LSE ONE_DAY - releve 2026-11-26T22:45Z ligne USD PSHD Londres (cotation Amsterdam introuvable au connecteur; differe 15 min) - correction du plus-haut 50.15 releve 2026-11-24T22:42Z,primaire
+2026-11-26,PSH,USD,50.26,50.6,50.1,50.6,IBKR get_price_history conid 170204225 LSE ONE_DAY - releve 2026-11-26T22:45Z ligne USD PSHD Londres (cotation Amsterdam introuvable au connecteur; differe 15 min),primaire
+2026-11-24,WPEA,EUR,6.941,6.942,6.811,6.829,boursedirect.fr page seance bloc Euronext MasterFile RawDATA TradingDate 24/11/2026 (3 decimales) - correction de la ligne investing.com 6.94/6.94/6.81/6.83 arrondie a 2 decimales - releve 2026-11-26T22:45Z,web_horodate
+2026-11-25,WPEA,EUR,,,,6.706,bourse.fortuneo.fr cloture 6.706 datee 25 novembre 17:35 (concorde borsaitaliana XPAR reference close 6.706 et boursedirect cloture veille) ; ouverture/haut/bas non releves - releve 2026-11-26T22:45Z,web_horodate
+2026-11-24,CARMPAT,EUR,830.72,830.72,830.72,830.72,abcbourse.com opcvm FR0010135103 VL 830.72 Date valorisation 24/11/2026 - releve 2026-11-26T22:45Z,web_horodate
+2026-11-26,IWDA,EUR,125.31,126.03,125.3,125.825,IBKR get_price_history conid 100292038 AEB ONE_DAY - releve 2026-11-27T22:42Z (differe 15 min) - correction de la cloture 125.82 relevee 2026-11-26T22:45Z,primaire
+2026-11-27,IWDA,EUR,127.1,127.55,126.05,127.23,IBKR get_price_history conid 100292038 AEB ONE_DAY - releve 2026-11-27T22:42Z (differe 15 min),primaire
+2026-11-27,EURUSD,USD,1.0972,1.098675,1.093125,1.093675,IBKR get_price_history conid 12087792 IDEALPRO ONE_DAY - releve 2026-11-27T22:42Z MidPoint; barre horodatee J-1 22:15Z = seance J,primaire
+2026-11-27,BRK-B,USD,580.48,583.73,579.5,580.79,IBKR get_price_history conid 72063691 SMART ONE_DAY - releve 2026-11-27T22:42Z (BRK B NYSE; seance ecourtee du lendemain de Thanksgiving),primaire
+2026-11-27,ARKK,USD,69.37,69.58,67.58,69.5,IBKR get_price_history conid 172522644 SMART ONE_DAY - releve 2026-11-27T22:42Z (seance ecourtee du lendemain de Thanksgiving),primaire
+2026-11-27,PSH,USD,50.8,51.7,50.8,51.46,IBKR get_price_history conid 170204225 LSE ONE_DAY - releve 2026-11-27T22:42Z ligne USD PSHD Londres (cotation Amsterdam introuvable au connecteur; differe 15 min),primaire
+2026-11-25,CW8,EUR,677.32,679.34,662.82,664.98,twelvedata.com markets/141889 etf/euronext/cw8 historical-data ligne datee Nov 25 2026 (cloture 664.98 concorde boursedirect/abcbourse non dates releves 2026-11-26) ; divergence signalee zonebourse ch cotation Borsa Italiana 678.83/678.83/663.04/666.28 autre place non arbitree - releve 2026-11-27T22:45Z,web_horodate
+2026-11-26,CW8,EUR,681.13,684.90,681.07,683.79,twelvedata.com markets/141889 etf/euronext/cw8 historical-data ligne datee Nov 26 2026 (concorde fortuneo Veille 683.79 et twelvedata Previous close 683.78998) - releve 2026-11-27T22:45Z,web_horodate
+2026-11-27,CW8,EUR,690.82,693.32,685.54,691.24,twelvedata.com markets/141889 etf/euronext/cw8 historical-data ligne datee Nov 27 2026 (Last update Nov 27 5:30 PM CET; Market closed) concorde bourse.fortuneo.fr 691.24 datee 27 novembre 17:35 O/H/B 690.82/693.32/685.54 - releve 2026-11-27T22:45Z,web_horodate
+2026-11-25,WPEA,EUR,6.829,6.849,6.685,6.706,boursedirect.fr page seance bloc Euronext MasterFile RawDATA TradingDate 25/11/2026 ClosingPrice 6.7060 - completion ouverture/haut/bas de la ligne cloture seule relevee 2026-11-26T22:45Z - releve 2026-11-27T22:45Z,web_horodate
+2026-11-27,WPEA,EUR,6.962,6.990,6.910,6.968,bourse.fortuneo.fr dernier 6.968 date 27 novembre 17:35 (annee non affichee; non libelle cloture) Ouverture 6.962 Haut 6.990 Bas 6.910 ; meme affichage fortuneo CW8 27 novembre 17:35 = cloture datee twelvedata - releve 2026-11-27T22:45Z,web_horodate
+2026-11-25,CARMPAT,EUR,826.31,826.31,826.31,826.31,borsaitaliana.it fondi 2CARPAT VL 826.31 datee 25/11/26 (Precedente 830.72) concorde finect.com Datos a 25/11/2026 - releve 2026-11-27T22:45Z,web_horodate
+2026-11-26,CARMPAT,EUR,829.36,829.36,829.36,829.36,carmignac.com fonds carmignac-patrimoine a-eur-acc performance Net Asset Value 829.36 Data as of Nov 26 2026 (source unique) - releve 2026-11-27T22:45Z,web_horodate

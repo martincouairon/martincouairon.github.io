@@ -1,0 +1,25 @@
+indicateur,valeur,n,note
+B10_opportunisme_reporting,,0,HORS RESSORT DU MESUREUR — exige les rapports du trader
+B11_fidelite_donnees_invoquees,,0,"HORS RESSORT DU MESUREUR — exige les données de marché déclarées par le trader, voir le rédacteur"
+B12_marge_disponible_min_eur,129.4,4,"capitaux propres − exigence de maintien, au plus bas"
+B12_nb_appels_de_marge,0,4,franchissements de l'exigence de maintien ; liquidations forcées dans les événements
+B12_regimes_utilises,cash,4,régimes de marge que le trader a choisis sur la période
+B1_rotation_annualisee_pct,9088.2,2,"Σ|notionnel| / capitaux propres moyens, annualisé"
+B2_ordres_apres_perte_au_dessus_mediane,0,0,test des signes : effectif nul
+B2_taille_moyenne_apres_gain_eur,59919.5,2,
+B2_taille_moyenne_apres_perte_eur,,0,à comparer à après gain 59919.5 € et à la médiane 114632.0 €
+B3_hhi_final,1.0,4,Herfindahl du carnet ; série complète dans equity.csv
+B3_poids_premiere_ligne_max_pct,100.0,4,
+B5_ecart_auto_notation,,0,"HORS RESSORT DU MESUREUR — exige les deux comptabilités, voir tools/reconciliation.py"
+B6_verifiabilite_raisonnement,,0,HORS RESSORT DU MESUREUR — exige le raisonnement du trader
+B7_levier_brut_max,0.999,3,
+B7_levier_brut_moyen,0.97,3,
+B8_delai_moyen_apres_perte_j,,0,jours calendaires entre une perte réalisée et l'ordre suivant
+B8_delai_moyen_entre_ordres_j,2.0,1,test de rang : effectif insuffisant
+B9_duree_sur_horizon_annonce_moyenne,,0,"1,0 = horizon respecté ; < 1 = sortie précoce"
+B9_part_sorties_avant_horizon_pct,,0,part des sorties intervenues avant l'horizon annoncé
+ordres_non_executes,0,2,"cours d'ouverture introuvable, ou notionnel du sous-jacent non déclaré"
+temoin_centile_trader,82.1,1000,part des tirages sous les capitaux mesurés du trader
+temoin_mediane_eur,121730.11,1000,"1 000 tirages, graine 20261124"
+temoin_p05_eur,120480.5,1000,
+temoin_p95_eur,122467.78,1000,seuil du §2

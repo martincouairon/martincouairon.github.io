@@ -1,0 +1,16 @@
+date,ticker,investisseur,vehicule,devise,cours,valeur_flux_identiques_eur,qualite
+2026-11-24,BRK-B,Warren Buffett,"Berkshire Hathaway (classe B), NYSE",USD,577.21,120000.0,primaire
+2026-11-25,BRK-B,Warren Buffett,"Berkshire Hathaway (classe B), NYSE",USD,579.32,120348.12,primaire
+2026-11-26,BRK-B,Warren Buffett,"Berkshire Hathaway (classe B), NYSE",USD,579.32,120405.72,primaire
+2026-11-27,BRK-B,Warren Buffett,"Berkshire Hathaway (classe B), NYSE",USD,580.79,121067.2,primaire
+2026-11-24,PSH,Bill Ackman,"Pershing Square Holdings, Euronext Amsterdam",USD,49.72,120000.0,primaire
+2026-11-25,PSH,Bill Ackman,"Pershing Square Holdings, Euronext Amsterdam",USD,48.7,117449.85,primaire
+2026-11-26,PSH,Bill Ackman,"Pershing Square Holdings, Euronext Amsterdam",USD,50.6,122090.49,primaire
+2026-11-27,PSH,Bill Ackman,"Pershing Square Holdings, Euronext Amsterdam",USD,51.46,124531.69,primaire
+2026-11-24,ARKK,Cathie Wood,"ARK Innovation ETF, NYSE Arca",USD,67.46,120000.0,primaire
+2026-11-25,ARKK,Cathie Wood,"ARK Innovation ETF, NYSE Arca",USD,67.36,119732.04,primaire
+2026-11-26,ARKK,Cathie Wood,"ARK Innovation ETF, NYSE Arca",USD,67.36,119789.35,primaire
+2026-11-27,ARKK,Cathie Wood,"ARK Innovation ETF, NYSE Arca",USD,69.5,123959.46,primaire
+2026-11-24,CARMPAT,Édouard Carmignac,"Carmignac Patrimoine A EUR Acc (FR0010135103), valeur liquidative",EUR,830.72,120000.0,web_horodate
+2026-11-25,CARMPAT,Édouard Carmignac,"Carmignac Patrimoine A EUR Acc (FR0010135103), valeur liquidative",EUR,826.31,119362.96,web_horodate
+2026-11-26,CARMPAT,Édouard Carmignac,"Carmignac Patrimoine A EUR Acc (FR0010135103), valeur liquidative",EUR,829.36,119803.54,web_horodate

@@ -1,1 +1,10 @@
 date,horodatage_utc,ticker,id_position,instrument,sens,quantite,multiplicateur,devise,prix_revient,marque,source_marque,fx_eurusd,valeur_eur
+2026-11-25,2026-11-25T13:19:28Z,IWDA,,etf,long,920,1,EUR,124.58,124.58,Twelve Data clôture 2026-11-24 (ouverture du 25 nov. non obtenue),,114613.60
+2026-11-25,2026-11-25T16:16:30Z,IWDA,,etf,long,920,1,EUR,124.58,124.58,Twelve Data clôture 2026-11-24 (aucun cours du 25 nov. obtenu à 16h08 UTC),,114613.60
+2026-11-25,2026-11-25T19:14:42Z,IWDA,,etf,long,920,1,EUR,124.58,124.58,Twelve Data clôture 2026-11-24 (aucun cours du 25 nov. obtenu à 19h08 UTC),,114613.60
+2026-11-26,2026-11-26T13:11:21Z,IWDA,,etf,long,920,1,EUR,124.60,125.795,IBKR contract_id 100292038 AEB dernier cours différé 2026-11-26 12:55 UTC,,115731.40
+2026-11-26,2026-11-26T16:10:09Z,IWDA,,etf,long,920,1,EUR,124.60,125.95,IBKR contract_id 100292038 AEB dernier cours différé 2026-11-26 15:54 UTC,,115874.00
+2026-11-26,2026-11-26T19:09:25Z,IWDA,,etf,long,920,1,EUR,124.60,125.675,IBKR contract_id 100292038 AEB dernier cours différé 2026-11-26 18:49 UTC,,115621.00
+2026-11-27,2026-11-27T13:11:20Z,IWDA,,etf,long,961,1,EUR,124.7024,127.145,IBKR contract_id 100292038 AEB dernier cours différé 2026-11-27 12:55 UTC,,122186.35
+2026-11-27,2026-11-27T16:10:30Z,IWDA,,etf,long,961,1,EUR,124.7024,126.975,IBKR contract_id 100292038 AEB dernier cours différé 2026-11-27 15:54 UTC,,122022.98
+2026-11-27,2026-11-27T19:09:40Z,IWDA,,etf,long,961,1,EUR,124.7024,127.445,IBKR contract_id 100292038 AEB dernier cours différé 2026-11-27 18:52 UTC,,122474.65
